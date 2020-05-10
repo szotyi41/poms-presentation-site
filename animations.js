@@ -39,13 +39,28 @@ function animate() {
     // Show left card
     setTimeout(() => $('#card-sliders').css({opacity: 1, transform: 'scale(1)'}), 1000);
 
+    // Show left arm
+    setTimeout(() => $('#robot-arms-left').fadeIn(500), 1000);
+
     // Show brand logo
     setTimeout(() => $('#card-brand-logo').css({opacity: 1, transform: 'scale(1)'}), 2000);
     setTimeout(() => runSliders(1, 15213), 3000);
     setTimeout(() => runSliders(2, 12), 5000);
     setTimeout(() => runSliders(3, 2), 7000);
 
-    setTimeout(() => $('#card-engagement').css({transform: 'scale(1)', opacity: 1}), 9000)
+    setTimeout(() => $('.robot-arm').css({opacity: 1, transition: 'all 1s ' + transitionType}));
+
+    // Wake up robot
+    setTimeout(() => {
+        $('#robot-wake-image').css({opacity: 1});
+        $('#robot-sleep-image').css({opacity: 0});
+    }, 8000);
+
+    // Card Engagement
+    setTimeout(() => $('#card-engagement').css({transform: 'scale(1)', opacity: 1}), 9000);
+
+    // Show right arm
+    setTimeout(() => $('#robot-arms-right').fadeIn(500), 9500);
 
     // Show card bubble image
     setTimeout(() => $('#card-bubble-image').css({transform: 'scale(1)', opacity: 1}), 9500);

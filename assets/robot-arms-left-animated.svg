@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg id="master-artboard" viewBox="0 0 1400 980" version="1.1"
+    xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" style="enable-background:new 0 0 1400 980;" width="1400px" height="980px"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <style>
+.animated {
+  stroke-dasharray: 50;
+  animation: armAnimation 5s linear infinite;
+}
+
+@keyframes armAnimation {
+  to {
+    stroke-dashoffset: -1000;
+  }
+}
+    </style>
+
+    <g id="Layer_1-2" data-name="Layer 1" transform="matrix(2.9620673656463623, 0, 0, 2.9620673656463623, 143.13133239746094, -0.0000025168117048224303)">
+        <g class="cls-6 path arm-left-top" transform="matrix(1, 0, 0, 1, 3.5638198368607448, -54.79372503957522)" style="clip-path: url('#clip-path'); opacity: 0.1;">
+            <path class="cls-7" d="M1,156.91c24-20,76-17,87,18s48,35,66,26" style="fill: none; stroke-width: 4px; stroke: rgb(0, 0, 0); stroke-miterlimit: 10;"/>
+        </g>
+        <path class="cls-7 path arm-left-middle" d="M7,222.91c10-15,48-17,67-2s59,16,82-7" style="fill: none; stroke-width: 4px; stroke: rgb(0, 0, 0); stroke-miterlimit: 10; clip-path: url('#clip-path-2'); opacity: 0.1;" transform="matrix(1, 0, 0, 1, -0.8909545428694798, -42.32036044797672)"/>
+        <path class="cls-7 path arm-left-bottom" d="M9,276.91c19,22,71,24,96,1,18.18-16.72,43-38,58-32" style="fill: none; stroke-width: 4px; stroke: rgb(0, 0, 0); stroke-miterlimit: 10; clip-path: url('#clip-path-3'); opacity: 0.1;" transform="matrix(1, 0, 0, 1, -3.5638189799727513, -42.765833165261874)"/>
+    </g>
+
+    <g id="Layer_1-2" data-name="Layer 1" transform="matrix(2.9620673656463623, 0, 0, 2.9620673656463623, 143.13133239746094, -0.0000025168117048224303)">
+        <g class="cls-6 animated arm-left-top" transform="matrix(1, 0, 0, 1, 3.5638198368607448, -54.79372503957522)" style="clip-path: url('#clip-path'); opacity: 1;">
+            <path class="cls-7" d="M1,156.91c24-20,76-17,87,18s48,35,66,26" style="fill: none; stroke-width: 4px; stroke: #f6af3f; stroke-miterlimit: 10;"/>
+        </g>
+        <path class="cls-7 animated arm-left-middle" d="M7,222.91c10-15,48-17,67-2s59,16,82-7" style="fill: none; stroke-width: 4px; stroke: #c13e6f; stroke-miterlimit: 10; clip-path: url('#clip-path-2'); opacity: 1;" transform="matrix(1, 0, 0, 1, -0.8909545428694798, -42.32036044797672)"/>
+        <path class="cls-7 animated arm-left-bottom" d="M9,276.91c19,22,71,24,96,1,18.18-16.72,43-38,58-32" style="fill: none; stroke-width: 4px; stroke: #53bda7; stroke-miterlimit: 10; clip-path: url('#clip-path-3'); opacity: 1;" transform="matrix(1, 0, 0, 1, -3.5638189799727513, -42.765833165261874)"/>
+    </g>
+</svg>
