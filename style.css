@@ -639,6 +639,9 @@ ul .fa.color-3 {
 #demo-section {
   background: linear-gradient(0deg, rgba(246, 246, 248, 0.548) 0%, #f7f2ee 100%);
 }
+#demo-section .laptop-mock-image {
+  max-width: 75%;
+}
 
 /*
 *
@@ -648,7 +651,95 @@ ul .fa.color-3 {
 *
 */
 #map-section {
+  position: relative;
   background: linear-gradient(180deg, rgba(246, 246, 248, 0.548) 0%, #f7f2ee 100%);
+}
+#map-section .contact-person {
+  position: absolute;
+  width: 500px;
+  height: 200px;
+}
+#map-section .contact-person .contact-person-image {
+  background-color: #3d8bfa;
+  padding: 12px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+#map-section .contact-person .contact-person-image img {
+  position: relative;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+#map-section .contact-person .contact-person-name {
+  position: absolute;
+  background-color: #53bda7;
+  left: 120px;
+  top: 24px;
+  height: 64px;
+  line-height: 64px;
+  font-size: 32px;
+  font-weight: bold;
+  vertical-align: middle;
+  color: #fff;
+  padding-left: 96px;
+  padding-right: 48px;
+  text-transform: uppercase;
+  border-radius: 32px;
+  -webkit-border-radius: 32px;
+  -moz-border-radius: 32px;
+  -ms-border-radius: 32px;
+  -o-border-radius: 32px;
+  z-index: -1;
+}
+#map-section .contact-person .contact-person-location {
+  position: absolute;
+  background-color: #53bda7;
+  left: 120px;
+  top: 96px;
+  height: 48px;
+  line-height: 48px;
+  font-size: 24px;
+  font-weight: bold;
+  vertical-align: middle;
+  color: #fff;
+  padding-left: 96px;
+  padding-right: 48px;
+  border-radius: 32px;
+  -webkit-border-radius: 32px;
+  -moz-border-radius: 32px;
+  -ms-border-radius: 32px;
+  -o-border-radius: 32px;
+  z-index: -1;
+}
+#map-section .contact-person .contact-person-contact {
+  position: absolute;
+  background-color: #53bda7;
+  left: 120px;
+  top: 128px;
+  height: 48px;
+  line-height: 48px;
+  font-size: 24px;
+  font-weight: bold;
+  vertical-align: middle;
+  color: #fff;
+  padding-left: 96px;
+  padding-right: 48px;
+  border-radius: 32px;
+  -webkit-border-radius: 32px;
+  -moz-border-radius: 32px;
+  -ms-border-radius: 32px;
+  -o-border-radius: 32px;
+  z-index: -1;
 }
 
 /*# sourceMappingURL=style.css.map */

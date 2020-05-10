@@ -22,6 +22,17 @@ function init() {
 
     // Stickers
     $('.card-sticker').css({opacity: 0, transform: 'scale(0)', transition: 'all 1s ' + transitionType});
+
+    // Counter
+    $('#counter').html(`                    
+        <div class="digit card-small">0</div>
+        <div class="digit card-small">0</div>
+        <div class="digit card-small">0</div>
+        <div class="digit">,</div>
+        <div class="digit card-small">0</div>
+        <div class="digit card-small">0</div>
+        <div class="digit card-small">0</div>`
+    );
 }
 
 function animate() {
@@ -59,19 +70,40 @@ function animate() {
     setTimeout(() => runStickers(2), 11000);
     setTimeout(() => runStickers(3), 11500);
 
+    // Counter
+    setTimeout(() => {
+        var digitsElement = $('#counter');
+        var digitsNumber = 0;
+        var counterInterval = setInterval(function() {            
+            if (digitsNumber >= 11538) {
+                digitsNumber = 11538;
+                clearInterval(counterInterval);
+            }
+
+            var digitsString = parseInt(digitsNumber).format();
+            var digitsHtml = Array.from(digitsString).map(digit => {
+                return digit === ',' ? 
+                    '<div class="digit">,</div>' :
+                    '<div class="digit card-small">' + digit + '</div>';
+            }).join('');
+
+            digitsElement.html(digitsHtml);
+            digitsNumber += 50;
+        }, 1);
+    }, 12000);
+
 }
 
 
 function runSliders(sliderIndex, sliderNumberTarget) {
     $('#slider-container-' + sliderIndex).css({transform: 'scale(1)', opacity: 1});
     setTimeout(() => {
-        console.log('nem');
         var sliderIndicator = $('#slider-indicator-' + sliderIndex);
         var sliderNumberDivide = 400;
         $('#slider-process-' + sliderIndex).animate({width: '80%'}, 300);
         sliderIndicator.animate({left: '80%'}, 300);
         var interval = setInterval(function() {
-            sliderIndicator.text(Math.round(sliderNumberTarget / sliderNumberDivide));
+            sliderIndicator.text(Math.round(sliderNumberTarget / sliderNumberDivide).format());
             if (sliderNumberDivide === 1) {
                 clearInterval(interval);
             }
@@ -84,3 +116,8 @@ function runStickers(stickerIndex) {
     var sticker = $('#card-sticker-' + stickerIndex);
     sticker.css({opacity: 1, transform: 'scale(1)'});
 }
+
+Number.prototype.format = function(n, x) {
+    var re = '\\d(?=(\\d{' + (x || 3) + '})+' + (n > 0 ? '\\.' : '$') + ')';
+    return this.toFixed(Math.max(0, ~~n)).replace(new RegExp(re, 'g'), '$&,');
+};
