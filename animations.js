@@ -68,33 +68,34 @@ function animate() {
     // Show left card
     setTimeout(() => $('#card-sliders').css({opacity: 1, transform: 'scale(1)'}), 1000);
 
-    // Show left arm
-    setTimeout(() => $('#robot-arms-left').fadeIn(500), 1000);
-
     // Show brand logo
     setTimeout(() => $('#card-brand-logo').css({opacity: 1, transform: 'scale(1)'}), 2000);
-    setTimeout(() => $('#slider-paragraph').css({opacity: 1, transform: 'scale(1)'}), 3000);
-    setTimeout(() => runSliders(1, 15213), 4000);
-    setTimeout(() => runSliders(2, 12), 6000);
-    setTimeout(() => runSliders(3, 2), 8000);
+
+    // Show left arm
+    setTimeout(() => $('#robot-arms-left').fadeIn(500), 3000);
+
+    setTimeout(() => $('#slider-paragraph').css({opacity: 1, transform: 'scale(1)'}), 4000);
+    setTimeout(() => runSliders(1, 15213), 5000);
+    setTimeout(() => runSliders(2, 12), 7000);
+    setTimeout(() => runSliders(3, 2), 9000);
 
     // Set left arm
-    setTimeout(() => $('.robot-arm').css({opacity: 1, transition: 'all 1s ' + transitionType}), 9000);
+    setTimeout(() => $('.robot-arm').css({opacity: 1, transition: 'all 1s ' + transitionType}), 10000);
 
     // Wake up robot
     setTimeout(() => {
         $('#robot-wake-image').css({opacity: 1});
         $('#robot-sleep-image').css({opacity: 0});
-    }, 10000);
+    }, 11000);
 
     // Card Engagement
-    setTimeout(() => $('#card-engagement').css({transform: 'scale(1)', opacity: 1}), 12000);
+    setTimeout(() => $('#card-engagement').css({transform: 'scale(1)', opacity: 1}), 15000);
 
     // Show right arm
-    setTimeout(() => $('#robot-arms-right').fadeIn(500), 13000);
+    setTimeout(() => $('#robot-arms-right').fadeIn(500), 16000);
 
     // Show card bubble image
-    setTimeout(() => $('#card-bubble-image').css({transform: 'scale(1)', opacity: 1}), 14000);
+    setTimeout(() => $('#card-bubble-image').css({transform: 'scale(1)', opacity: 1}), 17000);
 
     // Circle Progress
     setTimeout(() => {
@@ -109,12 +110,12 @@ function animate() {
         });
 
         setTimeout(function() { circle.circleProgress('value', 0.75); }, 1);        
-    }, 15000);
+    }, 18000);
 
     // Show stickers
-    setTimeout(() => runStickers(1), 15500);
-    setTimeout(() => runStickers(2), 16000);
-    setTimeout(() => runStickers(3), 16500);
+    setTimeout(() => runStickers(1), 19500);
+    setTimeout(() => runStickers(2), 20000);
+    setTimeout(() => runStickers(3), 20500);
 
     // Counter
     setTimeout(() => {
@@ -136,7 +137,7 @@ function animate() {
             digitsElement.html(digitsHtml);
             digitsNumber += counterStep;
         }, 1);
-    }, 18000);
+    }, 21000);
 
 }
 
