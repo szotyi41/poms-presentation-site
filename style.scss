@@ -94,6 +94,19 @@ label.label-text {
     color: $color-label-light;
 }
 
+p.paragraph {
+    color: $color-label-dark;
+    border-left: 4px solid $color-3;
+    border-radius: 2px;
+    padding-left: 16px;
+    font-size: 14px;
+    font-weight: normal;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+}
+
 hr {
     display: block;
     position: relative;
@@ -156,10 +169,8 @@ ul {
     align-content: center;
     text-align: center;
     background: $color-background-gradient-2;
-    padding-top: 28px;
 
     .header-logo {
-        height: 48px;
 
         img {
             height: 100%;
@@ -177,6 +188,10 @@ ul {
 
 #robot-section {
     background: $color-background-gradient-1;
+
+    .card {
+        opacity: 0;
+    }
 }
 
 .robot-header-text {
@@ -198,18 +213,18 @@ ul {
 
         &#robot-arms-left {
             position: absolute;
-            left: -64px;
-            top: -48px;
-            width: 140%;
+            left: -96px;
+            top: -128px;
+            width: 180%;
             z-index: -1;
             opacity: 1;
         }
-    
+
         &#robot-arms-right {
             position: absolute;
-            right: -64px;
-            top: -48px;
-            width: 140%;
+            right: -128px;
+            top: -128px;
+            width: 180%;
             z-index: -1;
             opacity: 1;
         }
@@ -224,7 +239,11 @@ ul {
         left: 0;
         top: 0;
         width: 100%;
-        transition: all 0.5s;
+        transition: all 3s;
+        -webkit-transition: all 3s;
+        -moz-transition: all 3s;
+        -ms-transition: all 3s;
+        -o-transition: all 3s;
     }
 
     .robot-sleeping-eye {
@@ -244,7 +263,7 @@ ul {
             width: 30px;
             height: 10px;
         }
-          
+
         .ellipse2 {
             top: 20px;
             left: 18px;
@@ -392,7 +411,6 @@ ul {
                 left: 32%;
                 transform: translateX(-50%);
                 top: -6px;
-                display: block;
                 width: 48px;
                 height: 24px;
                 color: #fff;
@@ -831,102 +849,139 @@ ul {
     position: relative;
     background: $color-background-gradient-1;
 
-    .contact-person {
-        position: absolute;
-        width: 500px;
-        height: 200px;
+    .map {
+        position: relative;
+        width: 100%;
 
-        .contact-person-image {
-            background-color: $color-speedo-end;
-            padding: 12px;
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            -webkit-border-radius: 50%;
-            -moz-border-radius: 50%;
-            -ms-border-radius: 50%;
-            -o-border-radius: 50%;
+        .line-image {
+            position: absolute;
+            left: 20px;
+            top: 20px;
+        }
 
-            img {
-                position: relative;
+        .contact-person {
+            position: absolute;
+            transition: all 0.3s;
+            transform: translate(-50%, -50%);
+            width: 128px;
+            height: 128px;
+            -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            -ms-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            transform-origin: center;
+
+            &:not(.opened):hover {
+                cursor: pointer;
+            }
+
+            .contact-person-image {
+                background-color: $color-speedo-end;
+                padding: 12px;
+                width: 128px;
+                height: 128px;
                 border-radius: 50%;
-                width: 100%;
-                height: 100%;
                 -webkit-border-radius: 50%;
                 -moz-border-radius: 50%;
                 -ms-border-radius: 50%;
                 -o-border-radius: 50%;
+
+                img {
+                    position: relative;
+                    border-radius: 50%;
+                    width: 100%;
+                    height: 100%;
+                    -webkit-border-radius: 50%;
+                    -moz-border-radius: 50%;
+                    -ms-border-radius: 50%;
+                    -o-border-radius: 50%;
+                }
+            }
+
+            .contact-person-info {
+                position: absolute;
+                background-color: $color-3;
+                color: #fff;
+                transition: all 0.3s;
+                z-index: -1;
+                white-space: nowrap;
+                opacity: 0;
+
+                &.contact-person-name {
+                    left: 120px;
+                    top: 24px;
+                    height: 64px;
+                    line-height: 64px;
+                    font-size: 32px;
+                    font-weight: bold;
+                    vertical-align: middle;
+                    padding-left: 96px;
+                    padding-right: 48px;
+                    text-transform: uppercase;
+                    border-radius: 32px;
+                    -webkit-border-radius: 32px;
+                    -moz-border-radius: 32px;
+                    -ms-border-radius: 32px;
+                    -o-border-radius: 32px;
+                }
+
+                &.contact-person-location {
+                    left: 120px;
+                    top: 96px;
+                    height: 36px;
+                    line-height: 36px;
+                    font-size: 24px;
+                    font-weight: bold;
+                    vertical-align: middle;
+                    padding-left: 96px;
+                    padding-right: 48px;
+                    border-radius: 32px;
+                    -webkit-border-radius: 32px;
+                    -moz-border-radius: 32px;
+                    -ms-border-radius: 32px;
+                    -o-border-radius: 32px;
+                }
+
+                &.contact-person-contact {
+                    left: 120px;
+                    top: 140px;
+                    height: 36px;
+                    line-height: 36px;
+                    font-size: 20px;
+                    font-weight: bold;
+                    vertical-align: middle;
+                    padding-left: 96px;
+                    padding-right: 48px;
+                    border-radius: 32px;
+                    -webkit-border-radius: 32px;
+                    -moz-border-radius: 32px;
+                    -ms-border-radius: 32px;
+                    -o-border-radius: 32px;
+                }
+
             }
         }
 
-        .contact-person-info {
-            position: absolute;
-            background-color: $color-3;
-            color: #fff;
-            transition: all 0.3s;
-            width: 0px;
-            opacity: 0;
-            z-index: -1;
+        .contact-person.opened {
+            left: 50%;
+            bottom: -32px;
+            width: 500px;
+            height: 200px;
 
-            &.contact-person-name {
-                left: 120px;
-                top: 24px;
-                height: 64px;
-                line-height: 64px;
-                font-size: 32px;
-                font-weight: bold;
-                vertical-align: middle;
-                padding-left: 96px;
-                padding-right: 48px;
-                text-transform: uppercase;
-                border-radius: 32px;
-                -webkit-border-radius: 32px;
-                -moz-border-radius: 32px;
-                -ms-border-radius: 32px;
-                -o-border-radius: 32px;
+            .contact-person-image {
+                width: 200px;
+                height: 200px;
             }
-    
-            &.contact-person-location {
-                left: 120px;
-                top: 96px;
-                height: 36px;
-                line-height: 36px;
-                font-size: 24px;
-                font-weight: bold;
-                vertical-align: middle;
-                padding-left: 96px;
-                padding-right: 48px;
-                border-radius: 32px;
-                -webkit-border-radius: 32px;
-                -moz-border-radius: 32px;
-                -ms-border-radius: 32px;
-                -o-border-radius: 32px;
+
+            .contact-person-info {
+                opacity: 1;
             }
-    
-            &.contact-person-contact {
-                left: 120px;
-                top: 140px;
-                height: 36px;
-                line-height: 36px;
-                font-size: 20px;
-                font-weight: bold;
-                vertical-align: middle;
-                padding-left: 96px;
-                padding-right: 48px;
-                border-radius: 32px;
-                -webkit-border-radius: 32px;
-                -moz-border-radius: 32px;
-                -ms-border-radius: 32px;
-                -o-border-radius: 32px;
-            }
-        
         }
 
-        &:hover .contact-person-name,
-        &:hover .contact-person-location,
-        &:hover .contact-person-contact {
-            opacity: 1;
-            width: auto;
-        }
+
     }
 }

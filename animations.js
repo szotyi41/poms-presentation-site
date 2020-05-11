@@ -1,9 +1,38 @@
 var transitionType = ' cubic-bezier(0.175, 0.885, 0.32, 1.0)';
+var counterNumber = 11538;
+var counterStep = 20;
+
+// Get parameters from url
+var url = new URL(window.location.href);
+var person = url.searchParams.get('personid');
 
 $(document).ready(function() {
     init();
     animate();
+
+    if (person) {
+        openPerson(person);
+    }
 });
+
+function openPerson(id) {
+
+    // Close all
+    $('.contact-person.opened').each(function(i, element) {
+        $(element).removeClass('opened').css({
+            left: $(element).attr('data-left') + 'px', 
+            top: $(element).attr('data-top') + 'px',
+            bottom: ''
+        });
+    });
+    
+    // Open with id
+    $('#person-' + id).addClass('opened').css({
+        left: '50%',
+        top: '',
+        bottom: '-32px'
+    });
+}
 
 function init() {
     // Cards
@@ -44,26 +73,28 @@ function animate() {
 
     // Show brand logo
     setTimeout(() => $('#card-brand-logo').css({opacity: 1, transform: 'scale(1)'}), 2000);
-    setTimeout(() => runSliders(1, 15213), 3000);
-    setTimeout(() => runSliders(2, 12), 5000);
-    setTimeout(() => runSliders(3, 2), 7000);
+    setTimeout(() => $('#slider-paragraph').css({opacity: 1, transform: 'scale(1)'}), 3000);
+    setTimeout(() => runSliders(1, 15213), 4000);
+    setTimeout(() => runSliders(2, 12), 6000);
+    setTimeout(() => runSliders(3, 2), 8000);
 
-    setTimeout(() => $('.robot-arm').css({opacity: 1, transition: 'all 1s ' + transitionType}));
+    // Set left arm
+    setTimeout(() => $('.robot-arm').css({opacity: 1, transition: 'all 1s ' + transitionType}), 9000);
 
     // Wake up robot
     setTimeout(() => {
         $('#robot-wake-image').css({opacity: 1});
         $('#robot-sleep-image').css({opacity: 0});
-    }, 8000);
+    }, 10000);
 
     // Card Engagement
-    setTimeout(() => $('#card-engagement').css({transform: 'scale(1)', opacity: 1}), 9000);
+    setTimeout(() => $('#card-engagement').css({transform: 'scale(1)', opacity: 1}), 12000);
 
     // Show right arm
-    setTimeout(() => $('#robot-arms-right').fadeIn(500), 9500);
+    setTimeout(() => $('#robot-arms-right').fadeIn(500), 13000);
 
     // Show card bubble image
-    setTimeout(() => $('#card-bubble-image').css({transform: 'scale(1)', opacity: 1}), 9500);
+    setTimeout(() => $('#card-bubble-image').css({transform: 'scale(1)', opacity: 1}), 14000);
 
     // Circle Progress
     setTimeout(() => {
@@ -78,20 +109,20 @@ function animate() {
         });
 
         setTimeout(function() { circle.circleProgress('value', 0.75); }, 1);        
-    }, 10000);
+    }, 15000);
 
     // Show stickers
-    setTimeout(() => runStickers(1), 10500);
-    setTimeout(() => runStickers(2), 11000);
-    setTimeout(() => runStickers(3), 11500);
+    setTimeout(() => runStickers(1), 15500);
+    setTimeout(() => runStickers(2), 16000);
+    setTimeout(() => runStickers(3), 16500);
 
     // Counter
     setTimeout(() => {
         var digitsElement = $('#counter');
         var digitsNumber = 0;
         var counterInterval = setInterval(function() {            
-            if (digitsNumber >= 11538) {
-                digitsNumber = 11538;
+            if (digitsNumber >= counterNumber) {
+                digitsNumber = counterNumber;
                 clearInterval(counterInterval);
             }
 
@@ -103,9 +134,9 @@ function animate() {
             }).join('');
 
             digitsElement.html(digitsHtml);
-            digitsNumber += 50;
+            digitsNumber += counterStep;
         }, 1);
-    }, 12000);
+    }, 18000);
 
 }
 

@@ -1,5 +1,10 @@
+<!DOCTYPE html>
 <html>
 <head>
+
+    <title>POMS</title>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="assets/favicon.ico">
 
     <!-- CSS for Bootstrap -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
@@ -22,8 +27,8 @@
 
     <!-- Header section -->
     <header id="header-section">
-        <div class="header-logo my-5 w-100">
-            <img src="assets/poms-logo.svg">
+        <div class="header-logo w-100">
+            <img class="my-3" src="assets/poms-logo.png">
         </div>
 
         <hr />
@@ -48,6 +53,10 @@
                     <div class="card card-sliders" id="card-sliders">
                         <div class="card-brand-logo" id="card-brand-logo">
                             <img class="card-brand-logo-image" src="assets/tsystems.png">
+                        </div>
+
+                        <div class="slider-container" id="slider-paragraph">
+                            <p class="paragraph">Running competition with personalised videos of the runners.</p>
                         </div>
 
                         <div class="slider-container" id="slider-container-1">
@@ -316,17 +325,31 @@
     <section id="map-section">
         <div class="container map-section">
             <h2>Contact</h2>
-            <img src="assets/map.svg" class="mx-auto d-block w-100">
+            <div class="map" id="map">
+                <img src="assets/map.svg" class="position-relative mx-auto d-block w-100">
 
-            <!--div class="contact-person">
-                <div class="contact-person-info contact-person-name">John Doe</div>
-                <div class="contact-person-info contact-person-location">France</div>
-                <div class="contact-person-info contact-person-contact">john.doe@pomscloud.ie</div>
-                <div class="contact-person-image">
-                    <img src="assets/testimonial-person.jpg">
+                <!-- Person 1 -->
+                <div class="contact-person" id="person-1" onclick="openPerson(1)" data-personid="1" data-left="400" data-top="128" style="left: 400px; top: 128px;">
+                    <div class="contact-person-info contact-person-name">John Doe</div>
+                    <div class="contact-person-info contact-person-location">France</div>
+                    <div class="contact-person-info contact-person-contact">john.doe@pomscloud.ie</div>
+                    <div class="contact-person-image">
+                        <img src="assets/john-doe.png">
+                    </div>
                 </div>
-                
-            </div-->
+
+                <!-- Person 2 -->
+                <div class="contact-person" id="person-2" onclick="openPerson(2)" data-personid="2" data-left="250" data-top="32" style="left: 250px; top: 32px;">
+                    <div class="contact-person-info contact-person-name">Jane Doe</div>
+                    <div class="contact-person-info contact-person-location">England</div>
+                    <div class="contact-person-info contact-person-contact">jane.doe@pomscloud.ie</div>
+                    <div class="contact-person-image">
+                        <img src="assets/jane-doe.png">
+                    </div>
+                </div>
+
+            </div>
+
         </div>
     </section>
 </body>
