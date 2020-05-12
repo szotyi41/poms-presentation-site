@@ -163,11 +163,18 @@ ul .fa.color-3 {
 
 .robot {
   text-align: center;
+  min-height: 480px;
 }
 
 .robot .robot-floating {
   -webkit-animation: robotFloating 1s infinite alternate;
   animation: robotFloating 1s infinite alternate;
+}
+
+@media screen and (max-width: 720px) {
+  .robot .robot-floating {
+    margin-top: 56px;
+  }
 }
 
 .robot .robot-arms {
@@ -186,6 +193,18 @@ ul .fa.color-3 {
   opacity: 1;
 }
 
+@media screen and (max-width: 960px) {
+  .robot .robot-arms#robot-arms-left {
+    top: 260px;
+    left: 0px;
+    width: 100%;
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    transform: rotate(90deg) translateX(-50%);
+    -webkit-transform: rotate(90deg) translateX(-50%);
+  }
+}
+
 .robot .robot-arms#robot-arms-right {
   position: absolute;
   right: -128px;
@@ -195,11 +214,23 @@ ul .fa.color-3 {
   opacity: 1;
 }
 
+@media screen and (max-width: 960px) {
+  .robot .robot-arms#robot-arms-right {
+    top: 400px;
+    left: 0px;
+    width: 100%;
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    transform: rotate(90deg) translateX(-50%);
+    -webkit-transform: rotate(90deg) translateX(-50%);
+  }
+}
+
 .robot .robot-arms img {
   width: 100%;
 }
 
-.robot .robot-image {
+.robot-image {
   position: absolute;
   left: 0;
   top: 0;
@@ -211,7 +242,7 @@ ul .fa.color-3 {
   -o-transition: all 3s;
 }
 
-.robot .robot-sleeping-eye {
+.robot-sleeping-eye {
   overflow: hidden;
   position: absolute;
   left: 50%;
@@ -223,7 +254,7 @@ ul .fa.color-3 {
   z-index: 1000;
 }
 
-.robot .robot-sleeping-eye .ellipse {
+.robot-sleeping-eye .ellipse {
   position: absolute;
   background: radial-gradient(ellipse, transparent, transparent 7px, white 7px, white 10px, transparent 11px);
   background-size: 12px 10px;
@@ -231,7 +262,7 @@ ul .fa.color-3 {
   height: 10px;
 }
 
-.robot .robot-sleeping-eye .ellipse2 {
+.robot-sleeping-eye .ellipse2 {
   top: 20px;
   left: 18px;
   background-position: 0px -20px;
@@ -840,8 +871,8 @@ ul .fa.color-3 {
   position: absolute;
   transition: all 0.3s;
   transform: translate(-50%, -50%);
-  width: 128px;
-  height: 128px;
+  width: 64px;
+  height: 64px;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   -ms-transition: all 0.3s;
@@ -860,9 +891,9 @@ ul .fa.color-3 {
 
 #map-section .map .contact-person .contact-person-image {
   background-color: #3d8bfa;
-  padding: 12px;
-  width: 128px;
-  height: 128px;
+  padding: 6px;
+  width: 64px;
+  height: 64px;
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -951,9 +982,16 @@ ul .fa.color-3 {
   height: 200px;
 }
 
+@media screen and (max-width: 960px) {
+  #map-section .map .contact-person.opened {
+    position: relative;
+  }
+}
+
 #map-section .map .contact-person.opened .contact-person-image {
   width: 200px;
   height: 200px;
+  padding: 12px;
 }
 
 #map-section .map .contact-person.opened .contact-person-info {

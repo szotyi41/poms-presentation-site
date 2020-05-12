@@ -7,7 +7,12 @@
 .animated {
   stroke-dasharray: 50;
   animation: armAnimation 5s linear infinite;
+  transition: all 0.5s;
+  opacity: 0;
 }
+
+
+@keyframes fadeInAnimation { from { opacity:0; } to { opacity:1; } }
 
 @keyframes armAnimation {
   to {
@@ -28,12 +33,12 @@
             </g>
         </g>
 
-        <g class="cls-5 animated arm-right-top" style="opacity: 1;" transform="matrix(1, 0, 0, 1, -3.5638199336470677, -40.09296992025149)">
+        <g class="cls-5 animated arm-right-top" style="opacity: 1" transform="matrix(1, 0, 0, 1, -3.5638199336470677, -40.09296992025149)">
             <g class="cls-16" style="clip-path: url('#clip-path-6');">
                 <path class="cls-7" d="M367,161.92c-19-22-71-24-96-1-18.18,16.72-43,38-58,32" style="fill: none; stroke-width: 4px; stroke: #f6af3f; stroke-miterlimit: 10;"/>
             </g>
         </g>
-        <g class="cls-5 animated arm-right-bottom" style="opacity: 1;" transform="matrix(1, 0, 0, 1, -15.591710139030369, -49.89347460469973)">
+        <g class="cls-5 animated arm-right-bottom" style="opacity: 1"  transform="matrix(1, 0, 0, 1, -15.591710139030369, -49.89347460469973)">
             <g class="cls-14" style="clip-path: url('#clip-path-4');">
                 <path class="cls-7" d="M375,281.92c-24,20-76,17-87-18s-48-35-66-26" style="fill: none; stroke-width: 4px; stroke: #c13e6f; stroke-miterlimit: 10;"/>
             </g>

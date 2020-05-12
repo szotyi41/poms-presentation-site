@@ -200,10 +200,15 @@ ul {
 
 .robot {
     text-align: center;
+    min-height: 480px;
 
     .robot-floating {
         -webkit-animation: robotFloating 1s infinite alternate;
         animation: robotFloating 1s infinite alternate;
+
+        @media screen and (max-width: $screen-md) {
+            margin-top: 56px;
+        }
     }
 
     .robot-arms {
@@ -218,6 +223,16 @@ ul {
             width: 180%;
             z-index: -1;
             opacity: 1;
+
+            @media screen and (max-width: $screen-lg) {
+                top: 260px;
+                left: 0px;
+                width: 100%;
+                -webkit-transform-origin: center;
+                transform-origin: center;
+                transform: rotate(90deg) translateX(-50%);
+                -webkit-transform: rotate(90deg) translateX(-50%);
+            }
         }
 
         &#robot-arms-right {
@@ -227,48 +242,61 @@ ul {
             width: 180%;
             z-index: -1;
             opacity: 1;
+
+            @media screen and (max-width: $screen-lg) {
+                top: 400px;
+                left: 0px;
+                width: 100%;
+                -webkit-transform-origin: center;
+                transform-origin: center;
+                transform: rotate(90deg) translateX(-50%);
+                -webkit-transform: rotate(90deg) translateX(-50%);
+            }
         }
 
         img {
             width: 100%;
         }
+
     }
 
-    .robot-image {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        transition: all 3s;
-        -webkit-transition: all 3s;
-        -moz-transition: all 3s;
-        -ms-transition: all 3s;
-        -o-transition: all 3s;
-    }
 
-    .robot-sleeping-eye {
-        overflow: hidden;
+}
+
+.robot-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    transition: all 3s;
+    -webkit-transition: all 3s;
+    -moz-transition: all 3s;
+    -ms-transition: all 3s;
+    -o-transition: all 3s;
+}
+
+.robot-sleeping-eye {
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 10px;
+    z-index: 1000;
+
+    .ellipse {
         position: absolute;
-        left: 50%;
-        top: 35%;
-        transform: translate(-50%, -50%);
+        background: radial-gradient(ellipse, transparent, transparent 7px, white 7px, white 10px, transparent 11px);
+        background-size: 12px 10px;
         width: 30px;
         height: 10px;
-        z-index: 1000;
+    }
 
-        .ellipse {
-            position: absolute;
-            background: radial-gradient(ellipse, transparent, transparent 7px, white 7px, white 10px, transparent 11px);
-            background-size: 12px 10px;
-            width: 30px;
-            height: 10px;
-        }
-
-        .ellipse2 {
-            top: 20px;
-            left: 18px;
-            background-position: 0px -20px;
-        }
+    .ellipse2 {
+        top: 20px;
+        left: 18px;
+        background-position: 0px -20px;
     }
 }
 
@@ -863,8 +891,8 @@ ul {
             position: absolute;
             transition: all 0.3s;
             transform: translate(-50%, -50%);
-            width: 128px;
-            height: 128px;
+            width: 64px;
+            height: 64px;
             -webkit-transition: all 0.3s;
             -moz-transition: all 0.3s;
             -ms-transition: all 0.3s;
@@ -881,9 +909,9 @@ ul {
 
             .contact-person-image {
                 background-color: $color-speedo-end;
-                padding: 12px;
-                width: 128px;
-                height: 128px;
+                padding: 6px;
+                width: 64px;
+                height: 64px;
                 border-radius: 50%;
                 -webkit-border-radius: 50%;
                 -moz-border-radius: 50%;
@@ -972,9 +1000,14 @@ ul {
             width: 500px;
             height: 200px;
 
+            @media screen and (max-width: $screen-lg) {
+                position: relative;
+            }
+
             .contact-person-image {
                 width: 200px;
                 height: 200px;
+                padding: 12px;
             }
 
             .contact-person-info {
