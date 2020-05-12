@@ -931,6 +931,7 @@ ul {
             }
 
             .contact-person-info {
+                display: none;
                 position: absolute;
                 background-color: $color-3;
                 color: #fff;
@@ -938,7 +939,6 @@ ul {
                 z-index: -1;
                 white-space: nowrap;
                 opacity: 0;
-                width: 0;
 
                 &.contact-person-name {
                     left: 120px;
@@ -1012,6 +1012,7 @@ ul {
             }
 
             .contact-person-info {
+                display: block;
                 opacity: 1;
             }
         }

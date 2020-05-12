@@ -913,6 +913,7 @@ ul .fa.color-3 {
 }
 
 #map-section .map .contact-person .contact-person-info {
+  display: none;
   position: absolute;
   background-color: #53bda7;
   color: #fff;
@@ -921,7 +922,6 @@ ul .fa.color-3 {
   z-index: -1;
   white-space: nowrap;
   opacity: 0;
-  width: 0;
 }
 
 #map-section .map .contact-person .contact-person-info.contact-person-name {
@@ -996,6 +996,7 @@ ul .fa.color-3 {
 }
 
 #map-section .map .contact-person.opened .contact-person-info {
+  display: block;
   opacity: 1;
 }
 /*# sourceMappingURL=style.css.map */
