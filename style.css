@@ -921,6 +921,7 @@ ul .fa.color-3 {
   z-index: -1;
   white-space: nowrap;
   opacity: 0;
+  width: 0;
 }
 
 #map-section .map .contact-person .contact-person-info.contact-person-name {
