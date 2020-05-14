@@ -2,6 +2,8 @@ var transitionType = ' cubic-bezier(0.175, 0.885, 0.32, 1.0)';
 var counterNumber = 11538;
 var counterStep = 20;
 
+var robotArriveTime = 5000;
+
 // Get parameters from url
 var url = new URL(window.location.href);
 var person = url.searchParams.get('personid');
@@ -65,41 +67,50 @@ function init() {
 }
 
 function animate() {
+
+    // Robot arrive
+    setTimeout(() => $('#robot-sleep-image').css({opacity: 1, top: '0px'}), 1000);
+
     // Show left card
-    setTimeout(() => $('#card-sliders').css({opacity: 1, transform: 'scale(1)'}), 1000);
+    setTimeout(() => $('#card-sliders').css({opacity: 1, transform: 'scale(1)'}), 1000 + robotArriveTime);
+
+    // Slide down logo placement
+    setTimeout(() => $('#card-brand-logo').css({opacity: 1, transform: 'scale(1)'}), 2000 + robotArriveTime);
 
     // Show brand logo
-    setTimeout(() => $('#card-brand-logo').css({opacity: 1, transform: 'scale(1)'}), 2000);
+    setTimeout(() => {
+        $('.card-brand-logo-image').css({opacity: 1});
+        $('#card-brand-logo').css({backgroundColor: '#e54973'});
+    }, 3000 + robotArriveTime);
 
-    // Show left arm
-    setTimeout(() => $('#robot-arms-left').fadeIn(500), 3000);
-
-    setTimeout(() => $('#slider-paragraph').css({opacity: 1, transform: 'scale(1)'}), 4000);
-    setTimeout(() => runSliders(1, 15213), 5000);
-    setTimeout(() => runSliders(2, 12), 7000);
-    setTimeout(() => runSliders(3, 2), 9000);
-
-    // Set left arm
-    setTimeout(() => $('.robot-arm').css({opacity: 1, transition: 'all 1s ' + transitionType}), 10000);
+    // Run sliders
+    setTimeout(() => $('#slider-paragraph').css({opacity: 1, transform: 'scale(1)'}), 4000 + robotArriveTime);
+    setTimeout(() => runSliders(1, 15213), 5000 + robotArriveTime);
+    setTimeout(() => runSliders(2, 12), 7000 + robotArriveTime);
+    setTimeout(() => runSliders(3, 2), 9000 + robotArriveTime);
 
     // Wake up robot
     setTimeout(() => {
         $('#robot-wake-image').css({opacity: 1});
         $('#robot-sleep-image').css({opacity: 0});
-    }, 11000);
+    }, 11000 + robotArriveTime);
+
+    // Show left arm
+    setTimeout(() => $('#robot-arms-left').fadeIn(500), 13000 + robotArriveTime);
 
     // Card Engagement
-    setTimeout(() => $('#card-engagement').css({transform: 'scale(1)', opacity: 1}), 15000);
+    setTimeout(() => $('#card-engagement').css({transform: 'scale(1)', opacity: 1}), 15000 + robotArriveTime);
 
     // Show right arm
-    setTimeout(() => $('#robot-arms-right').fadeIn(500), 16000);
+    setTimeout(() => $('#robot-arms-right').fadeIn(500), 16000 + robotArriveTime);
 
     // Show card bubble image
-    setTimeout(() => $('#card-bubble-image').css({transform: 'scale(1)', opacity: 1}), 17000);
+    setTimeout(() => $('#card-bubble-image').css({transform: 'scale(1)', opacity: 1}), 17000 + robotArriveTime);
 
     // Circle Progress
     setTimeout(() => {
         var circle = $('.circle-progress');
+        $('.circle-progress-label').css({opacity: 1});
         circle.circleProgress({
             value: 0,
             startAngle: -Math.PI / 4 * 5,
@@ -110,12 +121,15 @@ function animate() {
         });
 
         setTimeout(function() { circle.circleProgress('value', 0.75); }, 1);        
-    }, 18000);
+    }, 18000 + robotArriveTime);
+
+    // Show runners
+    setTimeout(() => $('.card-engagement-image').css({opacity: 1}), 20000 + robotArriveTime);
 
     // Show stickers
-    setTimeout(() => runStickers(1), 19500);
-    setTimeout(() => runStickers(2), 20000);
-    setTimeout(() => runStickers(3), 20500);
+    setTimeout(() => runStickers(1), 20500 + robotArriveTime);
+    setTimeout(() => runStickers(2), 21000 + robotArriveTime);
+    setTimeout(() => runStickers(3), 21500 + robotArriveTime);
 
     // Counter
     setTimeout(() => {
@@ -137,7 +151,7 @@ function animate() {
             digitsElement.html(digitsHtml);
             digitsNumber += counterStep;
         }, 1);
-    }, 21000);
+    }, 22000 + robotArriveTime);
 
 }
 
