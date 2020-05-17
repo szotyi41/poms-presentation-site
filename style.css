@@ -1,4 +1,10 @@
+/* $color-poms: #53bda7; */
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
 html,
 body {
   -webkit-user-select: none;
@@ -11,21 +17,24 @@ body {
 h1 {
   font-weight: 100;
   font-size: 48px;
-  margin-bottom: 48px;
-  margin-top: 64px;
+  padding-bottom: 48px;
+  padding-top: 64px;
+  margin: 0;
 }
 
 h2 {
   text-align: center;
   font-weight: 100;
   font-size: 38px;
-  margin-bottom: 48px;
+  padding-bottom: 48px;
   padding-top: 64px;
+  margin: 0;
 }
 
 h3 {
   font-weight: 100;
   color: #929598;
+  margin: 0;
 }
 
 b {
@@ -55,7 +64,6 @@ label.label-text {
   font-weight: 100;
   font-style: italic;
   font-size: 22px;
-  text-align: center;
   color: #929598;
 }
 
@@ -81,6 +89,10 @@ hr {
   background: radial-gradient(50% 100% at 50% 0%, #C4C4C4 0%, rgba(196, 196, 196, 0) 100%);
 }
 
+hr.hr-green {
+  background: radial-gradient(50% 100% at 50% 0%, #3b7a6c 0%, rgba(196, 196, 196, 0) 100%);
+}
+
 ul {
   list-style: none;
   padding-left: 0;
@@ -97,7 +109,7 @@ ul .fa {
   margin-right: 8px;
   width: 26px;
   height: 26px;
-  padding: 3px;
+  padding: 4px;
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -118,6 +130,19 @@ ul .fa.color-2 {
 ul .fa.color-3 {
   color: #53bda7;
   border: 2px solid #53bda7;
+}
+
+ul .fa.color-4 {
+  color: #3d8bfa;
+  border: 2px solid #3d8bfa;
+}
+
+.row {
+  margin: 0;
+}
+
+.color-white {
+  color: #fff;
 }
 
 /*
@@ -167,7 +192,7 @@ ul .fa.color-3 {
   min-height: 0;
 }
 
-@media screen and (max-height: 960px) {
+@media screen and (max-width: 960px) {
   .robot {
     min-height: 480px;
   }
@@ -872,8 +897,13 @@ ul .fa.color-3 {
 *
 */
 #demo-section {
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(246, 246, 248, 0.548)), to(#f7f2ee));
-  background: linear-gradient(0deg, rgba(246, 246, 248, 0.548) 0%, #f7f2ee 100%);
+  background: #366F62;
+  color: #fff;
+}
+
+#demo-section h2,
+#demo-section .quote-text {
+  color: #fff;
 }
 
 #demo-section .laptop-mock-image {
@@ -889,8 +919,11 @@ ul .fa.color-3 {
 */
 #map-section {
   position: relative;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(246, 246, 248, 0.548)), to(#f7f2ee));
-  background: linear-gradient(180deg, rgba(246, 246, 248, 0.548) 0%, #f7f2ee 100%);
+  background: #366F62;
+}
+
+#map-section h2 {
+  color: #fff;
 }
 
 #map-section .map {
@@ -964,26 +997,26 @@ ul .fa.color-3 {
 #map-section .map .contact-person .contact-person-info.contact-person-name {
   left: 120px;
   top: 24px;
-  height: 64px;
-  line-height: 64px;
+  height: 48px;
+  line-height: 48px;
   font-size: 32px;
   font-weight: bold;
   vertical-align: middle;
   padding-left: 96px;
   padding-right: 48px;
   text-transform: uppercase;
-  border-radius: 32px;
-  -webkit-border-radius: 32px;
-  -moz-border-radius: 32px;
-  -ms-border-radius: 32px;
-  -o-border-radius: 32px;
+  border-radius: 28px;
+  -webkit-border-radius: 28px;
+  -moz-border-radius: 28px;
+  -ms-border-radius: 28px;
+  -o-border-radius: 28px;
 }
 
 #map-section .map .contact-person .contact-person-info.contact-person-location {
   left: 120px;
-  top: 96px;
-  height: 36px;
-  line-height: 36px;
+  top: 88px;
+  height: 32px;
+  line-height: 32px;
   font-size: 24px;
   font-weight: bold;
   vertical-align: middle;
@@ -996,11 +1029,28 @@ ul .fa.color-3 {
   -o-border-radius: 32px;
 }
 
-#map-section .map .contact-person .contact-person-info.contact-person-contact {
+#map-section .map .contact-person .contact-person-info.contact-person-email {
   left: 120px;
-  top: 140px;
-  height: 36px;
-  line-height: 36px;
+  top: 124px;
+  height: 32px;
+  line-height: 32px;
+  font-size: 20px;
+  font-weight: bold;
+  vertical-align: middle;
+  padding-left: 96px;
+  padding-right: 48px;
+  border-radius: 32px;
+  -webkit-border-radius: 32px;
+  -moz-border-radius: 32px;
+  -ms-border-radius: 32px;
+  -o-border-radius: 32px;
+}
+
+#map-section .map .contact-person .contact-person-info.contact-person-phone {
+  left: 120px;
+  top: 160px;
+  height: 32px;
+  line-height: 32px;
   font-size: 20px;
   font-weight: bold;
   vertical-align: middle;
@@ -1035,5 +1085,106 @@ ul .fa.color-3 {
 #map-section .map .contact-person.opened .contact-person-info {
   display: block;
   opacity: 1;
+}
+
+/*
+*
+*
+*   Forms
+*
+*
+*/
+.input-dark input,
+.input-dark select,
+.input-dark label {
+  color: #fff;
+  border-color: #fff;
+  outline: none;
+}
+
+.input-dark button {
+  outline: none;
+}
+
+.input-dark .caret {
+  display: none;
+}
+
+.try-it-yourself {
+  color: #5b6066;
+  white-space: nowrap;
+  font-size: 28px;
+  font-weight: lighter;
+  margin-left: 16px;
+}
+
+.button-group {
+  background: #fff;
+  border-radius: 32px;
+  -webkit-border-radius: 32px;
+  -moz-border-radius: 32px;
+  -ms-border-radius: 32px;
+  -o-border-radius: 32px;
+  width: 100%;
+  padding: 8px;
+}
+
+.input-button {
+  color: #fff;
+  border: none;
+  padding: 12px 22px;
+  background: #3d8bfa;
+  border-radius: 22px;
+  -webkit-border-radius: 22px;
+  -moz-border-radius: 22px;
+  -ms-border-radius: 22px;
+  -o-border-radius: 22px;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  white-space: nowrap;
+}
+
+.input-button:hover {
+  background-color: #3271ca;
+}
+
+.input-button:focus {
+  background-color: #3271ca;
+}
+
+.input-button:disabled {
+  background-color: #5b6066;
+}
+
+#response {
+  font-size: 22px;
+}
+
+#response .fa-check {
+  color: #53bda7;
+}
+
+#response .fa-times {
+  color: #c13e6f;
+}
+
+.video-generator-box {
+  max-width: 800px;
+  margin: auto;
+}
+
+@media screen and (max-width: 960px) {
+  .video-generator-box .button-group {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .video-generator-box .button-group .input-button {
+    margin-bottom: 8px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
