@@ -381,7 +381,7 @@ $(document).ready(function () {
                 type: "POST",
                 url: "https://pomscloud.ie/src/handlers/sportVideoHandler.php",
                 dataType: "json",
-                data: { project: 'expo', id: Math.random(1000000000) * 1000000000, select: jsonString },
+                data: { project: 'expo', id: parseInt(Math.random(1000000000) * 1000000000), select: jsonString },
                 beforeSend: function () {
 
                     window.onbeforeunload = function () {
@@ -474,7 +474,7 @@ $(document).ready(function () {
                 type: "POST",
                 url: "https://pomscloud.ie/src/handlers/sportVideoHandler.php",
                 dataType: "json",
-                data: { project: 'brand', id: Math.random(1000000000) * 1000000000, select: jsonString },
+                data: { project: 'brand', id: parseInt(Math.random(1000000000) * 1000000000, select: jsonString },
                 beforeSend: function () {
 
                     window.onbeforeunload = function () {
