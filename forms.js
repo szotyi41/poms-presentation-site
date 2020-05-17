@@ -295,6 +295,8 @@ $(document).ready(function () {
                         $("#response").css("display", "block");
                         $('#response').html("<i class='fa fa-check'></i> <span class='response-message'>Generation successful.</span>").addClass('finished');
 
+                        $('#download-expo-video, #send-expo-video').prop('disabled', false);
+
                         var action = response;
                         $("#download").attr("action", action);
                         $("#sportVideo").attr("value", action);
@@ -408,6 +410,8 @@ $(document).ready(function () {
                         $("#response").css("display", "block");
                         $('#response').html("<i class='fa fa-check'></i> <span class='response-message'>Generation successful.</span>").addClass('finished');
 
+                        $('#download-expo-video, #send-expo-video').prop('disabled', false);
+
                         var action = response;
                         $("#download").attr("action", action);
                         $("#expoVideo").attr("value", action);
@@ -498,6 +502,8 @@ $(document).ready(function () {
 
                         $("#response").css("display", "block");
                         $('#response').html("<i class='fa fa-check'></i> <span class='response-message'>Generation successful.</span>").addClass('finished');
+
+                        $('#download-expo-video, #send-expo-video').prop('disabled', false);
 
                         var action = response;
                         $("#download").attr("action", action);
