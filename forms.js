@@ -1,8 +1,8 @@
 $(document).ready(function () {
 
-    $("#response.finished").click(function () {
+    $(".finished").click(function () {
 
-        $("#response").fadeToggle("slow", "linear");
+        $(this).fadeToggle("slow", "linear");
 
     });
 
@@ -132,11 +132,11 @@ $(document).ready(function () {
 
                     }
 
-                    $('#create-sport-video').css("disabled", "false");
+                    $('#create-sport-video').prop("disabled", false);
                     $('#create-sport-video').removeClass('disabled-input');
-                    $('#download-sport-video').css("disabled", "false");
+                    $('#download-sport-video').prop("disabled", false);
                     $('#download-sport-video').removeClass('disabled-input');
-                    $('#send-sport-video').css("disabled", "false");
+                    $('#send-sport-video').prop("disabled", false);
                     $('#send-sport-video').removeClass('disabled-input');
 
                 },
@@ -185,8 +185,9 @@ $(document).ready(function () {
                     window.onbeforeunload = function () {
                         return true;
                     }
-                    $('#create-expo-video').css("disabled", "true");
+                    $('#create-expo-video').prop("disabled", true).find('.fa').removeClass('fa-video').addClass('fa-spinner').addClass('fa-spin');
                     $('#create-expo-video').addClass('disabled-input');
+
                     $('#download-expo-video').css("disabled", "true");
                     $('#download-expo-video').addClass('disabled-input');
                     $('#send-expo-video').css("disabled", "true");
@@ -220,11 +221,11 @@ $(document).ready(function () {
 
                     }
 
-                    $('#create-expo-video').css("disabled", "false");
+                    $('#create-expo-video').prop("disabled", false);
                     $('#create-expo-video').removeClass('disabled-input');
-                    $('#download-expo-video').css("disabled", "false");
+                    $('#download-expo-video').prop("disabled", false);
                     $('#download-expo-video').removeClass('disabled-input');
-                    $('#send-expo-video').css("disabled", "false");
+                    $('#send-expo-video').prop("disabled", false);
                     $('#send-expo-video').removeClass('disabled-input');
 
                 },
@@ -326,15 +327,15 @@ $(document).ready(function () {
 
                 complete: function (response) {
 
-                    $('#download-sport-video').css("disabled", "false");
+                    $('#download-sport-video').prop("disabled", false);
                     $('#download-sport-video').removeClass('disabled-input');
-                    $('#send-sport-video').css("disabled", "false");
+                    $('#send-sport-video').prop("disabled", false);
                     $('#send-sport-video').removeClass('disabled-input');
-                    $('#create-sport-video').css("disabled", "false");
+                    $('#create-sport-video').prop("disabled", false);
                     $('#create-sport-video').removeClass('disabled-input');
-                    $('.bt-next').css("disabled", "false");
+                    $('.bt-next').prop("disabled", false);
                     $('.bt-next').removeClass('disabled-input');
-                    $('.bt-prev').css("disabled", "false");
+                    $('.bt-prev').prop("disabled", false);
                     $('.bt-prev').removeClass('disabled-input');
 
                 }
@@ -390,19 +391,20 @@ $(document).ready(function () {
 
                     $("#response").css("display", "block");
                     $('#response').html("<i class='fa fa-spinner fa-spin'></i> <span class='response-message'>Generating... please wait, it may take a long time.</span>").removeClass('finished');
-                    $('#create-expo-video').css("disabled", "true");
+                    $('#create-expo-video').prop("disabled", true).find('.fa').removeClass('fa-video').addClass('fa-spinner').addClass('fa-spin');
                     $('#create-expo-video').addClass('disabled-input');
+
 
                 },
                 success: function (response) {
 
                     window.onbeforeunload = null;
 
-                    $('#download-expo-video').css("disabled", "false");
+                    $('#download-expo-video').prop("disabled", false);
                     $('#download-expo-video').removeClass('disabled-input');
-                    $('#send-expo-video').css("disabled", "false");
+                    $('#send-expo-video').prop("disabled", false);
                     $('#send-expo-video').removeClass('disabled-input');
-                    $('#create-expo-video').css("disabled", "false");
+                    $('#create-expo-video').prop("disabled", false);
                     $('#create-expo-video').removeClass('disabled-input');
 
                     if (response != 'Error') {
@@ -474,7 +476,7 @@ $(document).ready(function () {
                 type: "POST",
                 url: "https://pomscloud.ie/src/handlers/sportVideoHandler.php",
                 dataType: "json",
-                data: { project: 'brand', id: parseInt(Math.random(1000000000) * 1000000000, select: jsonString },
+                data: { project: 'brand', id: parseInt(Math.random(1000000000) * 1000000000), select: jsonString },
                 beforeSend: function () {
 
                     window.onbeforeunload = function () {
@@ -483,19 +485,20 @@ $(document).ready(function () {
 
                     $("#response").css("display", "block");
                     $('#response').html("<i class='fa fa-spinner fa-spin'></i> <span class='response-message'>Generating... please wait, it may take a long time.</span>").removeClass('finished');
-                    $('#create-expo-video').css("disabled", "true");
+                    $('#create-expo-video').prop("disabled", true).find('.fa').removeClass('fa-video').addClass('fa-spinner').addClass('fa-spin');
                     $('#create-expo-video').addClass('disabled-input');
+
 
                 },
                 success: function (response) {
 
                     window.onbeforeunload = null;
 
-                    $('#download-brand-video').css("disabled", "false");
+                    $('#download-brand-video').prop("disabled", false);
                     $('#download-brand-video').removeClass('disabled-input');
-                    $('#send-brand-video').css("disabled", "false");
+                    $('#send-brand-video').prop("disabled", false);
                     $('#send-brand-video').removeClass('disabled-input');
-                    $('#create-brand-video').css("disabled", "false");
+                    $('#create-brand-video').prop("disabled", false);
                     $('#create-brand-video').removeClass('disabled-input');
 
                     if (response != 'Error') {

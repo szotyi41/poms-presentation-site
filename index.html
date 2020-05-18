@@ -478,18 +478,22 @@
                             <div class="try-it-yourself">Try it yourself</div>
 
                             <!-- Buttons -->
-
                             <button id="create-expo-video" class="input-button">
                                 <i class="fa fa-film"></i> CREATE MY VIDEO
                             </button>
 
-                            <button id="download-expo-video" class="input-button" disabled>
-                                <i class="fa fa-download"></i> DOWNLOAD MY VIDEO
-                            </button>
+                            <form id="download" method="get" target="_blank" action="">
+                                <button id="download-expo-video" class="input-button" disabled>
+                                    <i class="fa fa-download"></i> DOWNLOAD MY VIDEO
+                                </button>
+                            </form>
 
-                            <button id="send-expo-video" class="input-button" disabled>
-                                <i class="fa fa-envelope"></i> SEND MY VIDEO
-                            </button>
+                            <form id="send-expo-form" method="post"
+                                action="https://pomscloud.ie/src/handlers/sendHandler.php">
+                                <button id="send-expo-video" type="submit" class="input-button" disabled>
+                                    <i class="fa fa-envelope"></i> SEND MY VIDEO
+                                </button>
+                            </form>
 
 
                         </div>
