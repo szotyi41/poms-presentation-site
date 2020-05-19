@@ -18,26 +18,54 @@ $(document).ready(function () {
     // If url has personid paramter open it in maps
     if (person) {
         openPerson(person);
+    } else {
+        openPerson(1000);
     }
+
+    $(window).on('resize', function() {
+        replaceOpenedPerson();
+    });
 });
 
 function openPerson(id) {
 
+    var person = $('#person-' + id);
+
     // Close all
-    $('.contact-person.opened').each(function (i, element) {
-        $(element).removeClass('opened').css({
-            left: $(element).attr('data-left') + 'px',
-            top: $(element).attr('data-top') + 'px',
-            bottom: ''
-        });
+    $('.contact-person').each(function (i, element) {
+        var elem = $(element);
+        if (elem.attr('id') !== 'person-' + id) {
+            console.log(elem.attr('id'));
+            elem.removeClass('opened').animate({
+                left: elem.attr('data-left') + '%',
+                top: elem.attr('data-top') + '%',
+            }, 300);
+        }
     });
 
     // Open with id
-    $('#person-' + id).addClass('opened').css({
-        left: '50%',
-        top: '',
-        bottom: '-32px'
-    });
+    if (person) {
+        person.addClass('opened');
+        person.css({top: '', left: ''});
+        person.animate({left: '50%', bottom: '-60%'}, 300, 'ease-in-out', function() {
+            replaceOpenedPerson();
+        });
+    }
+}
+
+function replaceOpenedPerson() {
+    console.log(window.innerWidth)
+    if (window.innerWidth < 800) {
+        $('.contact-person.opened').css({bottom: '-120%'});
+        return;
+    }
+
+    if (window.innerWidth < 1200) {
+        $('.contact-person.opened').css({bottom: '-40%'});
+        return;
+    } 
+
+    $('.contact-person.opened').css({bottom: '0%'});
 }
 
 function init() {
