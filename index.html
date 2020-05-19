@@ -197,22 +197,22 @@
                 </div>
             </div>
 
-            <div class="w-100 d-flex justify-content-between">
+            <div class="row">
 
                 <!-- Detail 1 -->
-                <div class="detail">
+                <div class="detail col-xs-12 col-sm-4">
                     <label class="label-text">Customer</label>
                     <div class="detail-text">T-Systems</div>
                 </div>
 
                 <!-- Detail 2 -->
-                <div class="detail">
+                <div class="detail col-xs-12 col-sm-4">
                     <label class="label-text">Event</label>
                     <div class="detail-text">Vivicitta</div>
                 </div>
 
                 <!-- Detail 3 -->
-                <div class="detail">
+                <div class="detail col-xs-12 col-sm-4">
                     <label class="label-text">Agency</label>
                     <div class="detail-text">Wavemaker</div>
                 </div>
@@ -386,7 +386,7 @@
                     <div class="row ">
 
                         <!-- Interest I -->
-                        <div class="input-dark col-sm-12 col-lg-6">
+                        <div class="input-dark input-select col-sm-12 col-lg-6">
                             <label for="interest1">Interest I</label>
                             <select name="0#interest1" id="interest1">
                                 <option value="style">Style & Fashion</option>
@@ -404,7 +404,7 @@
                         </div>
 
                         <!-- Interest II -->
-                        <div class="input-dark col-sm-12 col-lg-6">
+                        <div class="input-dark input-select col-sm-12 col-lg-6">
                             <label for="interest2">Interest II</label>
                             <select name="0#interest2" id="interest2">
                                 <option value="tech">Technology</option>
@@ -424,7 +424,7 @@
                     <div class="row ">
 
                         <!-- Person age -->
-                        <div class="input-dark col-sm-12 col-lg-6">
+                        <div class="input-dark input-select col-sm-12 col-lg-6">
                             <label for="person">Person</label>
                             <select name="0#person" id="person">
                                 <option value="young_man">Young man</option>
@@ -435,7 +435,7 @@
                         </div>
 
                         <!-- Audi owner -->
-                        <div class="input-dark col-sm-12 col-lg-6">
+                        <div class="input-dark input-select col-sm-12 col-lg-6">
                             <label for="owner">Audi Owner</label>
                             <select name="0#owner" id="owner">
                                 <option value="yes">Yes</option>
@@ -446,7 +446,7 @@
                     <div class="row ">
 
                         <!-- Model -->
-                        <div class="input-dark col-sm-12 col-lg-6">
+                        <div class="input-dark input-select col-sm-12 col-lg-6">
                             <label for="model">Model</label>
                             <select name="0#model" id="model">
                                 <option value="a6">A6</option>
@@ -457,7 +457,7 @@
                         </div>
 
                         <!-- Travelling -->
-                        <div class="input-dark col-sm-12 col-lg-6">
+                        <div class="input-dark input-select col-sm-12 col-lg-6">
                             <label for="travel">Travelling</label>
                             <select name="0#travel" id="travel">
                                 <option value="hills">Hills</option>
@@ -471,7 +471,7 @@
                     <div class="row ">
 
                         <!-- Family -->
-                        <div class="input-dark col-sm-12 col-lg-6">
+                        <div class="input-dark input-select col-sm-12 col-lg-6">
                             <label for="family">Family</label>
                             <select name="0#family" id="family">
                                 <option value="single_0">Single without children</option>
@@ -484,7 +484,7 @@
                         </div>
 
                         <!-- Socializing -->
-                        <div class="input-dark col-sm-12 col-lg-6">
+                        <div class="input-dark input-select col-sm-12 col-lg-6">
                             <label for="social">Socializing</label>
                             <select name="#social" id="social">
                                 <option value="friends">Friends</option>
@@ -537,13 +537,13 @@
 
     <!-- Map section -->
     <section id="map-section">
-        <div class="container map-section" style="padding-bottom: 160px">
+        <div class="container map-section" style="padding-bottom: 200px">
             <h2>Contact</h2>
             <div class="map" id="map">
                 <img src="assets/map.svg" class="position-relative mx-auto d-block w-100">
 
                 <!-- Person 1 -->
-                <div class="contact-person" id="person-1" onclick="openPerson(1)" data-personid="1" data-left="20"
+                <div class="contact-person" id="person-1" data-personid="1" data-left="20"
                     data-top="60">
                     <div class="contact-person-info contact-person-name">John Doe</div>
                     <div class="contact-person-info contact-person-location"><i class="fa fa-globe"></i> France</div>
@@ -561,7 +561,7 @@
                 </div>
 
                 <!-- Person 2 -->
-                <div class="contact-person" id="person-2" onclick="openPerson(2)" data-personid="2" data-left="10"
+                <div class="contact-person" id="person-2" data-personid="2" data-left="10"
                     data-top="10">
                     <div class="contact-person-info contact-person-name">Jane Doe</div>
                     <div class="contact-person-info contact-person-location"><i class="fa fa-globe"></i> England</div>

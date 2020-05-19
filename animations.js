@@ -1,6 +1,7 @@
 var transitionType = ' cubic-bezier(0.175, 0.885, 0.32, 1.0)';
 var counterNumber = 11538;
 var counterStep = 20;
+var speedoBounce = false;
 
 var robotArriveTime = 5000;
 
@@ -25,6 +26,10 @@ $(document).ready(function () {
     $(window).on('resize', function() {
         replaceOpenedPerson();
     });
+
+    $('.contact-person:not(.opened)').on('click', function() {
+        openPerson($(this).attr('data-personid'));
+    });
 });
 
 function openPerson(id) {
@@ -47,25 +52,23 @@ function openPerson(id) {
     if (person) {
         person.addClass('opened');
         person.css({top: '', left: ''});
-        person.animate({left: '50%', bottom: '-60%'}, 300, 'ease-in-out', function() {
-            replaceOpenedPerson();
-        });
+        replaceOpenedPerson();
     }
 }
 
 function replaceOpenedPerson() {
     console.log(window.innerWidth)
     if (window.innerWidth < 800) {
-        $('.contact-person.opened').css({bottom: '-120%'});
+        $('.contact-person.opened').animate({left: '50%', bottom: '-260px'}, 300);
         return;
     }
 
     if (window.innerWidth < 1200) {
-        $('.contact-person.opened').css({bottom: '-40%'});
+        $('.contact-person.opened').animate({left: '50%', bottom: '-128px'}, 300);
         return;
     } 
 
-    $('.contact-person.opened').css({bottom: '0%'});
+    $('.contact-person.opened').animate({left: '50%', bottom: '0px'}, 300);
 }
 
 function init() {
@@ -150,12 +153,31 @@ function animate() {
             value: 0,
             startAngle: -Math.PI / 4 * 5,
             lineCap: 'round',
-            size: 112
+            size: 112,
+            animation: { duration: 800, easing: 'circleProgressEasing' },
+            fill: {
+                gradient: ['#3d8bfa','#c13e6f']
+            }
         }).on('circle-animation-progress', function (event, progress) {
             $(this).find('strong').html(Math.round(100 * progress) + '<i>%</i>');
         });
 
-        setTimeout(function () { circle.circleProgress('value', 0.75); }, 1);
+        setTimeout(function () { 
+            circle.circleProgress('value', 0.7);
+
+            setTimeout(function() {
+
+                setInterval(function () {
+                    if (speedoBounce) {
+                        circle.circleProgress('value', 0.7);
+                    } else {
+                        circle.circleProgress('value', 0.75);
+                    }
+                    speedoBounce =! speedoBounce;
+                }, 1000);
+            }, 1000);
+
+        }, 1);
     }, 19000 + robotArriveTime);
 
     // Show stickers

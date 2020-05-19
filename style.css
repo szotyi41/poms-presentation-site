@@ -192,7 +192,16 @@ ul .fa.color-4 {
   min-height: 0;
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 720px) {
+  .robot {
+    min-height: 320px;
+  }
+  .robot .robot-arms {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 960px) and (min-width: 720px) {
   .robot {
     min-height: 480px;
   }
@@ -205,7 +214,7 @@ ul .fa.color-4 {
 
 @media screen and (max-width: 960px) {
   .robot .robot-floating {
-    margin-top: 56px;
+    margin-top: 0;
   }
 }
 
@@ -557,7 +566,7 @@ ul .fa.color-4 {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  color: #929598;
+  color: #5b6066;
   font-size: 12px;
   font-weight: lighter;
   white-space: nowrap;
@@ -923,6 +932,13 @@ ul .fa.color-4 {
   -o-border-radius: 50%;
 }
 
+@media screen and (max-width: 960px) {
+  #map-section .map .contact-person .contact-person-image .contact-person-image {
+    width: 48px !important;
+    height: 48px !important;
+  }
+}
+
 #map-section .map .contact-person .contact-person-image img {
   position: relative;
   border-radius: 50%;
@@ -1021,13 +1037,6 @@ ul .fa.color-4 {
   z-index: 1;
 }
 
-@media screen and (max-width: 960px) {
-  #map-section .map .contact-person.opened {
-    position: absolute;
-    bottom: 0px;
-  }
-}
-
 #map-section .map .contact-person.opened .contact-person-image {
   width: 200px;
   height: 200px;
@@ -1037,6 +1046,46 @@ ul .fa.color-4 {
 #map-section .map .contact-person.opened .contact-person-info {
   display: block;
   opacity: 1;
+}
+
+@media screen and (max-width: 960px) {
+  #map-section .map .contact-person.opened {
+    position: absolute;
+    bottom: 0px;
+    width: 360px;
+    height: 160px;
+  }
+  #map-section .map .contact-person.opened .contact-person-image {
+    width: 160px;
+    height: 160px;
+    padding: 8px;
+  }
+  #map-section .map .contact-person.opened .contact-person-info {
+    padding-left: 48px;
+  }
+  #map-section .map .contact-person.opened .contact-person-info.contact-person-name {
+    font-size: 16px;
+    height: 32px;
+    line-height: 32px;
+  }
+  #map-section .map .contact-person.opened .contact-person-info.contact-person-location {
+    font-size: 12px;
+    height: 24px;
+    line-height: 24px;
+    top: 60px;
+  }
+  #map-section .map .contact-person.opened .contact-person-info.contact-person-email {
+    font-size: 12px;
+    height: 24px;
+    line-height: 24px;
+    top: 88px;
+  }
+  #map-section .map .contact-person.opened .contact-person-info.contact-person-phone {
+    font-size: 12px;
+    height: 24px;
+    line-height: 24px;
+    top: 116px;
+  }
 }
 
 /*
@@ -1066,6 +1115,13 @@ ul .fa.color-4 {
   z-index: 100;
 }
 
+@media screen and (max-width: 720px) {
+  .person-block .person {
+    width: 150px;
+    height: 150px;
+  }
+}
+
 .person-block .person img {
   border-radius: 50%;
   width: 100%;
@@ -1084,6 +1140,7 @@ ul .fa.color-4 {
   height: 48px;
   left: 50%;
   padding-left: 98px;
+  padding-right: 16px;
   bottom: 40px;
   border-top-right-radius: 48px;
   border-bottom-right-radius: 48px;
@@ -1097,6 +1154,17 @@ ul .fa.color-4 {
   font-size: 20px;
 }
 
+@media screen and (max-width: 720px) {
+  .person-block .person .person-name {
+    font-size: 16px;
+    height: 32px;
+    border-top-right-radius: 32px;
+    border-bottom-right-radius: 32px;
+    line-height: 32px;
+    min-width: 120px !important;
+  }
+}
+
 .person-block .person .person-profession {
   position: absolute;
   background-color: #bc8430;
@@ -1105,6 +1173,7 @@ ul .fa.color-4 {
   height: 32px;
   left: 50%;
   padding-left: 64px;
+  padding-right: 8px;
   bottom: 0;
   border-top-right-radius: 32px;
   border-bottom-right-radius: 32px;
@@ -1114,6 +1183,17 @@ ul .fa.color-4 {
   font-size: 16px;
   vertical-align: middle;
   line-height: 32px;
+}
+
+@media screen and (max-width: 720px) {
+  .person-block .person .person-profession {
+    font-size: 14px;
+    height: 28px;
+    border-top-right-radius: 28px;
+    border-bottom-right-radius: 28px;
+    line-height: 28px;
+    min-width: 64px !important;
+  }
 }
 
 .person-block.details-left .person {
@@ -1247,5 +1327,30 @@ ul .fa.color-4 {
     margin-bottom: 8px;
     width: 100%;
   }
+}
+
+.input-select input {
+  border-color: #fff !important;
+}
+
+.input-select li {
+  outline: none;
+}
+
+.input-select li span {
+  font-weight: 600;
+}
+
+.input-select:after {
+  content: ' ';
+  position: absolute;
+  right: 18px;
+  top: 50px;
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid #fff;
+  clear: both;
 }
 /*# sourceMappingURL=style.css.map */
