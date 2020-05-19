@@ -192,7 +192,7 @@ ul .fa.color-4 {
   min-height: 0;
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 720px) {
   .robot {
     min-height: 480px;
   }
@@ -225,7 +225,7 @@ ul .fa.color-4 {
   opacity: 1;
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 720px) {
   .robot .robot-arms#robot-arms-left {
     top: 260px;
     left: 0px;
@@ -246,7 +246,7 @@ ul .fa.color-4 {
   opacity: 1;
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 720px) {
   .robot .robot-arms#robot-arms-right {
     top: 400px;
     left: 0px;
@@ -590,7 +590,7 @@ ul .fa.color-4 {
   -o-border-radius: 24px;
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 720px) {
   .robot-cards .card.card-engagement .card-sticker {
     height: 32px;
     font-size: 22px;
@@ -646,7 +646,7 @@ ul .fa.color-4 {
   -o-border-radius: 50%;
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 720px) {
   .robot-cards .card.card-engagement .card-sticker .card-sticker-check {
     left: -16px;
     top: -12px;
@@ -662,7 +662,7 @@ ul .fa.color-4 {
   line-height: 30px;
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 720px) {
   .robot-cards .card.card-engagement .card-sticker .card-sticker-check .fa {
     font-size: 28px;
     vertical-align: middle;
@@ -800,7 +800,7 @@ ul .fa.color-4 {
   max-width: initial;
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 720px) {
   #testimonial-section .testimonial-quote {
     position: relative;
     left: 0;
@@ -929,7 +929,7 @@ ul .fa.color-4 {
 #map-section .map .contact-person .contact-person-info {
   display: none;
   position: absolute;
-  background-color: #53bda7;
+  background-color: #3271ca;
   color: #fff;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -1014,7 +1014,7 @@ ul .fa.color-4 {
   height: 200px;
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 720px) {
   #map-section .map .contact-person.opened {
     position: relative;
   }
