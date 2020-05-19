@@ -23,6 +23,10 @@ $color-testimonial-1: #f6af3f;
 $color-testimonial-2: #e19e39;
 $color-testimonial-3: #bc8430;
 
+$color-team-quote-1: #53bda6;
+$color-team-quote-2: #4baa96;
+$color-team-quote-3: #3d8e7c;
+
 $color-slider-background: #e8e9ea;
 $color-background-1: rgba(246, 246, 248, 0.548);
 $color-background-2: rgba(247, 242, 238, 1);
@@ -782,6 +786,7 @@ ul {
 
 
     .details {
+
         .detail-text {
             font-size: 32px;
             font-weight: lighter;
@@ -841,76 +846,20 @@ ul {
         margin-top: $testimonial-image-size - 40 - 48;
     }
 
-    .testimonial-person-block {
-        position: relative;
-
-        .testimonial-person {
-            position: relative;
-            width: $testimonial-image-size;
-            height: $testimonial-image-size;
-            padding: 8px;
-            background-color: $color-testimonial-1;
-            border-radius: 50%;
-            -webkit-border-radius: 50%;
-            -moz-border-radius: 50%;
-            -ms-border-radius: 50%;
-            -o-border-radius: 50%;
-            box-shadow: $card-box-shadow;
-            z-index: 100;
-
-            img {
-                border-radius: 50%;
-                width: 100%;
-                height: 100%;
-                -webkit-border-radius: 50%;
-                -moz-border-radius: 50%;
-                -ms-border-radius: 50%;
-                -o-border-radius: 50%;
-            }
-
-            .testimonial-person-name {
-                position: absolute;
-                background-color: $color-testimonial-2;
-                color: #fff;
-                width: 300px;
-                height: 48px;
-                left: 50%;
-                padding-left: 98px;
-                bottom: 40px;
-                border-top-right-radius: 48px;
-                border-bottom-right-radius: 48px;
-                text-transform: uppercase;
-                z-index: -1;
-                font-weight: 500;
-                line-height: 48px;
-                letter-spacing: 0.8px;
-                vertical-align: middle;
-                font-size: 20px;
-            }
-
-            .testimonial-person-profession {
-                position: absolute;
-                background-color: $color-testimonial-3;
-                color: #fff;
-                width: 260px;
-                height: 32px;
-                left: 50%;
-                padding-left: 64px;
-                bottom: 0;
-                border-top-right-radius: 32px;
-                border-bottom-right-radius: 32px;
-                border-bottom-left-radius: 32px;
-                white-space: nowrap;
-                z-index: -1;
-                font-size: 16px;
-                vertical-align: middle;
-                line-height: 32px;
-            }
-        }
-
-    }
-
 }
+
+/*
+*
+*
+*   Team quoute section
+*
+*
+*/
+
+#team-quote-section {
+    background: $color-background-gradient-2;
+}
+
 
 /*
 *
@@ -929,6 +878,7 @@ ul {
         color: #fff;
     }
 
+    /* Deprecated */
     .laptop-mock-image {
         max-width: 75%;
     }
@@ -1016,19 +966,19 @@ ul {
                 &.contact-person-name {
                     left: 120px;
                     top: 24px;
-                    height: 48px;
-                    line-height: 48px;
+                    height: 60px;
+                    line-height: 60px;
                     font-size: 32px;
                     font-weight: bold;
                     vertical-align: middle;
                     padding-left: 96px;
-                    padding-right: 48px;
+                    padding-right: 64px;
                     text-transform: uppercase;
-                    border-radius: 28px;
-                    -webkit-border-radius: 28px;
-                    -moz-border-radius: 28px;
-                    -ms-border-radius: 28px;
-                    -o-border-radius: 28px;
+                    border-radius: 30px;
+                    -webkit-border-radius: 30px;
+                    -moz-border-radius: 30px;
+                    -ms-border-radius: 30px;
+                    -o-border-radius: 30px;
                 }
 
                 &.contact-person-location {
@@ -1108,6 +1058,118 @@ ul {
         }
 
 
+    }
+}
+
+/*
+*
+*
+*   Person
+*
+*
+*/
+
+
+.person-block {
+    position: relative;
+
+    .person {
+        position: relative;
+        width: $testimonial-image-size;
+        height: $testimonial-image-size;
+        padding: 8px;
+        background-color: $color-testimonial-1;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        box-shadow: $card-box-shadow;
+        z-index: 100;
+
+        img {
+            border-radius: 50%;
+            width: 100%;
+            height: 100%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+        }
+
+        .person-name {
+            position: absolute;
+            background-color: $color-testimonial-2;
+            color: #fff;
+            min-width: 300px;
+            height: 48px;
+            left: 50%;
+            padding-left: 98px;
+            bottom: 40px;
+            border-top-right-radius: 48px;
+            border-bottom-right-radius: 48px;
+            text-transform: uppercase;
+            z-index: -1;
+            font-weight: 500;
+            line-height: 48px;
+            letter-spacing: 0.8px;
+            vertical-align: middle;
+            white-space: nowrap;
+            font-size: 20px;
+        }
+
+        .person-profession {
+            position: absolute;
+            background-color: $color-testimonial-3;
+            color: #fff;
+            min-width: 260px;
+            height: 32px;
+            left: 50%;
+            padding-left: 64px;
+            bottom: 0;
+            border-top-right-radius: 32px;
+            border-bottom-right-radius: 32px;
+            border-bottom-left-radius: 32px;
+            white-space: nowrap;
+            z-index: -1;
+            font-size: 16px;
+            vertical-align: middle;
+            line-height: 32px;
+        }
+    }
+
+    &.details-left {
+
+        .person {
+            margin-left: auto;
+            background-color: $color-team-quote-1;
+
+            .person-name {
+                left: auto;
+                right: 50%;
+                text-align: right;
+                background-color: $color-team-quote-2;
+                border-top-left-radius: 48px;
+                border-bottom-left-radius: 48px;
+                padding-left: 24px;
+                padding-right: 96px;
+                min-width: 280px;
+                white-space: nowrap;
+            }
+
+            .person-profession {
+                left: auto;
+                right: 50%;
+                text-align: right;
+                background-color: $color-team-quote-3;
+                border-top-left-radius: 48px;
+                border-bottom-left-radius: 48px;
+                padding-left: 24px;
+                padding-right: 64px;
+                min-width: 200px;
+                white-space: nowrap;
+            }
+        }
     }
 }
 
@@ -1212,6 +1274,7 @@ ul {
 
             .input-button {
                 margin-bottom: 8px;
+                width: 100%;
             }
         }
     }

@@ -35,7 +35,7 @@
     <!-- Header section -->
     <header id="header-section">
         <div class="header-logo w-100">
-            <img class="my-3" src="assets/poms-logo.png">
+            <img class="my-3" src="assets/poms_logo_2020_black.png" style="max-height: 180px; opacity: 0.5">
         </div>
 
         <hr />
@@ -48,7 +48,7 @@
 
             <div class="row robot-header-text">
                 <div class="col-md-12 w-100 py-5">
-                    <h3>POMS <b>expands the options</b> of automated personalisation in marketing.</h3>
+                    <h3 class="mb-5">POMS <b>expands the options</b> of automated personalisation in marketing.</h3>
                 </div>
             </div>
 
@@ -288,10 +288,10 @@
                         be created."
                     </div>
 
-                    <div class="testimonial-person-block">
-                        <div class="testimonial-person">
-                            <div class="testimonial-person-name">Tamás Sántha</div>
-                            <div class="testimonial-person-profession">Head of brand, Telekom</div>
+                    <div class="person-block">
+                        <div class="person">
+                            <div class="person-name">Tamás Sántha</div>
+                            <div class="person-profession">Head of brand, Telekom</div>
                             <img src="assets/testimonial-person.jpg">
                         </div>
                     </div>
@@ -313,6 +313,32 @@
                 </div>
 
             </div>
+        </div>
+    </section>
+
+    <!-- Team quote section -->
+    <section id="team-quote-section">
+        <div class="container team-quote pb-5">
+
+            <hr />
+
+            <h2>Team Quote</h2>
+
+            <div class="row mt-5">
+                <div class="quote-text col-md-12 col-lg-9 text-right">
+                    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type."
+                </div>
+            
+                <div class="person-block details-left float-right col-md-12 col-lg-3">
+                    <div class="person">
+                        <div class="person-name">Szabó Tamás</div>
+                        <div class="person-profession">Fullstack Developer, POMS</div>
+                        <img src="assets/testimonial-person.jpg">
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -477,17 +503,19 @@
 
                             <div class="try-it-yourself">Try it yourself</div>
 
-                            <!-- Buttons -->
+                            <!-- Create Video -->
                             <button id="create-expo-video" class="input-button">
                                 <i class="fa fa-film"></i> CREATE MY VIDEO
                             </button>
 
+                            <!-- Download Video -->
                             <form id="download" method="get" target="_blank" action="">
                                 <button id="download-expo-video" class="input-button" disabled>
                                     <i class="fa fa-download"></i> DOWNLOAD MY VIDEO
                                 </button>
                             </form>
 
+                            <!-- Send Video -->
                             <form id="send-expo-form" method="post"
                                 action="https://pomscloud.ie/src/handlers/sendHandler.php">
                                 <button id="send-expo-video" type="submit" class="input-button" disabled>
