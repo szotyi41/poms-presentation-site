@@ -235,7 +235,15 @@ ul {
     text-align: center;
     min-height: 0;
 
-    @media screen and (max-width: $screen-lg) {
+    @media screen and (max-width: $screen-md) {
+        min-height: 320px;
+
+        .robot-arms {
+            display: none !important;
+        }
+    }
+
+    @media screen and (max-width: $screen-lg) and (min-width: $screen-md) {
         min-height: 480px;
     }
 
@@ -244,7 +252,7 @@ ul {
         animation: robotFloating 1s infinite alternate;
 
         @media screen and (max-width: $screen-lg) {
-            margin-top: 56px;
+            margin-top: 0;
         }
     }
 
@@ -589,7 +597,7 @@ ul {
                     left: 50%;
                     top: 50%;
                     transform: translate(-50%, -50%);
-                    color: $color-label-light;
+                    color: $color-label-dark;
                     font-size: 12px;
                     font-weight: lighter;
                     white-space: nowrap;
@@ -946,6 +954,13 @@ ul {
                 -ms-border-radius: 50%;
                 -o-border-radius: 50%;
 
+                @media screen and (max-width: $screen-lg) {
+                    .contact-person-image {
+                        width: 48px !important;
+                        height: 48px !important;
+                    }
+                }
+
                 img {
                     position: relative;
                     border-radius: 50%;
@@ -1045,11 +1060,6 @@ ul {
             height: 200px;
             z-index: 1;
 
-            @media screen and (max-width: $screen-lg) {
-                position: absolute;
-                bottom: 0px;
-            }
-
             .contact-person-image {
                 width: 200px;
                 height: 200px;
@@ -1059,6 +1069,51 @@ ul {
             .contact-person-info {
                 display: block;
                 opacity: 1;
+            }
+
+            @media screen and (max-width: $screen-lg) {
+                position: absolute;
+                bottom: 0px;
+                width: 360px;
+                height: 160px;
+
+                .contact-person-image {
+                    width: 160px;
+                    height: 160px;
+                    padding: 8px;
+                }
+
+                .contact-person-info {
+                    padding-left: 48px;
+
+                    &.contact-person-name {
+                        font-size: 16px;
+                        height: 32px;
+                        line-height: 32px;
+                    }
+
+                    &.contact-person-location {
+                        font-size: 12px;
+                        height: 24px;
+                        line-height: 24px;
+                        top: 64px - 4px;
+                    }
+
+                    &.contact-person-email {
+                        font-size: 12px;
+                        height: 24px;
+                        line-height: 24px;
+                        top: 96px - 8px;
+                    }
+
+                    &.contact-person-phone {
+                        font-size: 12px;
+                        height: 24px;
+                        line-height: 24px;
+                        top: 128px - 12px;
+                    }
+
+                }
             }
         }
 
@@ -1092,6 +1147,11 @@ ul {
         box-shadow: $card-box-shadow;
         z-index: 100;
 
+        @media screen and (max-width: $screen-md) {
+            width: $testimonial-image-size * 0.75;
+            height: $testimonial-image-size * 0.75;
+        }
+
         img {
             border-radius: 50%;
             width: 100%;
@@ -1110,6 +1170,7 @@ ul {
             height: 48px;
             left: 50%;
             padding-left: 98px;
+            padding-right: 16px;
             bottom: 40px;
             border-top-right-radius: 48px;
             border-bottom-right-radius: 48px;
@@ -1121,6 +1182,15 @@ ul {
             vertical-align: middle;
             white-space: nowrap;
             font-size: 20px;
+
+            @media screen and (max-width: $screen-md) {
+                font-size: 16px;
+                height: 32px;
+                border-top-right-radius: 32px;
+                border-bottom-right-radius: 32px;
+                line-height: 32px;
+                min-width: 120px !important;
+            }
         }
 
         .person-profession {
@@ -1131,6 +1201,7 @@ ul {
             height: 32px;
             left: 50%;
             padding-left: 64px;
+            padding-right: 8px;
             bottom: 0;
             border-top-right-radius: 32px;
             border-bottom-right-radius: 32px;
@@ -1140,6 +1211,15 @@ ul {
             font-size: 16px;
             vertical-align: middle;
             line-height: 32px;
+
+            @media screen and (max-width: $screen-md) {
+                font-size: 14px;
+                height: 28px;
+                border-top-right-radius: 28px;
+                border-bottom-right-radius: 28px;
+                line-height: 28px;
+                min-width: 64px !important;
+            }
         }
     }
 
@@ -1282,5 +1362,33 @@ ul {
                 width: 100%;
             }
         }
+    }
+}
+
+.input-select {
+
+    input {
+        border-color: #fff !important;
+    }
+
+    li {
+        outline: none;
+
+        span {
+            font-weight: 600;
+        }
+    }
+
+    &:after {
+        content: ' ';
+        position: absolute;
+        right: 18px;
+        top: 50px;
+        width: 0;
+        height: 0;
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        border-top: 4px solid #fff;
+        clear: both;
     }
 }
