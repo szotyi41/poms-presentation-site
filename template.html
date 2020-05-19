@@ -2,7 +2,6 @@
 <html>
 
 <head>
-    
     <title>POMS</title>
     <meta charset="UTF-8">
     <link rel="icon" type="image/png" href="assets/favicon.ico">
@@ -26,7 +25,7 @@
     <script src="node_modules/materialize-css/dist/js/materialize.min.js"></script>
     <link rel="stylesheet" href="materialize-css-custom.css">
 
-    <link rel="stylesheet" href="1920x1080.css">
+    <link rel="stylesheet" href="[[css]]">
     <link rel="stylesheet" href="style.css" async>
     <script src="animations.js" async></script>
     <script src="forms.js"></script>
@@ -50,7 +49,7 @@
 
             <div class="row robot-header-text">
                 <div class="col-md-12 w-100 py-5">
-                    <h3 class="mb-5">POMS <b>expands the options</b> of automated personalisation in marketing.</h3>
+                    <h3 class="mb-5">{{Header_title}}</h3>
                 </div>
             </div>
 
@@ -61,40 +60,40 @@
 
                     <div class="card card-sliders" id="card-sliders">
                         <div class="card-brand-logo" id="card-brand-logo">
-                            <img class="card-brand-logo-image" src="assets/tsystems.png">
+                            <img class="card-brand-logo-image" src="{{Brand_logo_image}}">
                         </div>
 
                         <div class="slider-container" id="slider-paragraph">
-                            <p class="paragraph">Running competition with personalised videos of the runners.</p>
+                            <p class="paragraph">{{Slider Paragraph}}</p>
                         </div>
 
                         <div class="slider-container" id="slider-container-1">
-                            <div class="slider-label">Runners</div>
+                            <div class="slider-label">{{Slider1_Label}}</div>
                             <div class="slider">
-                                <div class="slider-process-container" id="slider-process-1">
+                                <div class="slider-process-container" id="slider-process-1" style="width: {{Slider2_width}} !important;">
                                     <div class="slider-process slider-color-1"></div>
                                 </div>
-                                <div class="slider-indicator slider-color-1" id="slider-indicator-1">15,213</div>
+                                <div class="slider-indicator slider-color-1" id="slider-indicator-1">{{Slider1_Value}}</div>
                             </div>
                         </div>
 
                         <div class="slider-container" id="slider-container-2">
-                            <div class="slider-label">Races</div>
+                            <div class="slider-label">{{Slider2_Label}}</div>
                             <div class="slider">
-                                <div class="slider-process-container" id="slider-process-2">
+                                <div class="slider-process-container" id="slider-process-2" style="width: {{Slider2_width}} !important;">
                                     <div class="slider-process slider-color-2"></div>
                                 </div>
-                                <div class="slider-indicator slider-color-2" id="slider-indicator-2">12</div>
+                                <div class="slider-indicator slider-color-2" id="slider-indicator-2">{{Slider2_Value}}</div>
                             </div>
                         </div>
 
                         <div class="slider-container" id="slider-container-3">
-                            <div class="slider-label">Days</div>
+                            <div class="slider-label">{{Slider3_Label}}</div>
                             <div class="slider">
-                                <div class="slider-process-container" id="slider-process-3">
+                                <div class="slider-process-container" id="slider-process-3" style="width: {{Slider3_width}} !important;">
                                     <div class="slider-process slider-color-3"></div>
                                 </div>
-                                <div class="slider-indicator slider-color-3" id="slider-indicator-3">2</div>
+                                <div class="slider-indicator slider-color-3" id="slider-indicator-3">{{Slider3_Value}}</div>
                             </div>
                         </div>
                     </div>
@@ -111,8 +110,7 @@
 
                         <div class="robot-floating">
                             <img class="robot-image" id="robot-sleep-image" src="assets/robot-poms-sleeping-new.svg">
-                            <img class="robot-image" id="robot-wake-image" src="assets/robot-wakeup-empty.svg"
-                                style="opacity: 0">
+                            <img class="robot-image" id="robot-wake-image" src="{{Robot_Agency_image}}" style="opacity: 0">
                         </div>
 
                         <div class="robot-arms" id="robot-arms-right">
@@ -128,25 +126,25 @@
 
                         <!-- Image -->
                         <div class="card-bubble card-bubble-left">
-                            <img class="card-bubble-image" src="assets/vivicitta-runner.jpeg" id="card-bubble-image">
+                            <img class="card-bubble-image" src="{{Bubble_image}}" id="card-bubble-image">
                         </div>
 
                         <!-- Pie -->
                         <div class="card-bubble card-bubble-right">
                             <div class="circle-progress"></div>
                             <div class="circle-progress-label">
-                                Engagement
+                                {{Circle_Progress_Label}}
                             </div>
                         </div>
 
-                        <img class="card-engagement-image" src="assets/vivicitta.jpg">
+                        <img class="card-engagement-image" src="{{Card_Background_image}}">
 
                         <!-- Sticker 1 -->
                         <div class="card-sticker card-sticker-1" id="card-sticker-1">
                             <div class="card-sticker-check">
                                 <i class="fa fa-check"></i>
                             </div>
-                            Branded content
+                            {{Card_Sticker_1}}
                         </div>
 
                         <!-- Sticker 2 -->
@@ -154,7 +152,7 @@
                             <div class="card-sticker-check">
                                 <i class="fa fa-check"></i>
                             </div>
-                            Innovation
+                            {{Card_Sticker_2}}
                         </div>
 
                         <!-- Sticker 2 -->
@@ -162,7 +160,7 @@
                             <div class="card-sticker-check">
                                 <i class="fa fa-check"></i>
                             </div>
-                            Personalisation
+                            {{Card_Sticker_3}}
                         </div>
                     </div>
                 </div>
@@ -171,16 +169,10 @@
 
             <div class="digits-section my-5">
                 <div class="digits" id="counter">
-                    <div class="digit card-small">0</div>
-                    <div class="digit card-small">1</div>
-                    <div class="digit card-small">1</div>
-                    <div class="digit">,</div>
-                    <div class="digit card-small">5</div>
-                    <div class="digit card-small">3</div>
-                    <div class="digit card-small">8</div>
+                    {{Counter_Digits}}
                 </div>
 
-                <div class="digits-label">Personalised videos generated</div>
+                <div class="digits-label">{{Counter_Label}}</div>
             </div>
 
             <hr class="mt-5" />
@@ -194,7 +186,7 @@
             <!-- Headline -->
             <div class="row">
                 <div class="col-12">
-                    <h1>Details of case study</h1>
+                    <h1>{{Case_Study_Title}}</h1>
                 </div>
             </div>
 
@@ -202,20 +194,20 @@
 
                 <!-- Detail 1 -->
                 <div class="detail">
-                    <label class="label-text">Customer</label>
-                    <div class="detail-text">T-Systems</div>
+                    <label class="label-text">{{Customer_Title}}</label>
+                    <div class="detail-text">{{Customer_Value}}</div>
                 </div>
 
                 <!-- Detail 2 -->
                 <div class="detail">
-                    <label class="label-text">Event</label>
-                    <div class="detail-text">Vivicitta</div>
+                    <label class="label-text">{{Campaign_Title}}</label>
+                    <div class="detail-text">{{Campaign_Value}}</div>
                 </div>
 
                 <!-- Detail 3 -->
                 <div class="detail">
-                    <label class="label-text">Agency</label>
-                    <div class="detail-text">Wavemaker</div>
+                    <label class="label-text">{{Agency_Title}}</label>
+                    <div class="detail-text">{{Agency_Value}}</div>
                 </div>
             </div>
 
@@ -224,17 +216,11 @@
                 <div class="col-md-12 col-lg-6">
 
                     <div class="text-section my-5">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
-                        of type and scrambled it to make a type specimen book. It has survived not only five centuries,
-                        but also the leap into electronic typesetting, remaining essentially unchanged. It was
-                        popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-                        and more recently with desktop publishing software like Aldus PageMaker including versions of
-                        Lorem Ipsum.
+                        {{Case_Study_Text}}
                     </div>
 
                     <div class="card overflow-hidden">
-                        <iframe class="video-iframe p-3" src="https://www.youtube.com/embed/F_Am073ZI6Q" frameborder="0"
+                        <iframe class="video-iframe p-3" src="{{Case_Study_Video_Link}}" frameborder="0"
                             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen>
                         </iframe>
@@ -243,21 +229,24 @@
                 </div>
 
                 <div class="col-md-12 col-lg-6">
-                    <label class="label-text mt-5 mb-3">POMS Advantages</label>
+                    <label class="label-text mt-5 mb-3">{{Poms_Advantages_Title}}</label>
 
                     <ul>
-                        <li><i class="fa fa-check color-3"></i> Data-driven</li>
-                        <li><i class="fa fa-check color-3"></i> Platform and expert team at the same time</li>
-                        <li><i class="fa fa-check color-3"></i> Quick and accurate</li>
-                        <li><i class="fa fa-check color-3"></i> Automated video production</li>
+                        <li><i class="fa fa-check color-3"></i> {{Poms_Advantages_Value_1}}</li>
+                        <li><i class="fa fa-check color-3"></i> {{Poms_Advantages_Value_2}}</li>
+                        <li><i class="fa fa-check color-3"></i> {{Poms_Advantages_Value_3}}</li>
+                        <li><i class="fa fa-check color-3"></i> {{Poms_Advantages_Value_4}}</li>
+                        <li><i class="fa fa-check color-3"></i> {{Poms_Advantages_Value_5}}</li>
                     </ul>
 
-                    <label class="label-text mb-3">Agency Benefits</label>
+                    <label class="label-text mb-3">{{Agency_Benefits_Title}}</label>
 
                     <ul>
-                        <li><i class="fa fa-check color-4"></i> 10-year contract</li>
-                        <li><i class="fa fa-check color-4"></i> Hypnosis award winner</li>
-                        <li><i class="fa fa-check color-4"></i> Recognition within the agency-group</li>
+                        <li><i class="fa fa-check color-4"></i> {{Agency_Benefits_Value_1}}</li>
+                        <li><i class="fa fa-check color-4"></i> {{Agency_Benefits_Value_2}}</li>
+                        <li><i class="fa fa-check color-4"></i> {{Agency_Benefits_Value_3}}</li>
+                        <li><i class="fa fa-check color-4"></i> {{Agency_Benefits_Value_4}}</li>
+                        <li><i class="fa fa-check color-4"></i> {{Agency_Benefits_Value_5}}</li>
                     </ul>
                 </div>
 
@@ -275,7 +264,7 @@
             <!-- Headline -->
             <div class="row">
                 <div class="col-12">
-                    <h1>Testimonial</h1>
+                    <h1>{{Testimonial_Title}}</h1>
                 </div>
             </div>
 
@@ -285,16 +274,14 @@
                 <div class="col-md-12 col-lg-6 col-xl-5 position-relative">
 
                     <div class="quote-text testimonial-quote">
-                        "Telekon supported this initiative because we strongly believe that is important to
-                        show that with the help of Telekom's technology, miracles, surprises like this can
-                        be created."
+                        "{{Testimonial_Quote}}"
                     </div>
 
                     <div class="person-block">
                         <div class="person">
-                            <div class="person-name">Tamás Sántha</div>
-                            <div class="person-profession">Head of brand, Telekom</div>
-                            <img src="assets/testimonial-person.jpg">
+                            <div class="person-name">{{Testimonial_Person_Name}}</div>
+                            <div class="person-profession">{{Testimonial_Person_Profession}}</div>
+                            <img src="{{Testimonial_Person_image}}">
                         </div>
                     </div>
                 </div>
@@ -302,13 +289,14 @@
                 <div class="col-md-12 col-lg-6 col-xl-7">
 
                     <div class="testimonial-listing">
-                        <label class="label-text mb-3">Advertiser Benefits</label>
+                        <label class="label-text mb-3">{{Testimonial_Advertiser_Benefits_Title}}</label>
 
                         <ul>
-                            <li><i class="fa fa-check color-1"></i> It has also reached people who are not possible in
-                                the classic way.</li>
-                            <li><i class="fa fa-check color-1"></i> Positive brand value.</li>
-                            <li><i class="fa fa-check color-1"></i> A unique innovation worldwide.</li>
+                            <li><i class="fa fa-check color-1"></i> {{Testimonial_Advertiser_Benefits_Value_1}}</li>
+                            <li><i class="fa fa-check color-1"></i> {{Testimonial_Advertiser_Benefits_Value_2}}</li>
+                            <li><i class="fa fa-check color-1"></i> {{Testimonial_Advertiser_Benefits_Value_3}}</li>
+                            <li><i class="fa fa-check color-1"></i> {{Testimonial_Advertiser_Benefits_Value_4}}</li>
+                            <li><i class="fa fa-check color-1"></i> {{Testimonial_Advertiser_Benefits_Value_5}}</li>
                         </ul>
                     </div>
 
@@ -324,19 +312,18 @@
 
             <hr />
 
-            <h2>Team Quote</h2>
+            <h2>{{Team_Quote_Title}}</h2>
 
             <div class="row mt-5">
                 <div class="quote-text col-md-12 col-lg-9 text-right">
-                    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type."
+                    "{{Team_Quote_Value}}"
                 </div>
             
                 <div class="person-block details-left float-right col-md-12 col-lg-3">
                     <div class="person">
-                        <div class="person-name">Szabó Tamás</div>
-                        <div class="person-profession">Fullstack Developer, POMS</div>
-                        <img src="assets/testimonial-person.jpg">
+                        <div class="person-name">{{Team_Quote_Person_Name}}</div>
+                        <div class="person-profession">{{Team_Quote_Person_Profession}}</div>
+                        <img src="{{Team_Quote_Person_image}}">
                     </div>
                 </div>
             </div>
@@ -350,12 +337,10 @@
 
             <hr class="hr-green" />
 
-            <h2>POMS is a lorem ipsum dolor sit</h2>
+            <h2>{{POMS_Demo_Section_Title}}</h2>
 
             <div class="row quote-text my-5">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book.
+                {{POMS_Demo_Section_Value}}
             </div>
 
             <!--div class="row">
@@ -539,25 +524,25 @@
     <!-- Map section -->
     <section id="map-section">
         <div class="container map-section" style="padding-bottom: 160px">
-            <h2>Contact</h2>
+            <h2>{{Contact_Title}}</h2>
             <div class="map" id="map">
-                <img src="assets/map.svg" class="position-relative mx-auto d-block w-100">
+                <img src="{{Contact_Background_image}}" class="position-relative mx-auto d-block w-100">
 
                 <!-- Person 1 -->
-                <div class="contact-person" id="person-1" onclick="openPerson(1)" data-personid="1" data-left="20"
+                <div class="contact-person opened" id="person-1" onclick="openPerson(1)" data-personid="1" data-left="20"
                     data-top="60">
-                    <div class="contact-person-info contact-person-name">John Doe</div>
-                    <div class="contact-person-info contact-person-location"><i class="fa fa-globe"></i> France</div>
+                    <div class="contact-person-info contact-person-name">{{Contact_Person_Name}}</div>
+                    <div class="contact-person-info contact-person-location"><i class="fa fa-globe"></i> {{Contact_Person_Location}}</div>
                     <div class="contact-person-info contact-person-email">
                         <i class="fa fa-envelope"></i>
-                        jane.doe@pomscloud.ie
+                        {{Contact_Person_Email}}
                     </div>
                     <div class="contact-person-info contact-person-phone">
                         <i class="fa fa-phone"></i>
-                        +36-30/3011-311
+                        {{Contact_Person_Phone}}
                     </div>
                     <div class="contact-person-image">
-                        <img src="assets/john-doe.png">
+                        <img src="{{Contact_Person_image}}">
                     </div>
                 </div>
 
