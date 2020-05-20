@@ -4,39 +4,20 @@
 <head>
     <title>POMS</title>
     <meta charset="UTF-8">
-    <link rel="icon" type="image/png" href="assets/favicon.ico">
+    <link rel="icon" type="image/png" href="favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
-
-    <!-- CSS for Bootstrap -->
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-
-    <!-- JS for Bootstrap -->
-    <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="node_modules/popper.js/dist/popper.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
-
-    <!-- Circle Progress -->
-    <script src="node_modules/jquery-circle-progress/dist/circle-progress.min.js"></script>
-
-    <!-- Materialize for inputs -->
-    <script src="node_modules/materialize-css/dist/js/materialize.min.js"></script>
-    <link rel="stylesheet" href="materialize-css-custom.css">
-
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.js"></script>
+    
     <link rel="stylesheet" href="[[css]]">
-    <link rel="stylesheet" href="style.css" async>
-    <script src="animations.js" async></script>
-    <script src="forms.js"></script>
 </head>
 
-<body>
+<body style="transition: all .3s ease; opacity: 0;">
 
     <!-- Header section -->
     <header id="header-section">
         <div class="header-logo w-100">
-            <img class="my-3" src="assets/poms_logo_2020_black.png" style="max-height: 180px; opacity: 0.5">
+            <img class="my-3" src="9347d430ce4003376ff643543ef45b38.png" style="max-height: 180px; opacity: 0.5">
         </div>
 
         <hr />
@@ -49,7 +30,7 @@
 
             <div class="row robot-header-text">
                 <div class="col-md-12 w-100 py-5">
-                    <h3 class="mb-5">{{Header_title}}</h3>
+                    <h3 class="mb-5">{{header_title}}</h3>
                 </div>
             </div>
 
@@ -60,40 +41,40 @@
 
                     <div class="card card-sliders" id="card-sliders">
                         <div class="card-brand-logo" id="card-brand-logo">
-                            <img class="card-brand-logo-image" src="{{Brand_logo_image}}">
+                            <img class="card-brand-logo-image" src="{{brand_logo_image_1}}">
                         </div>
 
                         <div class="slider-container" id="slider-paragraph">
-                            <p class="paragraph">{{Slider Paragraph}}</p>
+                            <p class="paragraph">{{slider_paragraph}}</p>
                         </div>
 
                         <div class="slider-container" id="slider-container-1">
-                            <div class="slider-label">{{Slider1_Label}}</div>
+                            <div class="slider-label">{{slider1_label}}</div>
                             <div class="slider">
-                                <div class="slider-process-container" id="slider-process-1" style="width: {{Slider2_width}} !important;">
+                                <div class="slider-process-container" id="slider-process-1" style="width: {{slider1_width}} !important;">
                                     <div class="slider-process slider-color-1"></div>
                                 </div>
-                                <div class="slider-indicator slider-color-1" id="slider-indicator-1">{{Slider1_Value}}</div>
+                                <div class="slider-indicator slider-color-1" id="slider-indicator-1">{{slider1_value}}</div>
                             </div>
                         </div>
 
                         <div class="slider-container" id="slider-container-2">
-                            <div class="slider-label">{{Slider2_Label}}</div>
+                            <div class="slider-label">{{slider2_label}}</div>
                             <div class="slider">
-                                <div class="slider-process-container" id="slider-process-2" style="width: {{Slider2_width}} !important;">
+                                <div class="slider-process-container" id="slider-process-2" style="width: {{slider2_width}} !important;">
                                     <div class="slider-process slider-color-2"></div>
                                 </div>
-                                <div class="slider-indicator slider-color-2" id="slider-indicator-2">{{Slider2_Value}}</div>
+                                <div class="slider-indicator slider-color-2" id="slider-indicator-2">{{slider2_value}}</div>
                             </div>
                         </div>
 
                         <div class="slider-container" id="slider-container-3">
-                            <div class="slider-label">{{Slider3_Label}}</div>
+                            <div class="slider-label">{{slider3_label}}</div>
                             <div class="slider">
-                                <div class="slider-process-container" id="slider-process-3" style="width: {{Slider3_width}} !important;">
+                                <div class="slider-process-container" id="slider-process-3" style="width: {{slider3_width}} !important;">
                                     <div class="slider-process slider-color-3"></div>
                                 </div>
-                                <div class="slider-indicator slider-color-3" id="slider-indicator-3">{{Slider3_Value}}</div>
+                                <div class="slider-indicator slider-color-3" id="slider-indicator-3">{{slider3_value}}</div>
                             </div>
                         </div>
                     </div>
@@ -105,16 +86,17 @@
                     <div class="robot">
 
                         <div class="robot-arms" id="robot-arms-left">
-                            <img src="assets/robot-arms-left-animated.svg">
+                            <img src="{{background_image_1_robot_left_arms}}">
                         </div>
 
                         <div class="robot-floating">
-                            <img class="robot-image" id="robot-sleep-image" src="assets/robot-poms-sleeping-new.svg">
-                            <img class="robot-image" id="robot-wake-image" src="{{Robot_Agency_image}}" style="opacity: 0">
+                            <img class="robot-image" id="robot-sleep-image" src="{{background_image_1_robot_sleeping}}">
+                            <img class="robot-image" id="robot-wake-image" src="{{background_image_1_robot_agency}}"
+                                style="opacity: 0">
                         </div>
 
                         <div class="robot-arms" id="robot-arms-right">
-                            <img src="assets/robot-arms-right-animated.svg">
+                            <img src="{{background_image_1_robot_right_arms}}">
                         </div>
 
                     </div>
@@ -126,25 +108,25 @@
 
                         <!-- Image -->
                         <div class="card-bubble card-bubble-left">
-                            <img class="card-bubble-image" src="{{Bubble_image}}" id="card-bubble-image">
+                            <img class="card-bubble-image" src="{{background_image_1_bubble}}" id="card-bubble-image">
                         </div>
 
                         <!-- Pie -->
                         <div class="card-bubble card-bubble-right">
                             <div class="circle-progress"></div>
                             <div class="circle-progress-label">
-                                {{Circle_Progress_Label}}
+                                {{circle_progress_label}}
                             </div>
                         </div>
 
-                        <img class="card-engagement-image" src="{{Card_Background_image}}">
+                        <img class="card-engagement-image" src="{{background_image_1_card}}">
 
                         <!-- Sticker 1 -->
                         <div class="card-sticker card-sticker-1" id="card-sticker-1">
                             <div class="card-sticker-check">
                                 <i class="fa fa-check"></i>
                             </div>
-                            {{Card_Sticker_1}}
+                            {{card_sticker_1}}
                         </div>
 
                         <!-- Sticker 2 -->
@@ -152,7 +134,7 @@
                             <div class="card-sticker-check">
                                 <i class="fa fa-check"></i>
                             </div>
-                            {{Card_Sticker_2}}
+                            {{card_sticker_2}}
                         </div>
 
                         <!-- Sticker 2 -->
@@ -160,7 +142,7 @@
                             <div class="card-sticker-check">
                                 <i class="fa fa-check"></i>
                             </div>
-                            {{Card_Sticker_3}}
+                            {{card_sticker_3}}
                         </div>
                     </div>
                 </div>
@@ -169,10 +151,10 @@
 
             <div class="digits-section my-5">
                 <div class="digits" id="counter">
-                    {{Counter_Digits}}
+                    {{counter_digits}}
                 </div>
 
-                <div class="digits-label">{{Counter_Label}}</div>
+                <div class="digits-label">{{counter_label}}</div>
             </div>
 
             <hr class="mt-5" />
@@ -186,28 +168,28 @@
             <!-- Headline -->
             <div class="row">
                 <div class="col-12">
-                    <h1>{{Case_Study_Title}}</h1>
+                    <h1>{{case_study_title}}</h1>
                 </div>
             </div>
 
-            <div class="w-100 d-flex justify-content-between">
+            <div class="row">
 
                 <!-- Detail 1 -->
-                <div class="detail">
-                    <label class="label-text">{{Customer_Title}}</label>
-                    <div class="detail-text">{{Customer_Value}}</div>
+                <div class="detail col-xs-12 col-sm-4">
+                    <label class="label-text">{{customer_title}}</label>
+                    <div class="detail-text">{{customer_value}}</div>
                 </div>
 
                 <!-- Detail 2 -->
-                <div class="detail">
-                    <label class="label-text">{{Campaign_Title}}</label>
-                    <div class="detail-text">{{Campaign_Value}}</div>
+                <div class="detail col-xs-12 col-sm-4">
+                    <label class="label-text">{{campaign_title}}</label>
+                    <div class="detail-text">{{campaign_value}}</div>
                 </div>
 
                 <!-- Detail 3 -->
-                <div class="detail">
-                    <label class="label-text">{{Agency_Title}}</label>
-                    <div class="detail-text">{{Agency_Value}}</div>
+                <div class="detail col-xs-12 col-sm-4">
+                    <label class="label-text">{{agency_title}}</label>
+                    <div class="detail-text">{{agency_value}}</div>
                 </div>
             </div>
 
@@ -216,11 +198,11 @@
                 <div class="col-md-12 col-lg-6">
 
                     <div class="text-section my-5">
-                        {{Case_Study_Text}}
+                        {{case_study_text}}
                     </div>
 
                     <div class="card overflow-hidden">
-                        <iframe class="video-iframe p-3" src="{{Case_Study_Video_Link}}" frameborder="0"
+                        <iframe class="video-iframe p-3" src="{{case_study_video_link}}" frameborder="0"
                             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen>
                         </iframe>
@@ -229,24 +211,24 @@
                 </div>
 
                 <div class="col-md-12 col-lg-6">
-                    <label class="label-text mt-5 mb-3">{{Poms_Advantages_Title}}</label>
+                    <label class="label-text mt-5 mb-3">{{poms_advantages_title}}</label>
 
                     <ul>
-                        <li><i class="fa fa-check color-3"></i> {{Poms_Advantages_Value_1}}</li>
-                        <li><i class="fa fa-check color-3"></i> {{Poms_Advantages_Value_2}}</li>
-                        <li><i class="fa fa-check color-3"></i> {{Poms_Advantages_Value_3}}</li>
-                        <li><i class="fa fa-check color-3"></i> {{Poms_Advantages_Value_4}}</li>
-                        <li><i class="fa fa-check color-3"></i> {{Poms_Advantages_Value_5}}</li>
+                        <li><i class="fa fa-check color-3"></i> {{poms_advantages_value_1}}</li>
+                        <li><i class="fa fa-check color-3"></i> {{poms_advantages_value_2}}</li>
+                        <li><i class="fa fa-check color-3"></i> {{poms_advantages_value_3}}</li>
+                        <li><i class="fa fa-check color-3"></i> {{poms_advantages_value_4}}</li>
+                        <li><i class="fa fa-check color-3"></i> {{poms_advantages_value_5}}</li>
                     </ul>
 
-                    <label class="label-text mb-3">{{Agency_Benefits_Title}}</label>
+                    <label class="label-text mb-3">{{agency_benefits_title}}</label>
 
                     <ul>
-                        <li><i class="fa fa-check color-4"></i> {{Agency_Benefits_Value_1}}</li>
-                        <li><i class="fa fa-check color-4"></i> {{Agency_Benefits_Value_2}}</li>
-                        <li><i class="fa fa-check color-4"></i> {{Agency_Benefits_Value_3}}</li>
-                        <li><i class="fa fa-check color-4"></i> {{Agency_Benefits_Value_4}}</li>
-                        <li><i class="fa fa-check color-4"></i> {{Agency_Benefits_Value_5}}</li>
+                        <li><i class="fa fa-check color-4"></i> {{agency_benefits_value_1}}</li>
+                        <li><i class="fa fa-check color-4"></i> {{agency_benefits_value_2}}</li>
+                        <li><i class="fa fa-check color-4"></i> {{agency_benefits_value_3}}</li>
+                        <li><i class="fa fa-check color-4"></i> {{agency_benefits_value_4}}</li>
+                        <li><i class="fa fa-check color-4"></i> {{agency_benefits_value_5}}</li>
                     </ul>
                 </div>
 
@@ -264,7 +246,7 @@
             <!-- Headline -->
             <div class="row">
                 <div class="col-12">
-                    <h1>{{Testimonial_Title}}</h1>
+                    <h1>{{testimonial_title}}</h1>
                 </div>
             </div>
 
@@ -274,14 +256,14 @@
                 <div class="col-md-12 col-lg-6 col-xl-5 position-relative">
 
                     <div class="quote-text testimonial-quote">
-                        "{{Testimonial_Quote}}"
+                        "{{testimonial_quote}}"
                     </div>
 
                     <div class="person-block">
                         <div class="person">
-                            <div class="person-name">{{Testimonial_Person_Name}}</div>
-                            <div class="person-profession">{{Testimonial_Person_Profession}}</div>
-                            <img src="{{Testimonial_Person_image}}">
+                            <div class="person-name">{{testimonial_person_name}}</div>
+                            <div class="person-profession">{{testimonial_person_profession}}</div>
+                            <img src="{{background_image_1_testimonial_person}}">
                         </div>
                     </div>
                 </div>
@@ -289,14 +271,14 @@
                 <div class="col-md-12 col-lg-6 col-xl-7">
 
                     <div class="testimonial-listing">
-                        <label class="label-text mb-3">{{Testimonial_Advertiser_Benefits_Title}}</label>
+                        <label class="label-text mb-3">{{testimonial_advertiser_benefits_title}}</label>
 
                         <ul>
-                            <li><i class="fa fa-check color-1"></i> {{Testimonial_Advertiser_Benefits_Value_1}}</li>
-                            <li><i class="fa fa-check color-1"></i> {{Testimonial_Advertiser_Benefits_Value_2}}</li>
-                            <li><i class="fa fa-check color-1"></i> {{Testimonial_Advertiser_Benefits_Value_3}}</li>
-                            <li><i class="fa fa-check color-1"></i> {{Testimonial_Advertiser_Benefits_Value_4}}</li>
-                            <li><i class="fa fa-check color-1"></i> {{Testimonial_Advertiser_Benefits_Value_5}}</li>
+                            <li><i class="fa fa-check color-1"></i> {{testimonial_advertiser_benefits_value_1}}</li>
+                            <li><i class="fa fa-check color-1"></i> {{testimonial_advertiser_benefits_value_2}}</li>
+                            <li><i class="fa fa-check color-1"></i> {{testimonial_advertiser_benefits_value_3}}</li>
+                            <li><i class="fa fa-check color-1"></i> {{testimonial_advertiser_benefits_value_4}}</li>
+                            <li><i class="fa fa-check color-1"></i> {{testimonial_advertiser_benefits_value_5}}</li>
                         </ul>
                     </div>
 
@@ -312,18 +294,18 @@
 
             <hr />
 
-            <h2>{{Team_Quote_Title}}</h2>
+            <h2>{{team_quote_title}}</h2>
 
             <div class="row mt-5">
                 <div class="quote-text col-md-12 col-lg-9 text-right">
-                    "{{Team_Quote_Value}}"
+                    "{{team_quote_value}}"
                 </div>
             
                 <div class="person-block details-left float-right col-md-12 col-lg-3">
                     <div class="person">
-                        <div class="person-name">{{Team_Quote_Person_Name}}</div>
-                        <div class="person-profession">{{Team_Quote_Person_Profession}}</div>
-                        <img src="{{Team_Quote_Person_image}}">
+                        <div class="person-name">{{team_quote_person_name}}</div>
+                        <div class="person-profession">{{team_quote_person_profession}}</div>
+                        <img src="{{background_image_1_team_quote_person}}">
                     </div>
                 </div>
             </div>
@@ -337,10 +319,10 @@
 
             <hr class="hr-green" />
 
-            <h2>{{POMS_Demo_Section_Title}}</h2>
+            <h2>{{poms_demo_section_title}}</h2>
 
             <div class="row quote-text my-5">
-                {{POMS_Demo_Section_Value}}
+                {{poms_demo_section_value}}
             </div>
 
             <!--div class="row">
@@ -372,7 +354,7 @@
                     <div class="row ">
 
                         <!-- Interest I -->
-                        <div class="input-dark col-sm-12 col-lg-6">
+                        <div class="input-dark input-select col-sm-12 col-lg-6">
                             <label for="interest1">Interest I</label>
                             <select name="0#interest1" id="interest1">
                                 <option value="style">Style & Fashion</option>
@@ -390,7 +372,7 @@
                         </div>
 
                         <!-- Interest II -->
-                        <div class="input-dark col-sm-12 col-lg-6">
+                        <div class="input-dark input-select col-sm-12 col-lg-6">
                             <label for="interest2">Interest II</label>
                             <select name="0#interest2" id="interest2">
                                 <option value="tech">Technology</option>
@@ -410,7 +392,7 @@
                     <div class="row ">
 
                         <!-- Person age -->
-                        <div class="input-dark col-sm-12 col-lg-6">
+                        <div class="input-dark input-select col-sm-12 col-lg-6">
                             <label for="person">Person</label>
                             <select name="0#person" id="person">
                                 <option value="young_man">Young man</option>
@@ -421,7 +403,7 @@
                         </div>
 
                         <!-- Audi owner -->
-                        <div class="input-dark col-sm-12 col-lg-6">
+                        <div class="input-dark input-select col-sm-12 col-lg-6">
                             <label for="owner">Audi Owner</label>
                             <select name="0#owner" id="owner">
                                 <option value="yes">Yes</option>
@@ -432,7 +414,7 @@
                     <div class="row ">
 
                         <!-- Model -->
-                        <div class="input-dark col-sm-12 col-lg-6">
+                        <div class="input-dark input-select col-sm-12 col-lg-6">
                             <label for="model">Model</label>
                             <select name="0#model" id="model">
                                 <option value="a6">A6</option>
@@ -443,7 +425,7 @@
                         </div>
 
                         <!-- Travelling -->
-                        <div class="input-dark col-sm-12 col-lg-6">
+                        <div class="input-dark input-select col-sm-12 col-lg-6">
                             <label for="travel">Travelling</label>
                             <select name="0#travel" id="travel">
                                 <option value="hills">Hills</option>
@@ -457,7 +439,7 @@
                     <div class="row ">
 
                         <!-- Family -->
-                        <div class="input-dark col-sm-12 col-lg-6">
+                        <div class="input-dark input-select col-sm-12 col-lg-6">
                             <label for="family">Family</label>
                             <select name="0#family" id="family">
                                 <option value="single_0">Single without children</option>
@@ -470,7 +452,7 @@
                         </div>
 
                         <!-- Socializing -->
-                        <div class="input-dark col-sm-12 col-lg-6">
+                        <div class="input-dark input-select col-sm-12 col-lg-6">
                             <label for="social">Socializing</label>
                             <select name="#social" id="social">
                                 <option value="friends">Friends</option>
@@ -523,31 +505,31 @@
 
     <!-- Map section -->
     <section id="map-section">
-        <div class="container map-section" style="padding-bottom: 160px">
-            <h2>{{Contact_Title}}</h2>
+        <div class="container map-section" style="padding-bottom: 200px">
+            <h2>{{contact_title}}</h2>
             <div class="map" id="map">
-                <img src="{{Contact_Background_image}}" class="position-relative mx-auto d-block w-100">
+                <img src="{{background_image_1_contact_map}}" class="position-relative mx-auto d-block w-100">
 
                 <!-- Person 1 -->
-                <div class="contact-person opened" id="person-1" onclick="openPerson(1)" data-personid="1" data-left="20"
+                <div class="contact-person" id="person-1" data-personid="1" data-left="20"
                     data-top="60">
-                    <div class="contact-person-info contact-person-name">{{Contact_Person_Name}}</div>
-                    <div class="contact-person-info contact-person-location"><i class="fa fa-globe"></i> {{Contact_Person_Location}}</div>
+                    <div class="contact-person-info contact-person-name">{{contact_person_name}}</div>
+                    <div class="contact-person-info contact-person-location"><i class="fa fa-globe"></i> {{contact_person_location}}</div>
                     <div class="contact-person-info contact-person-email">
                         <i class="fa fa-envelope"></i>
-                        {{Contact_Person_Email}}
+                        {{contact_person_email}}
                     </div>
                     <div class="contact-person-info contact-person-phone">
                         <i class="fa fa-phone"></i>
-                        {{Contact_Person_Phone}}
+                        {{contact_person_phone}}
                     </div>
                     <div class="contact-person-image">
-                        <img src="{{Contact_Person_image}}">
+                        <img src="{{background_image_1_contact_person}}">
                     </div>
                 </div>
 
                 <!-- Person 2 -->
-                <div class="contact-person" id="person-2" onclick="openPerson(2)" data-personid="2" data-left="10"
+                <div class="contact-person" id="person-2" data-personid="2" data-left="10"
                     data-top="10">
                     <div class="contact-person-info contact-person-name">Jane Doe</div>
                     <div class="contact-person-info contact-person-location"><i class="fa fa-globe"></i> England</div>
@@ -560,7 +542,7 @@
                         +36-30/3011-311
                     </div>
                     <div class="contact-person-image">
-                        <img src="assets/jane-doe.png">
+                        <img src="5f7e9c3cbc735c9e68c0e7ff0f0fc4b5.png">
                     </div>
                 </div>
 
@@ -568,6 +550,15 @@
 
         </div>
     </section>
+    <script>
+        const readyStateCheckInterval = setInterval(() => {
+            if (document.readyState === "complete") {
+                clearInterval(readyStateCheckInterval);
+                document.querySelector('body').style.opacity = 1;
+            }
+        }, 10);
+    </script>
+    <script src="main.js"></script>
 </body>
 
 </html>
