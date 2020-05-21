@@ -9,7 +9,6 @@ var robotArriveTime = 5000;
 var url = new URL(window.location.href);
 var person = url.searchParams.get('personid');
 
-
 $(document).ready(function () {
     init();
     animate();
@@ -101,6 +100,12 @@ function init() {
     );
 }
 
+function activateSliders(sliderIndex) {
+    const sliderWidth = $(`#slider-process-${sliderIndex}`).attr('data-width');
+    const sliderValue = parseInt($(`#slider-indicator-${sliderIndex}`).attr('data-value'));
+    runSliders(sliderIndex, sliderValue, sliderWidth);
+}
+
 function animate() {
 
     // Robot arrive
@@ -120,9 +125,14 @@ function animate() {
 
     // Run sliders
     setTimeout(() => $('#slider-paragraph').css({ opacity: 1, transform: 'scale(1)' }), 4000 + robotArriveTime);
-    setTimeout(() => runSliders(1, 15213, 80), 5000 + robotArriveTime);
-    setTimeout(() => runSliders(2, 12, 90), 7000 + robotArriveTime);
-    setTimeout(() => runSliders(3, 2, 70), 9000 + robotArriveTime);
+
+    setTimeout(() => activateSliders(1), 5000 + robotArriveTime);
+    setTimeout(() => activateSliders(2), 7000 + robotArriveTime);
+    setTimeout(() => activateSliders(3), 9000 + robotArriveTime);
+
+    // setTimeout(() => runSliders(1, 15213, 80), 5000 + robotArriveTime);
+    // setTimeout(() => runSliders(2, 12, 90), 7000 + robotArriveTime);
+    // setTimeout(() => runSliders(3, 2, 70), 9000 + robotArriveTime);
 
     // Wake up robot
     setTimeout(() => {

@@ -51,30 +51,30 @@
                         <div class="slider-container" id="slider-container-1">
                             <div class="slider-label">{{slider1_label}}</div>
                             <div class="slider">
-                                <div class="slider-process-container" id="slider-process-1" style="width: {{slider1_width}} !important;">
+                                <div class="slider-process-container" id="slider-process-1" data-width="{{slider1_width}}">
                                     <div class="slider-process slider-color-1"></div>
                                 </div>
-                                <div class="slider-indicator slider-color-1" id="slider-indicator-1">{{slider1_value}}</div>
+                                <div class="slider-indicator slider-color-1" id="slider-indicator-1" data-value="{{slider1_value}}">{{slider1_value}}</div>
                             </div>
                         </div>
 
                         <div class="slider-container" id="slider-container-2">
                             <div class="slider-label">{{slider2_label}}</div>
                             <div class="slider">
-                                <div class="slider-process-container" id="slider-process-2" style="width: {{slider2_width}} !important;">
+                                <div class="slider-process-container" id="slider-process-2" data-width="{{slider2_width}}">
                                     <div class="slider-process slider-color-2"></div>
                                 </div>
-                                <div class="slider-indicator slider-color-2" id="slider-indicator-2">{{slider2_value}}</div>
+                                <div class="slider-indicator slider-color-2" id="slider-indicator-2" data-value="{{slider2_value}}">{{slider2_value}}</div>
                             </div>
                         </div>
 
                         <div class="slider-container" id="slider-container-3">
                             <div class="slider-label">{{slider3_label}}</div>
                             <div class="slider">
-                                <div class="slider-process-container" id="slider-process-3" style="width: {{slider3_width}} !important;">
+                                <div class="slider-process-container" id="slider-process-3" data-width="{{slider3_width}}">
                                     <div class="slider-process slider-color-3"></div>
                                 </div>
-                                <div class="slider-indicator slider-color-3" id="slider-indicator-3">{{slider3_value}}</div>
+                                <div class="slider-indicator slider-color-3" id="slider-indicator-3" data-value="{{slider3_value}}">{{slider3_value}}</div>
                             </div>
                         </div>
                     </div>
@@ -558,7 +558,6 @@
             }
         }, 10);
     </script>
-    <script src="main.js"></script>
 </body>
 
 </html>
