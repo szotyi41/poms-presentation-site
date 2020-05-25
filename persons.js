@@ -207,8 +207,6 @@ $(document).ready(function () {
         replaceOpenedPerson();
     });
 
-    
-
     // Get x,y positions to edit 
     $('.map img').on('click', function(event) {
         console.log('X:', (event.offsetX / $(this).width()) * 100);
@@ -257,7 +255,6 @@ $(document).ready(function () {
             </div>`;
 
         personsElement.append(template);
-
         countrySelectElement.append(`<option value="${person.folder_name}">${person.contact_person_location}</option>`);
     });
 
