@@ -1037,6 +1037,13 @@ ul .fa.color-4 {
   z-index: 1;
 }
 
+@media only screen and (min-width: 900px) {
+  #map-section .map .contact-person.opened {
+    top: 50% !important;
+    left: 50% !important;
+  }  
+}
+
 #map-section .map .contact-person.opened .contact-person-image {
   width: 200px;
   height: 200px;

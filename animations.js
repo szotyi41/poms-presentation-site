@@ -56,7 +56,6 @@ function openPerson(id) {
 }
 
 function replaceOpenedPerson() {
-    console.log(window.innerWidth)
     if (window.innerWidth < 800) {
         $('.contact-person.opened').animate({left: '50%', bottom: '-260px'}, 300);
         return;
