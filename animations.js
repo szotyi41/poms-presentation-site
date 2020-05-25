@@ -1,6 +1,4 @@
 var transitionType = ' cubic-bezier(0.175, 0.885, 0.32, 1.0)';
-var counterNumber = 11538;
-var counterStep = 20;
 var speedoBounce = false;
 var robotArriveTime = 5000;
 
@@ -48,7 +46,48 @@ function activateSliders(sliderIndex) {
     runSliders(sliderIndex, sliderValue, sliderWidth);
 }
 
+function validateHTMLLists() {
+    const pomsAdvantagesList = [...document.querySelectorAll('#pomsAdvatages li')];
+    const agencyBenefitsList = [...document.querySelectorAll('#agencyBenefits li')];
+    const advertiserBenefitsList = [...document.querySelectorAll('#advertiserBenefits li')];
+
+    
+    loopArray(concatArrays([pomsAdvantagesList, agencyBenefitsList, advertiserBenefitsList]));
+}
+
+function loopArray(htmlListItems) {
+    htmlListItems.map( listItem => {
+        if(listItem.innerText.trim() == '') {
+            listItem.parentNode.removeChild(listItem);
+        }
+    });
+}
+
+function concatArrays(arrays) {
+    let concatedArray = [];
+    for(let i = 0; i < arrays.length; i++) {
+        concatedArray.push(...arrays[i])
+    }
+    return concatedArray;
+}
+
 function animate() {
+
+    // Get counter Number
+    const counterContainer = document.querySelector('#counter');
+    let counterNumber = parseInt(counterContainer.getAttribute('data-counter-value'));
+    
+    // Counter Number validation
+    if(isNaN(counterNumber) || counterNumber == '' || counterNumber < 0) {
+        // Hide container if not a correct number
+        counterContainer.parentNode.style.display = 'none';
+        counterNumber = 0;
+    }
+    const counterStep = Math.ceil(counterNumber / 400);
+
+
+    // HTML LISTS Validation
+    validateHTMLLists();
 
     // Robot arrive
     setTimeout(() => $('#robot-sleep-image').css({ opacity: 1, top: '0px' }), 1000);

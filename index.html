@@ -32,7 +32,7 @@
     <script src="persons.js"></script>
 </head>
 
-<body>
+<body style="transition: all .3s ease; opacity: 0;">
 
     <!-- Header section -->
     <header id="header-section">
@@ -175,15 +175,7 @@
             </div>
 
             <div class="digits-section my-5">
-                <div class="digits" id="counter">
-                    <div class="digit card-small">0</div>
-                    <div class="digit card-small">1</div>
-                    <div class="digit card-small">1</div>
-                    <div class="digit">,</div>
-                    <div class="digit card-small">5</div>
-                    <div class="digit card-small">3</div>
-                    <div class="digit card-small">8</div>
-                </div>
+                <div class="digits" id="counter" data-counter-value=""></div>
 
                 <div class="digits-label">Personalised videos generated</div>
             </div>
@@ -250,7 +242,7 @@
                 <div class="col-md-12 col-lg-6">
                     <label class="label-text mt-5 mb-3">POMS Advantages</label>
 
-                    <ul>
+                    <ul id="pomsAdvatages">
                         <li><i class="fa fa-check color-3"></i> Data-driven</li>
                         <li><i class="fa fa-check color-3"></i> Platform and expert team at the same time</li>
                         <li><i class="fa fa-check color-3"></i> Quick and accurate</li>
@@ -259,7 +251,7 @@
 
                     <label class="label-text mb-3">Agency Benefits</label>
 
-                    <ul>
+                    <ul id="agencyBenefits">
                         <li><i class="fa fa-check color-4"></i> 10-year contract</li>
                         <li><i class="fa fa-check color-4"></i> Hypnosis award winner</li>
                         <li><i class="fa fa-check color-4"></i> Recognition within the agency-group</li>
@@ -309,11 +301,12 @@
                     <div class="testimonial-listing">
                         <label class="label-text mb-3">Advertiser Benefits</label>
 
-                        <ul>
+                        <ul id="advertiserBenefits">
                             <li><i class="fa fa-check color-1"></i> It has also reached people who are not possible in
                                 the classic way.</li>
                             <li><i class="fa fa-check color-1"></i> Positive brand value.</li>
                             <li><i class="fa fa-check color-1"></i> A unique innovation worldwide.</li>
+                            <li><i class="fa fa-check color-1"></i> </li>
                         </ul>
                     </div>
 
@@ -561,6 +554,15 @@
 
         </div>
     </section>
+
+    <script>
+        const readyStateCheckInterval = setInterval(() => {
+            if (document.readyState === "complete") {
+                clearInterval(readyStateCheckInterval);
+                document.querySelector('body').style.opacity = 1;
+            }
+        }, 10);
+    </script>
 </body>
 
 </html>

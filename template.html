@@ -156,10 +156,7 @@
             </div>
 
             <div class="digits-section my-5">
-                <div class="digits" id="counter">
-                    {{counter_digits}}
-                </div>
-
+                <div class="digits" id="counter" data-counter-value="{{counter_digits}}"></div>
                 <div class="digits-label">{{counter_label}}</div>
             </div>
 
@@ -219,7 +216,7 @@
                 <div class="col-md-12 col-lg-6">
                     <label class="label-text mt-5 mb-3">{{poms_advantages_title}}</label>
 
-                    <ul>
+                    <ul id="pomsAdvatages">
                         <li><i class="fa fa-check color-3"></i> {{poms_advantages_value_1}}</li>
                         <li><i class="fa fa-check color-3"></i> {{poms_advantages_value_2}}</li>
                         <li><i class="fa fa-check color-3"></i> {{poms_advantages_value_3}}</li>
@@ -229,7 +226,7 @@
 
                     <label class="label-text mb-3">{{agency_benefits_title}}</label>
 
-                    <ul>
+                    <ul id="agencyBenefits">
                         <li><i class="fa fa-check color-4"></i> {{agency_benefits_value_1}}</li>
                         <li><i class="fa fa-check color-4"></i> {{agency_benefits_value_2}}</li>
                         <li><i class="fa fa-check color-4"></i> {{agency_benefits_value_3}}</li>
@@ -279,7 +276,7 @@
                     <div class="testimonial-listing">
                         <label class="label-text mb-3">{{testimonial_advertiser_benefits_title}}</label>
 
-                        <ul>
+                        <ul id="advertiserBenefits">
                             <li><i class="fa fa-check color-1"></i> {{testimonial_advertiser_benefits_value_1}}</li>
                             <li><i class="fa fa-check color-1"></i> {{testimonial_advertiser_benefits_value_2}}</li>
                             <li><i class="fa fa-check color-1"></i> {{testimonial_advertiser_benefits_value_3}}</li>

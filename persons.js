@@ -308,7 +308,7 @@ function openPerson(id, size = -1) {
             personElement.css({
                 left: `calc(${percentX}% + ${length * lengthdirX}px)`,
                 top: `calc(${percentY}% + ${length * lengthdirY}px)`,
-/*                 width: (64 * size) + 'px',
+                /*width: (64 * size) + 'px',
                 height: (64 * size) + 'px' */
             });
             personElement.find('.line').css({
@@ -320,7 +320,7 @@ function openPerson(id, size = -1) {
                 top: `calc(50% - ${(48 * size) * lengthdirY}px)`,
                 transform: 'translate(-50%, -50%) rotate(' + direction + 'deg)'
             });
-/*             personElement.find('.contact-person-image').css({
+            /*personElement.find('.contact-person-image').css({
                 width: (64 * size) + 'px',
                 height: (64 * size) + 'px'
             }); */
