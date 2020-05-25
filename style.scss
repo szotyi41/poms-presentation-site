@@ -235,11 +235,27 @@ ul {
     text-align: center;
     min-height: 0;
 
-    @media screen and (max-width: $screen-md) {
+    @media screen and (max-width: $screen-sm) {
+        min-height: 300px;
+
+        .robot-arms#robot-arms-left {
+            top: 160px !important;
+        }
+
+        .robot-arms#robot-arms-right {
+            top: 200px !important;
+        }
+    }
+
+    @media screen and (max-width: $screen-md) and (min-width: $screen-sm) {
         min-height: 320px;
 
-        .robot-arms {
-            display: none !important;
+        .robot-arms#robot-arms-left {
+            top: 220px !important;
+        }
+
+        .robot-arms#robot-arms-right {
+            top: 220px !important;
         }
     }
 
@@ -380,6 +396,57 @@ ul {
 
 .robot-cards {
     position: relative;
+
+    .margin-left-mobile {
+        @media screen and (max-width: $screen-md) {
+            margin-left: 32px;
+        }
+    }
+
+    .label {
+        position: absolute;
+        font-size: 16px;
+        text-transform: uppercase;
+        opacity: 0;
+        transition: opacity 1s;
+        -webkit-transition: opacity 1s;
+        -moz-transition: opacity 1s;
+        -ms-transition: opacity 1s;
+        -o-transition: opacity 1s;
+
+        &.label-left {
+            left: -30px;
+            top: 50%;
+            transform: translateY(-50%) scale(-1);
+            writing-mode: vertical-lr;
+            text-orientation: mixed;
+            -webkit-writing-mode: vertical-lr;
+            -ms-writing-mode: vertical-lr;
+            -webkit-transform: translateY(-50%) scale(-1);
+            -moz-transform: translateY(-50%) scale(-1);
+            -ms-transform: translateY(-50%) scale(-1);
+            -o-transform: translateY(-50%) scale(-1);
+        }
+
+        &.label-right {
+            right: -30px;
+            top: 50%;
+            transform: translateY(-50%);
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            -webkit-writing-mode: vertical-rl;
+            -ms-writing-mode: vertical-rl;
+            -webkit-transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            -o-transform: translateY(-50%);
+
+            @media screen and (max-width: $screen-lg) {
+                left: -30px;
+                transform: translateY(-50%) scale(-1);
+            }
+        }
+    }
 
     .card.card-sliders {
         position: relative;
@@ -910,7 +977,8 @@ ul {
 
     .map {
         position: relative;
-        width: 100%;
+
+        .map-image {}
 
         .line-image {
             position: absolute;
@@ -934,12 +1002,30 @@ ul {
             -o-transform: translate(-50%, -50%) scale(1);
             transform-origin: center;
 
+            .line {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                background-color: $color-4-dark;
+                border-radius: 4px;
+                -webkit-border-radius: 4px;
+                -moz-border-radius: 4px;
+                -ms-border-radius: 4px;
+                -o-border-radius: 4px;
+                transition: opacity 0.3s;
+                -webkit-transition: opacity 0.3s;
+                -moz-transition: opacity 0.3s;
+                -ms-transition: opacity 0.3s;
+                -o-transition: opacity 0.3s;
+                z-index: -1;
+            }
+
             &:not(.opened):hover {
-                transform: translate(-50%, -50%) scale(1.1);
-                -webkit-transform: translate(-50%, -50%) scale(1.1);
-                -moz-transform: translate(-50%, -50%) scale(1.1);
-                -ms-transform: translate(-50%, -50%) scale(1.1);
-                -o-transform: translate(-50%, -50%) scale(1.1);
+                transform: translate(-50%, -50%) scale(1);
+                -webkit-transform: translate(-50%, -50%) scale(1);
+                -moz-transform: translate(-50%, -50%) scale(1);
+                -ms-transform: translate(-50%, -50%) scale(1);
+                -o-transform: translate(-50%, -50%) scale(1);
                 cursor: pointer;
             }
 
@@ -982,6 +1068,21 @@ ul {
                 z-index: -1;
                 white-space: nowrap;
                 opacity: 0;
+
+                a {
+                    color: #fff;
+                    text-decoration: none;
+                    transition: all 0.3s;
+
+                    -webkit-transition: all 0.3s;
+                    -moz-transition: all 0.3s;
+                    -ms-transition: all 0.3s;
+                    -o-transition: all 0.3s;
+
+                    &:hover {
+                        color: $color-4;
+                    }
+                }
 
                 &.contact-person-name {
                     left: 120px;
@@ -1056,9 +1157,11 @@ ul {
         }
 
         .contact-person.opened {
-            width: 500px;
+            min-width: 500px;
             height: 200px;
             z-index: 1;
+            left: 50%;
+            bottom: -128px;
 
             .contact-person-image {
                 width: 200px;

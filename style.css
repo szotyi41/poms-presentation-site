@@ -192,12 +192,27 @@ ul .fa.color-4 {
   min-height: 0;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 540px) {
+  .robot {
+    min-height: 300px;
+  }
+  .robot .robot-arms#robot-arms-left {
+    top: 160px !important;
+  }
+  .robot .robot-arms#robot-arms-right {
+    top: 200px !important;
+  }
+}
+
+@media screen and (max-width: 720px) and (min-width: 540px) {
   .robot {
     min-height: 320px;
   }
-  .robot .robot-arms {
-    display: none !important;
+  .robot .robot-arms#robot-arms-left {
+    top: 220px !important;
+  }
+  .robot .robot-arms#robot-arms-right {
+    top: 220px !important;
   }
 }
 
@@ -352,6 +367,62 @@ ul .fa.color-4 {
 *
 *
 */
+}
+
+@media screen and (max-width: 720px) {
+  .robot-cards .margin-left-mobile {
+    margin-left: 32px;
+  }
+}
+
+.robot-cards .label {
+  position: absolute;
+  font-size: 16px;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 1s;
+  -webkit-transition: opacity 1s;
+  -moz-transition: opacity 1s;
+  -ms-transition: opacity 1s;
+  -o-transition: opacity 1s;
+}
+
+.robot-cards .label.label-left {
+  left: -30px;
+  top: 50%;
+  transform: translateY(-50%) scale(-1);
+  -ms-writing-mode: tb-lr;
+      writing-mode: vertical-lr;
+  text-orientation: mixed;
+  -webkit-writing-mode: vertical-lr;
+  -ms-writing-mode: vertical-lr;
+  -webkit-transform: translateY(-50%) scale(-1);
+  -moz-transform: translateY(-50%) scale(-1);
+  -ms-transform: translateY(-50%) scale(-1);
+  -o-transform: translateY(-50%) scale(-1);
+}
+
+.robot-cards .label.label-right {
+  right: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+  -ms-writing-mode: tb-rl;
+      writing-mode: vertical-rl;
+  text-orientation: mixed;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: vertical-rl;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+
+@media screen and (max-width: 960px) {
+  .robot-cards .label.label-right {
+    left: -30px;
+    -webkit-transform: translateY(-50%) scale(-1);
+            transform: translateY(-50%) scale(-1);
+  }
 }
 
 .robot-cards .card.card-sliders {
@@ -881,7 +952,6 @@ ul .fa.color-4 {
 
 #map-section .map {
   position: relative;
-  width: 100%;
 }
 
 #map-section .map .line-image {
@@ -911,12 +981,30 @@ ul .fa.color-4 {
           transform-origin: center;
 }
 
+#map-section .map .contact-person .line {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: #3271ca;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s;
+  -moz-transition: opacity 0.3s;
+  -ms-transition: opacity 0.3s;
+  -o-transition: opacity 0.3s;
+  z-index: -1;
+}
+
 #map-section .map .contact-person:not(.opened):hover {
-  transform: translate(-50%, -50%) scale(1.1);
-  -webkit-transform: translate(-50%, -50%) scale(1.1);
-  -moz-transform: translate(-50%, -50%) scale(1.1);
-  -ms-transform: translate(-50%, -50%) scale(1.1);
-  -o-transform: translate(-50%, -50%) scale(1.1);
+  transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+  -moz-transform: translate(-50%, -50%) scale(1);
+  -ms-transform: translate(-50%, -50%) scale(1);
+  -o-transform: translate(-50%, -50%) scale(1);
   cursor: pointer;
 }
 
@@ -960,6 +1048,20 @@ ul .fa.color-4 {
   z-index: -1;
   white-space: nowrap;
   opacity: 0;
+}
+
+#map-section .map .contact-person .contact-person-info a {
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+
+#map-section .map .contact-person .contact-person-info a:hover {
+  color: #3d8bfa;
 }
 
 #map-section .map .contact-person .contact-person-info.contact-person-name {
@@ -1032,9 +1134,11 @@ ul .fa.color-4 {
 }
 
 #map-section .map .contact-person.opened {
-  width: 500px;
+  min-width: 500px;
   height: 200px;
   z-index: 1;
+  left: 50%;
+  bottom: -128px;
 }
 
 #map-section .map .contact-person.opened .contact-person-image {
