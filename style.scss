@@ -10,7 +10,7 @@ $color-2: #c13e6f;
 $color-3: #53bda7;
 $color-4: #3d8bfa;
 $color-4-dark: #3271ca;
-$color-brand: #e54973;
+$color-brand: #fe0000;
 $color-agency: #f39131;
 $color-speedo-start: #c13e6f;
 $color-speedo-end: #3d8bfa;
@@ -35,7 +35,7 @@ $color-background-2: rgba(247, 242, 238, 1);
 $color-background-gradient-1: linear-gradient(180deg, $color-background-1 0%, $color-background-2 100%);
 $color-background-gradient-2: linear-gradient(0deg, $color-background-1 0%, $color-background-2 100%);
 
-
+$box-shadow-person: 0px 10px 32px 0px rgba(0, 0, 0, 0.45);
 $card-border-radius: 20px;
 $card-box-shadow: 0px 15px 24px 0px rgba(0, 0, 0, 0.1);
 $card-brand-logo-height: 48px;
@@ -471,6 +471,8 @@ ul {
             -ms-transform: scale(0);
             -o-transform: scale(0);
             opacity: 0;
+            display: flex;
+            justify-content: center;
 
             position: absolute;
             left: $card-border-radius;
@@ -478,7 +480,6 @@ ul {
             overflow: hidden;
             width: calc(100% - 36px);
             height: $card-brand-logo-height;
-            background-color: $color-robot-eye-sleep;
             border-radius: 32px;
             -webkit-border-radius: 32px;
             -moz-border-radius: 32px;
@@ -973,6 +974,14 @@ ul {
     position: relative;
     background: $color-poms;
 
+    #country-select {
+        display: block; 
+
+        @media screen and (min-width: $screen-lg) {
+            display: none;
+        }
+    }
+
     .cover {
         display: none;
         position: absolute;
@@ -1078,7 +1087,9 @@ ul {
                 -moz-border-radius: 50%;
                 -ms-border-radius: 50%;
                 -o-border-radius: 50%;
-
+                -webkit-box-shadow: $box-shadow-person;
+                box-shadow: $box-shadow-person;
+            
                 @media screen and (max-width: $screen-lg) {
                     .contact-person-image {
                         width: 48px !important;
@@ -1107,6 +1118,9 @@ ul {
                 z-index: -1;
                 white-space: nowrap;
                 opacity: 0;
+                -webkit-box-shadow: $box-shadow-person;
+                box-shadow: $box-shadow-person;
+            
 
                 a {
                     color: #fff;
@@ -1211,7 +1225,7 @@ ul {
             .contact-person-info {
                 display: block;
                 opacity: 1;
-                -webkit-box-shadow: 0px 10px 32px 0px rgba(0, 0, 0, 0.1);
+                -webkit-box-shadow: $box-shadow-person;
                 -moz-box-shadow: 0px 10px 32px 0px rgba(0,0,0,0.1);
                 box-shadow: 0px 10px 32px 0px rgba(0,0,0,0.1);
             }
