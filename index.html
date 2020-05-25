@@ -27,8 +27,9 @@
     <link rel="stylesheet" href="materialize-css-custom.css">
 
     <link rel="stylesheet" href="style.css" async>
-    <script src="animations.js" async></script>
+    <script src="animations.js"></script>
     <script src="forms.js"></script>
+    <script src="persons.js"></script>
 </head>
 
 <body>
@@ -56,7 +57,9 @@
             <div class="row robot-cards mt-5">
 
                 <!-- Left -->
-                <div class="col-md-12 col-lg-4">
+                <div class="col-md-12 col-lg-4 margin-left-mobile">
+
+                    <label class="label label-left">Challenge</label>
 
                     <div class="card card-sliders" id="card-sliders">
                         <div class="card-brand-logo" id="card-brand-logo">
@@ -122,7 +125,10 @@
                 </div>
 
                 <!-- Right -->
-                <div class="col-md-12 col-lg-4">
+                <div class="col-md-12 col-lg-4 margin-left-mobile">
+
+                    <label class="label label-right">Solution</label>
+
                     <div class="card card-engagement" id="card-engagement">
 
                         <!-- Image -->
@@ -538,45 +544,11 @@
     <!-- Map section -->
     <section id="map-section">
         <div class="container map-section" style="padding-bottom: 200px">
-            <h2>Contact</h2>
-            <div class="map" id="map">
-                <img src="assets/map.svg" class="position-relative mx-auto d-block w-100">
+            <h2 class="map-title mb-5">Contact</h2>
+            <div class="map persons" id="map">
+                <img src="assets/map.svg" class="map-image position-relative mx-auto d-block w-100">
 
-                <!-- Person 1 -->
-                <div class="contact-person" id="person-1" data-personid="1" data-left="20"
-                    data-top="60">
-                    <div class="contact-person-info contact-person-name">John Doe</div>
-                    <div class="contact-person-info contact-person-location"><i class="fa fa-globe"></i> France</div>
-                    <div class="contact-person-info contact-person-email">
-                        <i class="fa fa-envelope"></i>
-                        jane.doe@pomscloud.ie
-                    </div>
-                    <div class="contact-person-info contact-person-phone">
-                        <i class="fa fa-phone"></i>
-                        +36-30/3011-311
-                    </div>
-                    <div class="contact-person-image">
-                        <img src="assets/john-doe.png">
-                    </div>
-                </div>
-
-                <!-- Person 2 -->
-                <div class="contact-person" id="person-2" data-personid="2" data-left="10"
-                    data-top="10">
-                    <div class="contact-person-info contact-person-name">Jane Doe</div>
-                    <div class="contact-person-info contact-person-location"><i class="fa fa-globe"></i> England</div>
-                    <div class="contact-person-info contact-person-email">
-                        <i class="fa fa-envelope"></i>
-                        jane.doe@pomscloud.ie
-                    </div>
-                    <div class="contact-person-info contact-person-phone">
-                        <i class="fa fa-phone"></i>
-                        +36-30/3011-311
-                    </div>
-                    <div class="contact-person-image">
-                        <img src="assets/jane-doe.png">
-                    </div>
-                </div>
+                <!-- Persons append here -->
 
             </div>
 

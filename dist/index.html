@@ -2,6 +2,7 @@
 <html>
 
 <head>
+
     <title>POMS</title>
     <meta charset="UTF-8">
     <link rel="icon" type="image/png" href="favicon.ico">
@@ -37,7 +38,9 @@
             <div class="row robot-cards mt-5">
 
                 <!-- Left -->
-                <div class="col-md-12 col-lg-4">
+                <div class="col-md-12 col-lg-4 margin-left-mobile">
+
+                    <label class="label label-left">{{challenge_title}}</label>
 
                     <div class="card card-sliders" id="card-sliders">
                         <div class="card-brand-logo" id="card-brand-logo">
@@ -103,7 +106,10 @@
                 </div>
 
                 <!-- Right -->
-                <div class="col-md-12 col-lg-4">
+                <div class="col-md-12 col-lg-4 margin-left-mobile">
+
+                    <label class="label label-right">{{solution_title}}</label>
+
                     <div class="card card-engagement" id="card-engagement">
 
                         <!-- Image -->
@@ -256,7 +262,7 @@
                 <div class="col-md-12 col-lg-6 col-xl-5 position-relative">
 
                     <div class="quote-text testimonial-quote">
-                        "{{testimonial_quote}}"
+                        {{testimonial_quote}}
                     </div>
 
                     <div class="person-block">
@@ -298,7 +304,7 @@
 
             <div class="row mt-5">
                 <div class="quote-text col-md-12 col-lg-9 text-right">
-                    "{{team_quote_value}}"
+                    {{team_quote_value}}
                 </div>
             
                 <div class="person-block details-left float-right col-md-12 col-lg-3">
@@ -506,50 +512,17 @@
     <!-- Map section -->
     <section id="map-section">
         <div class="container map-section" style="padding-bottom: 200px">
-            <h2>{{contact_title}}</h2>
-            <div class="map" id="map">
-                <img src="{{background_image_1_contact_map}}" class="position-relative mx-auto d-block w-100">
+            <h2 class="map-title mb-5">{{contact_title}}</h2>
+            <div class="map persons" id="map">
+                <img src="{{background_image_1_contact_map}}" class="map-image position-relative mx-auto d-block w-100">
 
-                <!-- Person 1 -->
-                <div class="contact-person opened" id="person-1" data-personid="1" data-left="20"
-                    data-top="60">
-                    <div class="contact-person-info contact-person-name">{{contact_person_name}}</div>
-                    <div class="contact-person-info contact-person-location"><i class="fa fa-globe"></i> {{contact_person_location}}</div>
-                    <div class="contact-person-info contact-person-email">
-                        <i class="fa fa-envelope"></i>
-                        {{contact_person_email}}
-                    </div>
-                    <div class="contact-person-info contact-person-phone">
-                        <i class="fa fa-phone"></i>
-                        {{contact_person_phone}}
-                    </div>
-                    <div class="contact-person-image">
-                        <img src="{{background_image_1_contact_person}}">
-                    </div>
-                </div>
-
-                <!-- Person 2 -->
-                <div class="contact-person" id="person-2" data-personid="2" data-left="10"
-                    data-top="10">
-                    <div class="contact-person-info contact-person-name">Jane Doe</div>
-                    <div class="contact-person-info contact-person-location"><i class="fa fa-globe"></i> England</div>
-                    <div class="contact-person-info contact-person-email">
-                        <i class="fa fa-envelope"></i>
-                        jane.doe@pomscloud.ie
-                    </div>
-                    <div class="contact-person-info contact-person-phone">
-                        <i class="fa fa-phone"></i>
-                        +36-30/3011-311
-                    </div>
-                    <div class="contact-person-image">
-                        <img src="5f7e9c3cbc735c9e68c0e7ff0f0fc4b5.png">
-                    </div>
-                </div>
+                <!-- Persons append here -->
 
             </div>
 
         </div>
     </section>
+
     <script>
         const readyStateCheckInterval = setInterval(() => {
             if (document.readyState === "complete") {

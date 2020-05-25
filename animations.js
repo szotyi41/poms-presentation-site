@@ -2,12 +2,7 @@ var transitionType = ' cubic-bezier(0.175, 0.885, 0.32, 1.0)';
 var counterNumber = 11538;
 var counterStep = 20;
 var speedoBounce = false;
-
 var robotArriveTime = 5000;
-
-// Get parameters from url
-var url = new URL(window.location.href);
-var person = url.searchParams.get('personid');
 
 $(document).ready(function () {
     init();
@@ -15,59 +10,7 @@ $(document).ready(function () {
 
     $('select').formSelect();
 
-    // If url has personid paramter open it in maps
-    if (person) {
-        openPerson(person);
-    } else {
-        openPerson(1000);
-    }
-
-    $(window).on('resize', function() {
-        replaceOpenedPerson();
-    });
-
-    $('.contact-person:not(.opened)').on('click', function() {
-        openPerson($(this).attr('data-personid'));
-    });
 });
-
-function openPerson(id) {
-
-    var person = $('#person-' + id);
-
-    // Close all
-    $('.contact-person').each(function (i, element) {
-        var elem = $(element);
-        if (elem.attr('id') !== 'person-' + id) {
-            console.log(elem.attr('id'));
-            elem.removeClass('opened').animate({
-                left: elem.attr('data-left') + '%',
-                top: elem.attr('data-top') + '%',
-            }, 300);
-        }
-    });
-
-    // Open with id
-    if (person) {
-        person.addClass('opened');
-        person.css({top: '', left: ''});
-        replaceOpenedPerson();
-    }
-}
-
-function replaceOpenedPerson() {
-    if (window.innerWidth < 800) {
-        $('.contact-person.opened').animate({left: '50%', bottom: '-260px'}, 300);
-        return;
-    }
-
-    if (window.innerWidth < 1200) {
-        $('.contact-person.opened').animate({left: '50%', bottom: '-128px'}, 300);
-        return;
-    } 
-
-    $('.contact-person.opened').animate({left: '50%', bottom: '0px'}, 300);
-}
 
 function init() {
     // Cards
@@ -111,7 +54,10 @@ function animate() {
     setTimeout(() => $('#robot-sleep-image').css({ opacity: 1, top: '0px' }), 1000);
 
     // Show left card
-    setTimeout(() => $('#card-sliders').css({ opacity: 1, transform: 'scale(1)' }), 1000 + robotArriveTime);
+    setTimeout(() => {
+        $('#card-sliders').css({ opacity: 1, transform: 'scale(1)' });
+        $('.label-left').css({ opacity: 1 });
+    }, 1000 + robotArriveTime);
 
     // Slide down logo placement
     setTimeout(() => $('#card-brand-logo').css({ opacity: 1, transform: 'scale(1)' }), 2000 + robotArriveTime);
@@ -146,7 +92,10 @@ function animate() {
     setTimeout(() => $('#card-engagement').css({ transform: 'scale(1)', opacity: 1 }), 15000 + robotArriveTime);
 
     // Show right arm
-    setTimeout(() => $('#robot-arms-right').fadeIn(500), 16000 + robotArriveTime);
+    setTimeout(() => {
+        $('#robot-arms-right').fadeIn(500);
+        $('.label-right').css({ opacity: 1 });
+    }, 16000 + robotArriveTime);
 
     // Show runners
     setTimeout(() => $('.card-engagement-image').css({ opacity: 1 }), 17000 + robotArriveTime);
