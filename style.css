@@ -981,6 +981,31 @@ ul .fa.color-4 {
           transform-origin: center;
 }
 
+#map-section .map .contact-person .contact-person-close {
+  z-index: 1;
+  position: absolute;
+  opacity: 0;
+  border: 4px solid #fff;
+  background-color: #c13e6f;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+#map-section .map .contact-person .contact-person-close i {
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  line-height: 23px;
+}
+
+#map-section .map .contact-person .contact-person-close:hover {
+  cursor: pointer;
+  background-color: #e54973;
+}
+
 #map-section .map .contact-person .line {
   position: absolute;
   top: 50%;
@@ -1149,6 +1174,10 @@ ul .fa.color-4 {
 
 #map-section .map .contact-person.opened .contact-person-info {
   display: block;
+  opacity: 1;
+}
+
+#map-section .map .contact-person.opened .contact-person-close {
   opacity: 1;
 }
 

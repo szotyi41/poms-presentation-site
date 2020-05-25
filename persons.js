@@ -227,6 +227,10 @@ $(document).ready(function () {
 
                 <div class="line"></div>
 
+                <div class="contact-person-close" onclick="closePerson('${person.folder_name}')">
+                    <i class="fa fa-times"></i>
+                </div>
+
                 <div class="contact-person-info contact-person-name">${person.contact_person_name}</div>
                 <div class="contact-person-info contact-person-location"><i class="fa fa-globe"></i> ${person.contact_person_location}</div>
                 <div class="contact-person-info contact-person-email">
@@ -255,6 +259,12 @@ $(document).ready(function () {
     }, 10);
 });
 
+function closePerson(id) {
+    setTimeout(function() {
+        openPerson(1000);
+    }, 1);
+}
+
 function openPerson(id) {
 
     var personElement = $('#person-' + id);
@@ -268,6 +278,7 @@ function openPerson(id) {
 
         
         if (elem.attr('id') !== 'person-' + id) {
+
             var length = 96;
             var percentX = elem.attr('data-left');
             var percentY = elem.attr('data-top');
