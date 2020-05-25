@@ -203,7 +203,7 @@ var selectedPersonId = url.searchParams.get('personid');
 $(document).ready(function () {
 
     $(window).on('resize', function () {
-        replaceOpenedPerson();
+        /* replaceOpenedPerson(); */
     });
 
     // Get x,y positions to edit 
@@ -262,7 +262,7 @@ $(document).ready(function () {
 function closePerson(id) {
     setTimeout(function() {
         openPerson(1000);
-    }, 1);
+    }, 10);
 }
 
 function openPerson(id) {
@@ -293,7 +293,7 @@ function openPerson(id) {
                 display: 'block',
                 opacity: 1,
                 width: length,
-                height: '4px',
+                height: '3px',
                 left: `calc(50% - ${48 * lengthdirX}px)`,
                 top: `calc(50% - ${48 * lengthdirY}px)`,
                 transform: 'translate(-50%, -50%) rotate(' + direction + 'deg)'
@@ -302,16 +302,24 @@ function openPerson(id) {
     });
 
     // Open with id
-    if (!personElement) return;
+    if (!personElement) {
+        $('.cover').fadeOut();
+        return;
+    } 
 
     $('.map-title').text(personElement.attr('data-title'));
     personElement.addClass('opened');
+    personElement.css({
+        left: '50%',
+        top: '50%'
+    });
     personElement.find('.line').css({opacity: 0, display: 'none'});
-    replaceOpenedPerson();
+    $('.cover').fadeIn();
+    /* replaceOpenedPerson(); */
 }
 
 // On mobile the person is under the map
-function replaceOpenedPerson() {
+/* function replaceOpenedPerson() {
     if (window.innerWidth < 800) {
         $('.contact-person.opened').css({ left: '50%', top: 'auto', bottom: '-260px' });
         return;
@@ -323,4 +331,4 @@ function replaceOpenedPerson() {
     }
 
     $('.contact-person.opened').css({ left: '50%', top: 'auto', bottom: '-128px' });
-}
+} */
