@@ -35,7 +35,7 @@ $color-background-2: rgba(247, 242, 238, 1);
 $color-background-gradient-1: linear-gradient(180deg, $color-background-1 0%, $color-background-2 100%);
 $color-background-gradient-2: linear-gradient(0deg, $color-background-1 0%, $color-background-2 100%);
 
-
+$box-shadow-person: 0px 10px 32px 0px rgba(0, 0, 0, 0.45);
 $card-border-radius: 20px;
 $card-box-shadow: 0px 15px 24px 0px rgba(0, 0, 0, 0.1);
 $card-brand-logo-height: 48px;
@@ -1024,8 +1024,6 @@ ul {
             -o-transform: translate(-50%, -50%) scale(1);
             transform-origin: center;
 
-            background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(0,212,255,0) 100%);
-
             .contact-person-close {
                 display: none;
                 z-index: 1;
@@ -1089,7 +1087,9 @@ ul {
                 -moz-border-radius: 50%;
                 -ms-border-radius: 50%;
                 -o-border-radius: 50%;
-
+                -webkit-box-shadow: $box-shadow-person;
+                box-shadow: $box-shadow-person;
+            
                 @media screen and (max-width: $screen-lg) {
                     .contact-person-image {
                         width: 48px !important;
@@ -1118,6 +1118,9 @@ ul {
                 z-index: -1;
                 white-space: nowrap;
                 opacity: 0;
+                -webkit-box-shadow: $box-shadow-person;
+                box-shadow: $box-shadow-person;
+            
 
                 a {
                     color: #fff;
@@ -1222,7 +1225,7 @@ ul {
             .contact-person-info {
                 display: block;
                 opacity: 1;
-                -webkit-box-shadow: 0px 10px 32px 0px rgba(0, 0, 0, 0.1);
+                -webkit-box-shadow: $box-shadow-person;
                 -moz-box-shadow: 0px 10px 32px 0px rgba(0,0,0,0.1);
                 box-shadow: 0px 10px 32px 0px rgba(0,0,0,0.1);
             }
