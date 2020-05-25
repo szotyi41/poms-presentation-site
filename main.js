@@ -7,3 +7,4 @@ import './materialize-css-custom.css';
 import './style.css';
 import './animations.js';
 import './forms.js';
+import './persons.js';
