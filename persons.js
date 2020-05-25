@@ -202,9 +202,12 @@ var selectedPersonId = url.searchParams.get('personid');
 
 $(document).ready(function () {
 
+    replaceOpenedPerson();
     $(window).on('resize', function () {
         replaceOpenedPerson();
     });
+
+    
 
     // Get x,y positions to edit 
     $('.map img').on('click', function(event) {
@@ -214,6 +217,13 @@ $(document).ready(function () {
 
     // Insert persons
     var personsElement = $('.persons');
+    var countrySelectElement = $('#country');
+
+    countrySelectElement.on('change', function() {
+        var value = $(this).val();
+        openPerson(value);
+    });
+
     persons.forEach(function (person) {
         template = `                
             <div class="contact-person" 
@@ -226,6 +236,10 @@ $(document).ready(function () {
                 data-title="${person.contact_title}">
 
                 <div class="line"></div>
+
+                <div class="contact-person-close" onclick="closePerson('${person.folder_name}')">
+                    <i class="fa fa-times"></i>
+                </div>
 
                 <div class="contact-person-info contact-person-name">${person.contact_person_name}</div>
                 <div class="contact-person-info contact-person-location"><i class="fa fa-globe"></i> ${person.contact_person_location}</div>
@@ -243,6 +257,8 @@ $(document).ready(function () {
             </div>`;
 
         personsElement.append(template);
+
+        countrySelectElement.append(`<option value="${person.folder_name}">${person.contact_person_location}</option>`);
     });
 
     setTimeout(function() {
@@ -252,64 +268,96 @@ $(document).ready(function () {
         } else {
             openPerson(1000);
         }
+
+        countrySelectElement.formSelect();
     }, 10);
 });
 
-function openPerson(id) {
+function closePerson(id) {
+    setTimeout(function() {
+        openPerson(1000);
+    }, 10);
+}
+
+function openPerson(id, size = -1) {
 
     var personElement = $('#person-' + id);
+
+    window.openedPerson = id;
+
+    if (size === -1) size = window.openPersonInSize;
 
     // Do not open again opened
     if (personElement.hasClass('opened')) return;
 
     // Close all
     $('.contact-person').each(function (i, element) {
-        var elem = $(element);
+        var personElement = $(element);
 
         
-        if (elem.attr('id') !== 'person-' + id) {
-            var length = 96;
-            var percentX = elem.attr('data-left');
-            var percentY = elem.attr('data-top');
-            var direction = elem.attr('data-direction') === 'undefined' ? 0 : elem.attr('data-direction');
+        if (personElement.attr('id') !== 'person-' + id) {
+
+            var length = 96 * size;
+            var percentX = personElement.attr('data-left');
+            var percentY = personElement.attr('data-top');
+            var direction = personElement.attr('data-direction') === 'undefined' ? 0 : personElement.attr('data-direction');
             var lengthdirX = Math.cos(direction * (Math.PI / 180));
             var lengthdirY = Math.sin(direction * (Math.PI / 180));
 
-            elem.removeClass('opened').css({
+            personElement.removeClass('opened');
+            personElement.css({
                 left: `calc(${percentX}% + ${length * lengthdirX}px)`,
                 top: `calc(${percentY}% + ${length * lengthdirY}px)`,
-            }).find('.line').css({
+/*                 width: (64 * size) + 'px',
+                height: (64 * size) + 'px' */
+            });
+            personElement.find('.line').css({
                 display: 'block',
                 opacity: 1,
                 width: length,
-                height: '4px',
-                left: `calc(50% - ${48 * lengthdirX}px)`,
-                top: `calc(50% - ${48 * lengthdirY}px)`,
+                height: '3px',
+                left: `calc(50% - ${(48 * size) * lengthdirX}px)`,
+                top: `calc(50% - ${(48 * size) * lengthdirY}px)`,
                 transform: 'translate(-50%, -50%) rotate(' + direction + 'deg)'
             });
+/*             personElement.find('.contact-person-image').css({
+                width: (64 * size) + 'px',
+                height: (64 * size) + 'px'
+            }); */
         }
     });
 
     // Open with id
-    if (!personElement) return;
+    if (!personElement) {
+        return;
+    } 
 
     $('.map-title').text(personElement.attr('data-title'));
     personElement.addClass('opened');
+    personElement.css({
+        left: '50%',
+        top: '50%'
+    });
     personElement.find('.line').css({opacity: 0, display: 'none'});
-    replaceOpenedPerson();
 }
 
 // On mobile the person is under the map
 function replaceOpenedPerson() {
+
+    // Small
     if (window.innerWidth < 800) {
-        $('.contact-person.opened').css({ left: '50%', top: 'auto', bottom: '-260px' });
+        window.openPersonInSize = 0.5;
+        openPerson(window.openedPerson, window.openPersonInSize);
         return;
     }
 
+    // Medium
     if (window.innerWidth < 1200) {
-        $('.contact-person.opened').css({ left: '50%', top: 'auto', bottom: '-160px' });
+        window.openPersonInSize = 0.75;
+        openPerson(window.openedPerson, window.openPersonInSize);
         return;
     }
 
-    $('.contact-person.opened').css({ left: '50%', top: 'auto', bottom: '-128px' });
+    window.openPersonInSize = 1;
+    openPerson(window.openedPerson, window.openPersonInSize);
 }

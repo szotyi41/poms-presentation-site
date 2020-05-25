@@ -946,6 +946,18 @@ ul .fa.color-4 {
   background: #366F62;
 }
 
+#map-section .cover {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #366F62;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
 #map-section h2 {
   color: #fff;
 }
@@ -981,16 +993,42 @@ ul .fa.color-4 {
           transform-origin: center;
 }
 
+#map-section .map .contact-person .contact-person-close {
+  display: none;
+  z-index: 1;
+  position: absolute;
+  opacity: 0;
+  border: 4px solid #fff;
+  background-color: #c13e6f;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+#map-section .map .contact-person .contact-person-close i {
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  line-height: 23px;
+}
+
+#map-section .map .contact-person .contact-person-close:hover {
+  cursor: pointer;
+  background-color: #e54973;
+}
+
 #map-section .map .contact-person .line {
   position: absolute;
   top: 50%;
   left: 50%;
   background-color: #3271ca;
-  border-radius: 4px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
   transition: opacity 0.3s;
   -webkit-transition: opacity 0.3s;
   -moz-transition: opacity 0.3s;
@@ -1157,6 +1195,13 @@ ul .fa.color-4 {
 #map-section .map .contact-person.opened .contact-person-info {
   display: block;
   opacity: 1;
+  -webkit-box-shadow: 0px 10px 32px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 10px 32px 0px rgba(0, 0, 0, 0.1);
+}
+
+#map-section .map .contact-person.opened .contact-person-close {
+  display: block;
+  opacity: 1;
 }
 
 @media screen and (max-width: 960px) {
@@ -1164,6 +1209,7 @@ ul .fa.color-4 {
     position: absolute;
     bottom: 0px;
     width: 360px;
+    min-width: 360px;
     height: 160px;
   }
   #map-section .map .contact-person.opened .contact-person-image {
