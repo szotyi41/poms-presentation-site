@@ -994,6 +994,7 @@ ul .fa.color-4 {
 }
 
 #map-section .map .contact-person .contact-person-close {
+  display: none;
   z-index: 1;
   position: absolute;
   opacity: 0;
@@ -1192,6 +1193,7 @@ ul .fa.color-4 {
 }
 
 #map-section .map .contact-person.opened .contact-person-close {
+  display: block;
   opacity: 1;
 }
 
@@ -1200,6 +1202,7 @@ ul .fa.color-4 {
     position: absolute;
     bottom: 0px;
     width: 360px;
+    min-width: 360px;
     height: 160px;
   }
   #map-section .map .contact-person.opened .contact-person-image {

@@ -1016,6 +1016,7 @@ ul {
             transform-origin: center;
 
             .contact-person-close {
+                display: none;
                 z-index: 1;
                 position: absolute;
                 opacity: 0;
@@ -1216,6 +1217,7 @@ ul {
             }
 
             .contact-person-close {
+                display: block;
                 opacity: 1;
             }
 
@@ -1223,6 +1225,7 @@ ul {
                 position: absolute;
                 bottom: 0px;
                 width: 360px;
+                min-width: 360px;
                 height: 160px;
 
                 .contact-person-image {
