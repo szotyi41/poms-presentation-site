@@ -451,13 +451,18 @@ ul .fa.color-4 {
   -ms-transform: scale(0);
   -o-transform: scale(0);
   opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: absolute;
   left: 20px;
   top: -24px;
   overflow: hidden;
   width: calc(100% - 36px);
   height: 48px;
-  background-color: #112e43;
   border-radius: 32px;
   -webkit-border-radius: 32px;
   -moz-border-radius: 32px;
@@ -946,6 +951,16 @@ ul .fa.color-4 {
   background: #366F62;
 }
 
+#map-section #country-select {
+  display: block;
+}
+
+@media screen and (min-width: 960px) {
+  #map-section #country-select {
+    display: none;
+  }
+}
+
 #map-section .cover {
   display: none;
   position: absolute;
@@ -991,6 +1006,7 @@ ul .fa.color-4 {
   -o-transform: translate(-50%, -50%) scale(1);
   -webkit-transform-origin: center;
           transform-origin: center;
+  background: radial-gradient(circle, #020024 0%, rgba(0, 212, 255, 0) 100%);
 }
 
 #map-section .map .contact-person .contact-person-close {
