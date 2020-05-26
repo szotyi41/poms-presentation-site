@@ -975,7 +975,7 @@ ul {
     background: $color-poms;
 
     #country-select {
-        display: block; 
+        display: block;
 
         @media screen and (min-width: $screen-lg) {
             display: none;
@@ -1089,7 +1089,7 @@ ul {
                 -o-border-radius: 50%;
                 -webkit-box-shadow: $box-shadow-person;
                 box-shadow: $box-shadow-person;
-            
+
                 @media screen and (max-width: $screen-lg) {
                     .contact-person-image {
                         width: 48px !important;
@@ -1120,7 +1120,7 @@ ul {
                 opacity: 0;
                 -webkit-box-shadow: $box-shadow-person;
                 box-shadow: $box-shadow-person;
-            
+
 
                 a {
                     color: #fff;
@@ -1217,17 +1217,108 @@ ul {
             bottom: -128px;
 
             .contact-person-image {
-                width: 200px;
-                height: 200px;
-                padding: 12px;
+
+                @media screen and (min-width: $screen-md) {
+                    width: 200px !important;
+                    height: 200px !important;
+                    padding: 12px !important;
+                }
+
+                @media screen and (max-width: $screen-lg) and (min-width: $screen-md) {
+                    width: 160px !important;
+                    height: 160px !important;
+                    padding: 8px !important;
+                }
+
+                @media screen and (max-width: $screen-md) {
+                    width: 120px !important;
+                    height: 120px !important;
+                    padding: 6px !important;
+                }
             }
 
             .contact-person-info {
                 display: block;
                 opacity: 1;
                 -webkit-box-shadow: $box-shadow-person;
-                -moz-box-shadow: 0px 10px 32px 0px rgba(0,0,0,0.1);
-                box-shadow: 0px 10px 32px 0px rgba(0,0,0,0.1);
+                -moz-box-shadow: 0px 10px 32px 0px rgba(0, 0, 0, 0.1);
+                box-shadow: 0px 10px 32px 0px rgba(0, 0, 0, 0.1);
+                padding-left: 96px;
+                left: 120px;
+
+                @media screen and (max-width: $screen-lg) and (min-width: $screen-md) {
+                    padding-left: 48px;
+                    left: 120px;
+                }
+
+                @media screen and (max-width: $screen-md) {
+                    padding-left: 48px;
+                    left: 80px;
+                }
+            }
+
+            .contact-person-name {
+
+                @media screen and (max-width: $screen-lg) and (min-width: $screen-md) {
+                    font-size: 16px;
+                    height: 32px;
+                    line-height: 32px;
+                }
+
+                @media screen and (max-width: $screen-md) {
+                    font-size: 14px;
+                    height: 28px;
+                    line-height: 28px;
+                    top: 8px;
+                }
+            }
+
+            .contact-person-location {
+                @media screen and (max-width: $screen-lg) and (min-width: $screen-md) {
+                    font-size: 12px;
+                    height: 24px;
+                    line-height: 24px;
+                    top: 64px - 4px;
+                }
+
+                @media screen and (max-width: $screen-md) {
+                    font-size: 10px;
+                    height: 20px;
+                    line-height: 20px;
+                    top: 64px - 8px - 12px;
+                }
+            }
+
+            .contact-person-email {
+                @media screen and (max-width: $screen-lg) and (min-width: $screen-md) {
+                    font-size: 12px;
+                    height: 24px;
+                    line-height: 24px;
+                    top: 96px - 8px;
+                }
+
+                @media screen and (max-width: $screen-md) {
+                    font-size: 10px;
+                    height: 20px;
+                    line-height: 20px;
+                    top: 80px - 12px;
+                }
+            }
+
+            .contact-person-phone {
+                @media screen and (max-width: $screen-lg) and (min-width: $screen-md) {
+                    font-size: 12px;
+                    height: 24px;
+                    line-height: 24px;
+                    top: 128px - 12px;
+                }
+
+                @media screen and (max-width: $screen-md) {
+                    font-size: 10px;
+                    height: 20px;
+                    line-height: 20px;
+                    top: 104px - 12px;
+                }
             }
 
             .contact-person-close {
@@ -1235,50 +1326,16 @@ ul {
                 opacity: 1;
             }
 
-            @media screen and (max-width: $screen-lg) {
+            @media screen and (max-width: $screen-lg) and (min-width: $screen-md) {
                 position: absolute;
                 bottom: 0px;
                 width: 360px;
                 min-width: 360px;
                 height: 160px;
+            }
 
-                .contact-person-image {
-                    width: 160px;
-                    height: 160px;
-                    padding: 8px;
-                }
-
-                .contact-person-info {
-                    padding-left: 48px;
-
-                    &.contact-person-name {
-                        font-size: 16px;
-                        height: 32px;
-                        line-height: 32px;
-                    }
-
-                    &.contact-person-location {
-                        font-size: 12px;
-                        height: 24px;
-                        line-height: 24px;
-                        top: 64px - 4px;
-                    }
-
-                    &.contact-person-email {
-                        font-size: 12px;
-                        height: 24px;
-                        line-height: 24px;
-                        top: 96px - 8px;
-                    }
-
-                    &.contact-person-phone {
-                        font-size: 12px;
-                        height: 24px;
-                        line-height: 24px;
-                        top: 128px - 12px;
-                    }
-
-                }
+            @media screen and (max-width: $screen-md) {
+                min-width: 320px;
             }
         }
 
@@ -1325,6 +1382,8 @@ ul {
             -moz-border-radius: 50%;
             -ms-border-radius: 50%;
             -o-border-radius: 50%;
+            -webkit-box-shadow: $box-shadow-person;
+            box-shadow: $box-shadow-person;
         }
 
         .person-name {
@@ -1347,6 +1406,8 @@ ul {
             vertical-align: middle;
             white-space: nowrap;
             font-size: 20px;
+            -webkit-box-shadow: $box-shadow-person;
+            box-shadow: $box-shadow-person;
 
             @media screen and (max-width: $screen-md) {
                 font-size: 16px;
@@ -1376,6 +1437,8 @@ ul {
             font-size: 16px;
             vertical-align: middle;
             line-height: 32px;
+            -webkit-box-shadow: $box-shadow-person;
+            box-shadow: $box-shadow-person;
 
             @media screen and (max-width: $screen-md) {
                 font-size: 14px;
