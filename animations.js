@@ -5,9 +5,7 @@ var robotArriveTime = 5000;
 $(document).ready(function () {
     init();
     animate();
-
     $('select').formSelect();
-
 });
 
 function init() {
@@ -43,7 +41,12 @@ function init() {
 function activateSliders(sliderIndex) {
     const sliderWidth = $(`#slider-process-${sliderIndex}`).attr('data-width');
     const sliderValue = parseInt($(`#slider-indicator-${sliderIndex}`).attr('data-value'));
-    runSliders(sliderIndex, sliderValue, sliderWidth);
+
+    if(sliderWidth.trim() == '' || parseInt(sliderWidth) == 0 || isNaN(sliderValue) || sliderValue == '' || sliderValue == 0){
+        document.querySelector(`#slider-process-${sliderIndex}`).parentNode.parentNode.style.opacity = '0';
+    }else{
+        runSliders(sliderIndex, sliderValue, sliderWidth);
+    }
 }
 
 function validateHTMLLists() {
@@ -71,6 +74,26 @@ function concatArrays(arrays) {
     return concatedArray;
 }
 
+function videoIframeCheckIfFailed(){
+    const videoIframe = document.querySelector('.video-iframe');
+    let secondsCounter = 0;
+    let interval;
+
+    interval = setInterval( () => {
+        if(secondsCounter === 1){
+            videoIframe.parentNode.style.opacity = 0;
+            clearInterval(interval);
+        }
+        
+        secondsCounter++;
+    }, 1000);
+    
+    videoIframe.addEventListener('load', () => {
+        clearInterval(interval);
+        secondsCounter = 0;
+    });
+}
+
 function animate() {
 
     // Get counter Number
@@ -85,9 +108,13 @@ function animate() {
     }
     const counterStep = Math.ceil(counterNumber / 400);
 
+    // Iframe Validation
+    videoIframeCheckIfFailed();
 
     // HTML LISTS Validation
     validateHTMLLists();
+
+    //Validate iframe
 
     // Robot arrive
     setTimeout(() => $('#robot-sleep-image').css({ opacity: 1, top: '0px' }), 1000);

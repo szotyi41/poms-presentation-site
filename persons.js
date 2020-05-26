@@ -292,7 +292,7 @@ $(document).ready(function () {
         contactPersonInfoPersonImg.className = 'contact-person-image';
 
         const personImg = document.createElement('img');
-        personImg.src = `assets/${person.background_image_1_contact_person}`;
+        personImg.src = person.background_image_1_contact_person;
 
         contactPersonInfoPersonImg.append(personImg);
 
