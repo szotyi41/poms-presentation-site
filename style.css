@@ -415,6 +415,7 @@ ul .fa.color-4 {
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
+  max-width: 128px;
 }
 
 @media screen and (max-width: 960px) {
@@ -1607,5 +1608,13 @@ ul .fa.color-4 {
   border-right: 4px solid transparent;
   border-top: 4px solid #fff;
   clear: both;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  select:focus,
+  textarea:focus,
+  input:focus {
+    font-size: 16px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
