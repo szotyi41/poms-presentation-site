@@ -104,7 +104,6 @@ function animate() {
     // Show brand logo
     setTimeout(() => {
         $('.card-brand-logo-image').css({ opacity: 1 });
-        $('#card-brand-logo').css({ backgroundColor: '#e54973' });
     }, 3000 + robotArriveTime);
 
     // Run sliders

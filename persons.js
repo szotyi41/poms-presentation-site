@@ -223,38 +223,86 @@ $(document).ready(function () {
     });
 
     persons.forEach(function (person) {
-        template = `                
-            <div class="contact-person" 
-                id="person-${person.folder_name}" 
-                onclick="openPerson('${person.folder_name}')" 
-                data-personid="${person.folder_name}" 
-                data-left="${person.x}" 
-                data-top="${person.y}"
-                data-direction="${person.direction}"
-                data-title="${person.contact_title}">
+        const contactPerson = document.createElement('div');
+        contactPerson.className = 'contact-person';
+        contactPerson.id = `person-${person.folder_name}`;
+        contactPerson.addEventListener('click', () => {openPerson(person.folder_name)});
+        contactPerson.setAttribute('data-personid', person.folder_name);
+        contactPerson.setAttribute('data-left', person.x);
+        contactPerson.setAttribute('data-top', person.y);
+        contactPerson.setAttribute('data-direction', person.direction);
+        contactPerson.setAttribute('data-title', person.contact_title);
 
-                <div class="line"></div>
+        const line = document.createElement('div');
+        line.className = 'line';
 
-                <div class="contact-person-close" onclick="closePerson('${person.folder_name}')">
-                    <i class="fa fa-times"></i>
-                </div>
+        const contactPersonClose = document.createElement('div');
+        contactPersonClose.className = 'contact-person-close';
+        contactPersonClose.addEventListener('click', () => {closePerson(person.folder_name)});
 
-                <div class="contact-person-info contact-person-name">${person.contact_person_name}</div>
-                <div class="contact-person-info contact-person-location"><i class="fa fa-globe"></i> ${person.contact_person_location}</div>
-                <div class="contact-person-info contact-person-email">
-                    <i class="fa fa-envelope"></i>
-                    <a href="mailto:${person.contact_person_email}">${person.contact_person_email}</a>
-                </div>
-                <div class="contact-person-info contact-person-phone">
-                    <i class="fa fa-phone"></i>
-                    <a href="tel:${person.contact_person_phone}">${person.contact_person_phone}</a>
-                </div>
-                <div class="contact-person-image">
-                    <img src="assets/${person.background_image_1_contact_person}">
-                </div>
-            </div>`;
+        const closeIcon = document.createElement('i');
+        closeIcon.className = 'fa fa-times';
 
-        personsElement.append(template);
+        contactPersonClose.append(closeIcon);
+
+        const contactPersonInfoPersonName = document.createElement('div');
+        contactPersonInfoPersonName.className = 'contact-person-info contact-person-name';
+        contactPersonInfoPersonName.innerHTML = person.contact_person_name;
+
+        const contactPersonInfoPersonLocation = document.createElement('div');
+        contactPersonInfoPersonLocation.className = 'contact-person-info contact-person-location';
+        contactPersonInfoPersonLocation.innerHTML = ' ' + person.contact_person_location;
+
+        const globeIcon = document.createElement('i');
+        globeIcon.className = 'fa fa-globe';
+
+        contactPersonInfoPersonLocation.prepend(globeIcon);
+
+        const contactPersonInfoPersonEmail = document.createElement('div');
+        contactPersonInfoPersonEmail.className = 'contact-person-info contact-person-email';
+
+        const envelopeIcon = document.createElement('i');
+        envelopeIcon.className = 'fa fa-envelope';
+
+        contactPersonInfoPersonEmail.append(envelopeIcon);
+
+        const mailToLink = document.createElement('a');
+        mailToLink.href = `mailto:${person.contact_person_email}`;
+        mailToLink.innerHTML = ' ' + person.contact_person_email;
+
+        contactPersonInfoPersonEmail.append(mailToLink);
+
+        const contactPersonInfoPersonPhone = document.createElement('div');
+        contactPersonInfoPersonPhone.className = 'contact-person-info contact-person-phone';
+
+        const phoneIcon = document.createElement('i');
+        phoneIcon.className = 'fa fa-phone';
+
+        contactPersonInfoPersonPhone.append(phoneIcon);
+
+        const phoneLink = document.createElement('a');
+        phoneLink.href = `tel:${person.contact_person_phone}`;
+        phoneLink.innerHTML = ' ' + person.contact_person_phone;
+
+        contactPersonInfoPersonPhone.append(phoneLink);
+
+        const contactPersonInfoPersonImg = document.createElement('div');
+        contactPersonInfoPersonImg.className = 'contact-person-image';
+
+        const personImg = document.createElement('img');
+        personImg.src = `assets/${person.background_image_1_contact_person}`;
+
+        contactPersonInfoPersonImg.append(personImg);
+
+        contactPerson.append(line);
+        contactPerson.append(contactPersonClose);
+        contactPerson.append(contactPersonInfoPersonName);
+        contactPerson.append(contactPersonInfoPersonLocation);
+        contactPerson.append(contactPersonInfoPersonEmail);
+        contactPerson.append(contactPersonInfoPersonPhone);
+        contactPerson.append(contactPersonInfoPersonImg);
+
+        personsElement.append(contactPerson);
         countrySelectElement.append(`<option value="${person.folder_name}">${person.contact_person_location}</option>`);
     });
 
@@ -329,7 +377,7 @@ function openPerson(id, size = -1) {
         return;
     } 
 
-    $('.map-title').text(personElement.attr('data-title'));
+    $('.map-title').html(personElement.attr('data-title'));
     personElement.addClass('opened');
     personElement.css({
         left: '50%',
