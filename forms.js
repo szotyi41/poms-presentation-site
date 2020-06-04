@@ -365,14 +365,14 @@ $(document).ready(function () {
             selection.push({
                 'name': $('#name').val(),
                 'email': $('#email').val(),
-                'interest1': $('#interest1').val(),
-                'interest2': $('#interest2').val(),
+                'interest_I': $('#interest_I').val(),
+                'interest_II': $('#interest_II').val(),
                 'person': $('#person').val(),
                 'owner': $('#owner').val(),
                 'model': $('#model').val(),
-                'travel': $('#travel').val(),
+                'travelling': $('#travelling').val(),
                 'family': $('#family').val(),
-                'social': $('#social').val()
+                'socializing': $('#socializing').val()
             });
 
             jsonString = JSON.stringify(selection);
@@ -380,9 +380,9 @@ $(document).ready(function () {
             $.ajax({
 
                 type: "POST",
-                url: "https://pomscloud.ie/src/handlers/sportVideoHandler.php",
+                url: "./src/Support/handler.php",
                 dataType: "json",
-                data: { project: 'expo', id: parseInt(Math.random(1000000000) * 1000000000), select: jsonString },
+                data: { project: 'Expo', id: parseInt(Math.random(1000000000) * 1000000000), select: jsonString },
                 beforeSend: function () {
 
                     window.onbeforeunload = function () {

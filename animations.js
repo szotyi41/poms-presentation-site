@@ -117,12 +117,29 @@ function animate() {
     //Validate iframe
 
     // Robot arrive
-    setTimeout(() => $('#robot-sleep-image').css({ opacity: 1, top: '0px' }), 1000);
+    setTimeout(() => {
+        $('#robot-sleep-image').css({ opacity: 1, top: '0px' });
+
+        // Scroll to robot in mobile
+        if (window.innerWidth < 800) {
+            $([document.documentElement, document.body]).animate({
+                scrollTop: $('#robot-sleep-image').offset().top - 200
+            }, 1000);
+        }
+    }, 1000);
 
     // Show left card
     setTimeout(() => {
         $('#card-sliders').css({ opacity: 1, transform: 'scale(1)' });
         $('.label-left').css({ opacity: 1 });
+
+        // Scroll to card in mobile
+        if (window.innerWidth < 800) {
+            $([document.documentElement, document.body]).animate({
+                scrollTop: $('#card-sliders').offset().top - 200
+            }, 1000);
+        }
+
     }, 1000 + robotArriveTime);
 
     // Slide down logo placement
@@ -148,13 +165,30 @@ function animate() {
     setTimeout(() => {
         $('#robot-wake-image').css({ opacity: 1 });
         $('#robot-sleep-image').css({ opacity: 0 });
+
+        // Scroll to robot in mobile
+        if (window.innerWidth < 800) {
+            $([document.documentElement, document.body]).animate({
+                scrollTop: $('.robot-floating').offset().top
+            }, 1000);
+        }
+
     }, 11000 + robotArriveTime);
 
     // Show left arm
     setTimeout(() => $('#robot-arms-left').fadeIn(500), 13000 + robotArriveTime);
 
     // Card Engagement
-    setTimeout(() => $('#card-engagement').css({ transform: 'scale(1)', opacity: 1 }), 15000 + robotArriveTime);
+    setTimeout(() => {
+        $('#card-engagement').css({ transform: 'scale(1)', opacity: 1 });
+
+        // Scroll to right card in mobile
+        if (window.innerWidth < 800) {
+            $([document.documentElement, document.body]).animate({
+                scrollTop: ($('#card-engagement').offset().top - 300) + 'px'
+            }, 1000);
+        }
+    }, 15000 + robotArriveTime);
 
     // Show right arm
     setTimeout(() => {

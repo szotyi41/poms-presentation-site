@@ -442,6 +442,7 @@ ul {
             -moz-transform: translateY(-50%);
             -ms-transform: translateY(-50%);
             -o-transform: translateY(-50%);
+            max-width: 128px;
 
             @media screen and (max-width: $screen-lg) {
                 left: -30px;
@@ -1618,5 +1619,14 @@ ul {
         border-right: 4px solid transparent;
         border-top: 4px solid #fff;
         clear: both;
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+
+    select:focus,
+    textarea:focus,
+    input:focus {
+        font-size: 16px;
     }
 }
