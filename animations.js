@@ -271,16 +271,30 @@ function runSliders(sliderIndex, sliderNumberTarget, slideToPercent) {
     $('#slider-container-' + sliderIndex).css({ transform: 'scale(1)', opacity: 1 });
     setTimeout(() => {
         var sliderIndicator = $('#slider-indicator-' + sliderIndex);
-        var sliderNumberDivide = 400;
+
         $('#slider-process-' + sliderIndex).animate({ width: slideToPercent + '%' }, 300);
         sliderIndicator.animate({ left: slideToPercent + '%' }, 300);
-        var interval = setInterval(function () {
-            sliderIndicator.text(Math.round(sliderNumberTarget / sliderNumberDivide).format());
-            if (sliderNumberDivide === 1) {
-                clearInterval(interval);
-            }
-            sliderNumberDivide--;
-        }, 1);
+
+        // var sliderNumberDivide = 400;
+        var sliderNumberDivide = sliderNumberTarget < 1000 ? 1 : Math.ceil(sliderNumberTarget * 0.01);
+        let counter = 0;
+        setTimeout( function() {
+            var interval = setInterval(function () {
+                sliderIndicator.text(counter);
+                counter += sliderNumberDivide;
+                if (counter >= sliderNumberTarget) {
+                    sliderIndicator.text(sliderNumberTarget);
+                    clearInterval(interval);
+                }
+            }, 10);
+        }, 200);
+        // var interval = setInterval(function () {
+        //     sliderIndicator.text(Math.round(sliderNumberTarget / sliderNumberDivide).format());
+        //     if (sliderNumberDivide === 1) {
+        //         clearInterval(interval);
+        //     }
+        //     sliderNumberDivide--;
+        // }, 1);
     }, 300);
 }
 
