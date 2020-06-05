@@ -283,7 +283,7 @@ function runSliders(sliderIndex, sliderNumberTarget, slideToPercent) {
                 sliderIndicator.text(counter);
                 counter += sliderNumberDivide;
                 if (counter >= sliderNumberTarget) {
-                    sliderIndicator.text(sliderNumberTarget);
+                    sliderIndicator.text(sliderNumberTarget.format());
                     clearInterval(interval);
                 }
             }, 10);

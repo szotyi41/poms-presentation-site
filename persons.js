@@ -14,7 +14,7 @@ var persons = [
       "direction": 130
     },
     {
-      "contact_person_name": "Greg Zsigmond",
+      "contact_person_name": "Gergely Zsigmond",
       "contact_title": "Kontaktpersonen",
       "background_image_1_contact_person": "greg_zs.jpg",
       "contact_person_location": "Deutschland",
