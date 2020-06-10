@@ -200,6 +200,7 @@ var persons = [
 var url = new URL(window.location.href);
 var selectedPersonId = url.searchParams.get('personid');
 
+
 $(document).ready(function () {
 
     replaceOpenedPerson();

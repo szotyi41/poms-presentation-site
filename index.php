@@ -36,19 +36,19 @@
 <body style="transition: all .3s ease; opacity: 0;">
 
 <?php
-$lang = isset($_GET['lang']) ? $_GET['lang'] : 'en';
-$brand = isset($_GET['brand']) ? $_GET['brand'] : 'mediamarkt';
-$demo = isset($_GET['demo']) ? $_GET['demo'] : 'audi';
+$lang = isset($_GET['lang']) ? $_GET['lang'] : '{{lang}}';
+$brand = isset($_GET['brand']) ? $_GET['brand'] : '{{brand}}';
+$demo = isset($_GET['demo']) ? $_GET['demo'] : '{{demo}}';
 
-if (isset($_GET['brand'])) {
+if (!empty($_GET['brand'])) {
     include "dynamic-section-$brand-$lang.php";
 }
 
-if (isset($_GET['demo'])) {
+if (!empty($_GET['demo'])) {
     include "demo-section-$demo-$lang.php";
 }
 
-if (isset($_GET['map'])) {
+if (!empty($_GET['map'])) {
     include "map-section.php";
 }
 ?>

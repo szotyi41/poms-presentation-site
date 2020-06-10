@@ -925,18 +925,22 @@ ul .fa.color-4 {
 *
 *
 */
-#demo-section {
+#audi-demo-section,
+.demo-section {
   background: #366F62;
   color: #fff;
   /* Deprecated */
 }
 
-#demo-section h2,
-#demo-section .quote-text {
+#audi-demo-section h2,
+#audi-demo-section .quote-text,
+.demo-section h2,
+.demo-section .quote-text {
   color: #fff;
 }
 
-#demo-section .laptop-mock-image {
+#audi-demo-section .laptop-mock-image,
+.demo-section .laptop-mock-image {
   max-width: 75%;
 }
 
