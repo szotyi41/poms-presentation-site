@@ -538,7 +538,8 @@
         (function() {
             // ?sections=header-section,robot-section,testimonial-section,triumph-demo-section,audi-demo-section
             var url = new URL(window.location.href);
-            var sections = '{{section}}' ? '{{section}}' : url.searchParams.get('sections');
+            var sectionsUrl = url.searchParams.get('sections');
+            var sections = sectionsUrl ? sectionsUrl : '{{section}}';
             $('section,header').css({display: 'none'});
             sections.split(',').forEach(function(section) {
                 setTimeout(function() { 
