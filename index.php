@@ -39,17 +39,16 @@
 $lang = isset($_GET['lang']) ? $_GET['lang'] : 'en';
 $brand = isset($_GET['brand']) ? $_GET['brand'] : 'mediamarkt';
 $demo = isset($_GET['demo']) ? $_GET['demo'] : 'audi';
-$map = isset($_GET['map']) ? $_GET['map'] : 'map';
 
-if (isset($brand)) {
+if (isset($_GET['brand'])) {
     include "dynamic-section-$brand-$lang.php";
 }
 
-if (isset($demo)) {
+if (isset($_GET['demo'])) {
     include "demo-section-$demo-$lang.php";
 }
 
-if (isset($map)) {
+if (isset($_GET['map'])) {
     include "map-section.php";
 }
 ?>
