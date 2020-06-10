@@ -541,10 +541,9 @@
             var sections = '{{section}}' ? '{{section}}' : url.searchParams.get('sections');
             $('section,header').css({display: 'none'});
             sections.split(',').forEach(function(section) {
-                console.log(section);
                 setTimeout(function() { 
                     $('section#' + section).css({display: 'block'}); 
-                });
+                },1);
             });
         })();
     </script>
