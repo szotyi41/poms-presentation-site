@@ -543,7 +543,7 @@
             $('section,header').css({display: 'none'});
             sections.split(',').forEach(function(section) {
                 setTimeout(function() { 
-                    $('section#' + section).css({display: 'block'}); 
+                    $('#' + section).css({display: 'block'}); 
                 },1);
             });
         })();
