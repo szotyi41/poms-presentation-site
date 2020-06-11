@@ -104,7 +104,7 @@ var persons = [
       "direction": 160
     },
     {
-      "contact_person_name": "Bálint Borsos",
+      "contact_person_name": "Balint Borsos",
       "contact_title": "Kontaktpersonen",
       "background_image_1_contact_person": "balint_b.jpg",
       "contact_person_location": "Österreich",
