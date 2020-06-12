@@ -332,23 +332,23 @@
                 </div>
 
                 <div class="col-md-12 col-lg-4">
-                    <label class="mt-5 mb-3 alt-label-text">Features</label>
+                    <label class="mt-5 mb-3 alt-label-text">{{features_title}}</label>
 
                     <ul>
-                        <li class="color-white"><i class="fa fa-check color-1"></i> Data-driven</li>
-                        <li class="color-white"><i class="fa fa-check color-1"></i> Expert team and Platform</li>
-                        <li class="color-white"><i class="fa fa-check color-1"></i> Quick and accurate</li>
-                        <li class="color-white"><i class="fa fa-check color-1"></i> Automated video production</li>
+                        <li class="color-white"><i class="fa fa-check color-1"></i> {{data_driven_value}}</li>
+                        <li class="color-white"><i class="fa fa-check color-1"></i> {{expert_team_and_platform_value}}</li>
+                        <li class="color-white"><i class="fa fa-check color-1"></i> {{quick_and_accurate_value}}</li>
+                        <li class="color-white"><i class="fa fa-check color-1"></i> {{automated_video_production_value}}</li>
                     </ul>
                 </div>
             </div>
 
             <div class="row">
                 <ul class="timeline">
-                    <li class="color-white">Create a personalised ad for AUDI</li>
-                    <li class="color-white">Fill the form or press the "Random fill" button</li>
-                    <li class="color-white">Press the "Create my video" if you want to see the video</li>
-                    <li class="color-white">Press the "Download" or "Send my video" if you want to keep what you created</li>
+                    <li class="color-white">{{create_a_personalised_ad_value}}</li>
+                    <li class="color-white">{{fill_the_form_value}}</li>
+                    <li class="color-white">{{press_the_create_my_video_value}}</li>
+                    <li class="color-white">{{press_the_download_value}}</li>
                   </ul>
             </div>
 
@@ -356,7 +356,7 @@
                 <div class="video-generator-box">
                     <div class="row mt-25">
                         <div class="col-md-12 col-lg-8 flex-center">
-                            <h3>Generate your own creative version!</h3>
+                            <h3>{{generate_your_own_version_value}}</h3>
                         </div>
 
                         <div class="col-md-12 col-lg-4">
@@ -369,7 +369,7 @@
                         <div class="col-lg-12 black-text">
                             <div class="input-field input-light">
                                 <input id="name" type="text" class="black-border" required>
-                                <label for="name">Customer Name</label>
+                                <label for="name">customer_name_value</label>
                             </div>
                         </div>
                     </div>
@@ -500,7 +500,7 @@
                     <div class="row my-5 mb-15">
                         <div class="button-group gray-blue-background" id="generated-video-container">
                             <div class="try-it-container d-flex justify-content-between rounded-5">
-                                <div class="try-it-yourself">Try it yourself</div>
+                                <div class="try-it-yourself">{{try_it_yourself_value}}</div>
 
                                 <!-- Create video -->
                                 <button id="create-expo-video" class="input-button">
@@ -522,9 +522,7 @@
 
                             <div id="email-container" class="centered-text">
                                 <span class="inline-b full-height v-middle mb-1">
-                                    Please fill out your e-mail or get 
-                                    <a class="back_link underlined gray-yellow-text">back</a> 
-                                    to your video
+                                    {{please_fill_out_your_email_value}}
                                 </span>
 
                                 <script>
@@ -548,15 +546,11 @@
 
                             <div id="video-link-container" class="centered-text mt-30">
                                 <span class="inline-b full-height v-middle">
-                                    Download won't start?
+                                    {{download_wont_start_value}}
                                 </span>
                                 <br />
                                 <span class="inline-b full-height v-middle">
-                                    Please click  
-                                    <a id="download_link" href="#" target="_blank" class="gray-yellow-text">this link</a>
-                                    or get 
-                                    <a class="back_link gray-yellow-text underlined">back</a> 
-                                    to your video and try later
+                                    {{please_click_this_link_value}}
                                 </span>
                             </div>
 
