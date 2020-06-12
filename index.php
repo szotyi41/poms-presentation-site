@@ -29,6 +29,7 @@
     <link rel="stylesheet" href="style.css" async>
     <script src="animations.js"></script>
     <script src="forms.js" type="module"></script>
+    <script src="js/video-player/video-player-controls.js"></script>
     <script src="persons.js"></script>
 
 </head>
