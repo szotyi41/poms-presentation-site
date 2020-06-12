@@ -528,20 +528,9 @@
                                     to your video
                                 </span>
 
-                                <script>
-                                    function enable() {
-                                        if (document.getElementById("email").value == "") {
-                                            $('.send-expo-video').prop('disabled', true);
-                                            $('.send-expo-video').addClass('disabled-input');
-                                        } else {
-                                            $('.send-expo-video').prop('disabled', false);
-                                            $('.send-expo-video').removeClass('disabled-input');
-                                        }
-                                    }
-                                </script>
                                 <div class="d-flex">
                                     <div class="input-dark pad-l-40 full-width">
-                                        <input name="email" id="email" type="email" placeholder="E-mail" onchange="enable()">
+                                        <input name="email" id="email" type="email" placeholder="E-mail">
                                     </div>
                                     <button class="send-expo-video btn" id="send-expo-video">&gt;</button>
                                 </div>
