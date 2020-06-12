@@ -1856,6 +1856,9 @@ ul .fa.color-4 {
 .video-generator-box {
   max-width: 800px;
   margin: auto;
+  background-color: white;
+  border-radius: 5%;
+  padding: 10px 25px 5px 25px;
 }
 
 @media screen and (max-width: 1140px) {
