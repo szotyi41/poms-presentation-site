@@ -40,11 +40,11 @@ $brand = isset($_GET['brand']) ? $_GET['brand'] : '{{brand}}';
 $demo = isset($_GET['demo']) ? $_GET['demo'] : '{{demo}}';
 
 if (!empty($_GET['brand'])) {
-    include "dynamic-section-$brand-$lang.php";
+    include "$brand-$lang.html";
 }
 
 if (!empty($_GET['demo'])) {
-    include "demo-section-$demo-$lang.php";
+    include "$demo-$lang.html";
 }
 
 if (!empty($_GET['map'])) {

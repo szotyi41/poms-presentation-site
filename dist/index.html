@@ -316,8 +316,8 @@
         </div>
     </section>
 
-    <!-- Demo section -->
-    <section id="demo-section">
+    <!-- Audi Demo section -->
+    <section id="audi-demo-section">
         <div class="container demo">
 
             <hr class="hr-green" />
@@ -533,6 +533,19 @@
                 document.querySelector('body').style.opacity = 1;
             }
         }, 10);
+
+        (function() {
+            // ?sections=header-section,robot-section,testimonial-section,triumph-demo-section,audi-demo-section
+            var url = new URL(window.location.href);
+            var sections = '{{section}}' ? '{{section}}' : url.searchParams.get('sections');
+            $('section,header').css({display: 'none'});
+            sections.split(',').forEach(function(section) {
+                console.log(section);
+                setTimeout(function() { 
+                    $('section#' + section).css({display: 'block'}); 
+                });
+            });
+        })();
     </script>
 <script src="main.js"></script></body>
 
