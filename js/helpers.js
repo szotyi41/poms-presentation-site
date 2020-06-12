@@ -14,7 +14,7 @@
  * @param {array}  icons The icon classes passed with their fa name.
  * @param {string} style The style to be applied to the icon classes.
  * 
- * @return {string} The string of styled icon classes
+ * @return {string} The string of styled icon classes.
  */
 function setIconsHtml(icons, style = 'margin-right: 5px;')
 {
@@ -27,19 +27,19 @@ function setIconsHtml(icons, style = 'margin-right: 5px;')
 /**
  * Return the HTML of a response element.
  * 
- * Set and return the HTML of a response <div> element containing
+ * Set and return the HTML of a response element containing
  * a message, an array of classes (e.g. `error`, `success`, `info`)
  * and, optionally, an array of icons.
  * The default element type is <span>.
  * 
  * @since 1.0.0
  * 
- * @param {string} message 
- * @param {array}  classes 
- * @param {array}  icons 
- * @param {string} elemType 
+ * @param {string} message  The message to be passed as a response.
+ * @param {array}  classes  The response classes.
+ * @param {array}  icons    The response icon classes (optional).
+ * @param {string} elemType The response container element type.
  * 
- * @return {string} The styled response
+ * @return {string} The styled response.
  */
 export function setResponse(message, classes, icons = null, elemType = 'span') 
 {       
