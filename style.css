@@ -1784,11 +1784,22 @@ ul .fa.color-4 {
   outline: none;
 }
 
+.input-light input,
+.input-light select,
+.input-light label {
+  color: #000;
+  border-color: #000!important;
+}
+
+.input-light input,
+.input-light select,
+.input-light label,
 .input-dark button {
   outline: none;
 }
 
-.input-dark .caret {
+.input-dark .caret,
+.input-light .caret {
   display: none;
 }
 
@@ -1856,6 +1867,9 @@ ul .fa.color-4 {
 .video-generator-box {
   max-width: 800px;
   margin: auto;
+  background-color: white;
+  border-radius: 5%;
+  padding: 10px 25px 5px 25px;
 }
 
 @media screen and (max-width: 1140px) {
