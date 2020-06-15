@@ -339,7 +339,7 @@ $(document).ready(function () {
 
         var downloadLink = document.getElementById("download_link");
         var file = $(expoVideoLink).attr("href").replace(/^.*[\\\/]/, '');
-        downloadLink.setAttribute("href", "/src/Support/downloadHandler.php?file=" + file);
+        downloadLink.setAttribute("href", "/projects/src/Support/downloadHandler.php?file=" + file);
     });
 
     /** Send an e-mail with the video */
