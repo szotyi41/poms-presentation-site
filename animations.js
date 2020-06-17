@@ -5,7 +5,6 @@ var robotArriveTime = 5000;
 $(document).ready(function () {
     init();
     animate();
-    $('select').formSelect();
 });
 
 function init() {

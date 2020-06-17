@@ -1,0 +1,1053 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"memory_usag",
+				"memory_usage_start"
+			],
+			[
+				"docum",
+				"documents"
+			],
+			[
+				"optio",
+				"options"
+			],
+			[
+				"disable",
+				"disableTriggerOnChange"
+			],
+			[
+				"enable",
+				"enableTriggerOnChange"
+			],
+			[
+				"addOpti",
+				"addOptionIfNotExists"
+			],
+			[
+				"addOptions",
+				"addOptionsIfNotExists"
+			],
+			[
+				"Dfa",
+				"Dfareporting.php"
+			],
+			[
+				"namse",
+				"namespace"
+			],
+			[
+				"in",
+				"initial\tcolor"
+			],
+			[
+				"tra",
+				"transition\tproperty"
+			],
+			[
+				"jqer",
+				"jquery.fittext.js"
+			],
+			[
+				"change",
+				"changeContent"
+			],
+			[
+				"getElement",
+				"getElementById\t( elementId: DOMString ): Element Document"
+			],
+			[
+				"trans",
+				"transition\tproperty"
+			],
+			[
+				"know",
+				"knowledge"
+			],
+			[
+				"langu",
+				"language"
+			],
+			[
+				"knowled",
+				"knowledge"
+			],
+			[
+				"tar",
+				"translateY()\ttransform"
+			],
+			[
+				"box",
+				"box-shadow\tproperty"
+			],
+			[
+				"h",
+				"hud/"
+			],
+			[
+				"font",
+				"font-weight\tproperty"
+			],
+			[
+				"shipp",
+				"shipping_address"
+			],
+			[
+				"cur",
+				"curtain_width"
+			],
+			[
+				"cornice",
+				"cornice_width"
+			],
+			[
+				"terme",
+				"termekdata"
+			],
+			[
+				"behu",
+				"behuzo"
+			],
+			[
+				"curtain-",
+				"curtain-height"
+			],
+			[
+				"C",
+				"CURRENT_TIMESTAMP"
+			],
+			[
+				"excelimport-upl",
+				"excelimport-upload-button"
+			],
+			[
+				"upload-button",
+				"upload-button-input"
+			],
+			[
+				"wor",
+				"word-wrap\tproperty"
+			],
+			[
+				"tran",
+				"transform\tproperty"
+			],
+			[
+				"drag",
+				"draggable"
+			],
+			[
+				"filter-enable",
+				"filter-enable-brightness"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"video",
+				"videoCurrentTime"
+			],
+			[
+				"__",
+				"__probe"
+			],
+			[
+				"ps",
+				"position\tproperty"
+			],
+			[
+				"backgr",
+				"background\tproperty"
+			],
+			[
+				"wid",
+				"width\tproperty"
+			],
+			[
+				"Mongo",
+				"MongoDB"
+			],
+			[
+				"orderitem",
+				"orderitemmodal"
+			],
+			[
+				"input-sear",
+				"input-searchselect-option"
+			],
+			[
+				"campaig",
+				"campaignid"
+			],
+			[
+				"cam",
+				"campaign"
+			],
+			[
+				"subcam",
+				"subcampaign"
+			],
+			[
+				"status",
+				"statusToDate"
+			],
+			[
+				"rem",
+				"remainingdaily"
+			],
+			[
+				"col",
+				"color-font"
+			],
+			[
+				"over",
+				"overflow\tproperty"
+			],
+			[
+				"max",
+				"max-height\tproperty"
+			],
+			[
+				"getElemet",
+				"getElementById\t( elementId: DOMString ): Element Document"
+			],
+			[
+				"cama",
+				"campaignObjectId"
+			],
+			[
+				"subca",
+				"subcampaignObjectId"
+			],
+			[
+				"med",
+				"mediumid"
+			],
+			[
+				"campai",
+				"campaignid"
+			],
+			[
+				"campaign",
+				"campaignObjectId"
+			],
+			[
+				"medi",
+				"medium"
+			],
+			[
+				"border-rad",
+				"border-radius\tproperty"
+			],
+			[
+				"Cal",
+				"CalendarViewMode"
+			],
+			[
+				"viewM",
+				"viewModes"
+			],
+			[
+				"calendar",
+				"calendarEvents"
+			],
+			[
+				"notifi",
+				"Notifications"
+			],
+			[
+				"native",
+				"nativescript-mapbox"
+			],
+			[
+				"tras",
+				"transform\tproperty"
+			],
+			[
+				"t",
+				"translateX()\ttransform"
+			],
+			[
+				"border-bot",
+				"border-bottom-right-radius\tproperty"
+			],
+			[
+				"border-left",
+				"border-top-left-radius\tproperty"
+			],
+			[
+				"tr",
+				"transform\tproperty"
+			],
+			[
+				"pro",
+				"prototype"
+			],
+			[
+				"transa",
+				"translateY()\ttransform"
+			],
+			[
+				"medium",
+				"mediumid"
+			],
+			[
+				"input-mu",
+				"input-multiselect-option"
+			],
+			[
+				"Y",
+				"translateY()\ttransform"
+			],
+			[
+				"inline",
+				"inline-block\tdisplay"
+			],
+			[
+				"parent",
+				"parentElement\t: Element Node"
+			],
+			[
+				"taskb",
+				"taskbar-element"
+			],
+			[
+				"json",
+				"json_sortby"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"format python",
+				"CodeFormatter: Format as Python Syntax"
+			],
+			[
+				"remove plac",
+				"Package Control: Remove Package"
+			],
+			[
+				"html",
+				"Snippet: html5"
+			],
+			[
+				"format ",
+				"CodeFormatter: Format as PHP Syntax"
+			],
+			[
+				"csv",
+				"Set Syntax: CSV (Rainbow)"
+			],
+			[
+				"rainbow",
+				"Set Syntax: CSV (Rainbow)"
+			],
+			[
+				"format js",
+				"CodeFormatter: Format as Javascript Syntax"
+			],
+			[
+				"rainbow csv",
+				"Set Syntax: CSV (Rainbow)"
+			],
+			[
+				"convert to tabs",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"format javasc",
+				"CodeFormatter: Format as Javascript Syntax"
+			],
+			[
+				"php eroror",
+				"CodeFormatter: Show PHP Transformations"
+			],
+			[
+				"php",
+				"CodeFormatter: Show PHP Transformations"
+			],
+			[
+				"format",
+				"CodeFormatter: Format as Javascript Syntax"
+			],
+			[
+				"instll",
+				"Package Control: Install Package"
+			],
+			[
+				"formatcss",
+				"CodeFormatter: Format as CSS Syntax"
+			],
+			[
+				"delimi",
+				"CSV: Set delimiter"
+			],
+			[
+				"csv ;",
+				"Set Syntax: Rainbow CSV [;] Simple"
+			],
+			[
+				"advance",
+				"Set Syntax: Advanced CSV"
+			],
+			[
+				"csv set",
+				"CSV: Set delimiter"
+			],
+			[
+				"format css",
+				"CodeFormatter: Format as SCSS Syntax"
+			],
+			[
+				"mini",
+				"Minify Javascript/CSS to file"
+			],
+			[
+				"minif",
+				"Minify Javascript/CSS to file"
+			],
+			[
+				"line",
+				"Sort Lines"
+			],
+			[
+				"minifie",
+				"Minify Javascript/CSS to file"
+			],
+			[
+				"install pac",
+				"Package Control: Install Package"
+			],
+			[
+				"format html",
+				"CodeFormatter: Format as HTML Syntax"
+			],
+			[
+				"javasc",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"format javacs",
+				"CodeFormatter: Format as Javascript Syntax"
+			],
+			[
+				"install p",
+				"Package Control: Install Package"
+			],
+			[
+				"jquery",
+				"Snippet: HTML - Include jQuery"
+			],
+			[
+				"",
+				"AngularJS: Toggle - Disable Indexed Isolate Completions"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"ftp",
+				"Preferences: SFTP Settings"
+			],
+			[
+				"format j",
+				"CodeFormatter: Format as Javascript Syntax"
+			],
+			[
+				"lint",
+				"ESLint"
+			],
+			[
+				"format php",
+				"CodeFormatter: Format as PHP Syntax"
+			],
+			[
+				"disable",
+				"Package Control: Disable Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"key ",
+				"Preferences: Key Bindings"
+			],
+			[
+				"keyboar",
+				"VUEFormatter: Set Keyboard Shortcuts"
+			],
+			[
+				"settings",
+				"Preferences: Settings"
+			],
+			[
+				"html sy",
+				"Set Syntax: HTML"
+			],
+			[
+				"javascript",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"fill",
+				"Snippet: fillStyle {Prop}"
+			],
+			[
+				"syntax html",
+				"Set Syntax: HTML"
+			],
+			[
+				"sftp",
+				"Preferences: SFTP Settings"
+			],
+			[
+				"sft",
+				"SFTP: Browse Server…"
+			],
+			[
+				"sftp edit",
+				"SFTP: Edit Server…"
+			],
+			[
+				"sftp ",
+				"SFTP: Browse Server…"
+			],
+			[
+				"server br",
+				"SFTP: Browse Server…"
+			],
+			[
+				"sftp set",
+				"SFTP: Setup Server…"
+			],
+			[
+				"ftp ",
+				"SFTP: Edit Server…"
+			],
+			[
+				"eslint",
+				"ESLint"
+			],
+			[
+				"syntax vue",
+				"Set Syntax: Vue Component"
+			],
+			[
+				"vue",
+				"VUEFormatter"
+			],
+			[
+				"color ",
+				"Color Picker"
+			],
+			[
+				"css",
+				"Set Syntax: CSS"
+			],
+			[
+				"button",
+				"Snippet: button"
+			],
+			[
+				"jquer",
+				"Snippet: HTML - Include jQuery"
+			],
+			[
+				"snippet: select",
+				"Snippet: select-menu-custom"
+			],
+			[
+				"input",
+				"Snippet: HTML - Input:text"
+			],
+			[
+				"sql",
+				"Set Syntax: SQL"
+			],
+			[
+				"JAVASC",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"syntax php",
+				"Set Syntax: PHP"
+			],
+			[
+				"color",
+				"Color Picker"
+			],
+			[
+				"php ",
+				"Set Syntax: PHP"
+			],
+			[
+				"syntax javasc",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"colo",
+				"Color Picker"
+			],
+			[
+				"syntax css",
+				"Set Syntax: CSS"
+			],
+			[
+				"SFTP",
+				"SFTP: Browse Server…"
+			],
+			[
+				"remove pack",
+				"Package Control: Remove Package"
+			],
+			[
+				"remove pace",
+				"Package Control: Remove Package"
+			],
+			[
+				"lorem",
+				"Snippet: Lorem ipsum"
+			],
+			[
+				"comment",
+				"Toggle Comment"
+			],
+			[
+				"indetn",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"colorpic",
+				"Color Picker"
+			],
+			[
+				"route",
+				"Set Syntax: Laroute"
+			],
+			[
+				"HTM",
+				"Snippet: html"
+			],
+			[
+				"format javas",
+				"CodeFormatter: Format as Javascript Syntax"
+			],
+			[
+				"html format",
+				"CodeFormatter: Format as HTML Syntax"
+			],
+			[
+				"format javsc",
+				"CodeFormatter: Format as Javascript Syntax"
+			],
+			[
+				"javascr",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"install pack",
+				"Package Control: Install Package"
+			],
+			[
+				"css sys",
+				"Set Syntax: CSS"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"indent",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"vue ",
+				"Snippet: Object Value JS"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"syntax v",
+				"Set Syntax: Vue Component"
+			],
+			[
+				"formatj javasc",
+				"CodeFormatter: Format as Javascript Syntax"
+			],
+			[
+				"svn comm",
+				"SVN: Commit…"
+			],
+			[
+				"snippet jquer",
+				"Snippet: HTML - Include jQuery"
+			],
+			[
+				"install pa",
+				"Package Control: Install Package"
+			],
+			[
+				"html ",
+				"Snippet: html"
+			],
+			[
+				"php sy",
+				"Set Syntax: PHP"
+			],
+			[
+				"format java",
+				"CodeFormatter: Format as Javascript Syntax"
+			],
+			[
+				"syntax hmtl",
+				"Set Syntax: HTML"
+			],
+			[
+				"javascipt",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"snippet script",
+				"Snippet: HTML - Script"
+			],
+			[
+				"html snippet",
+				"Snippet: html"
+			],
+			[
+				"format jav",
+				"CodeFormatter: Format as Javascript Syntax"
+			],
+			[
+				"theme",
+				"UI: Select Theme"
+			],
+			[
+				"html sni",
+				"Snippet: html"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 136.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Library/WebServer/Documents/poms-presentation-site"
+	],
+	"file_history":
+	[
+		"/Library/WebServer/Documents/poms-presentation-site/persons.js",
+		"/Library/WebServer/Documents/poms-presentation-site/map-section.php",
+		"/Library/WebServer/Documents/poms-presentation-site/main.js",
+		"/Library/WebServer/Documents/poms-presentation-site/materialize-css-custom.css",
+		"/Library/WebServer/Documents/poms-presentation-site/package-lock.json",
+		"/Library/WebServer/Documents/poms-presentation-site/package.json",
+		"/Library/WebServer/Documents/poms-presentation-site/style.css",
+		"/Library/WebServer/Documents/poms-presentation-site/style.css.map",
+		"/Library/WebServer/Documents/poms-presentation-site/webpack.config.js",
+		"/Library/WebServer/Documents/poms-presentation-site/.gitignore",
+		"/Library/WebServer/Documents/poms-presentation-site/5f7e9c3cbc735c9e68c0e7ff0f0fc4b5.png",
+		"/Library/WebServer/Documents/poms-presentation-site/1920x1080.css",
+		"/Library/WebServer/Documents/poms-presentation-site/9347d430ce4003376ff643543ef45b38.png",
+		"/Library/WebServer/Documents/poms-presentation-site/animations.js",
+		"/Library/WebServer/Documents/poms-presentation-site/demo-section-audi-en.php",
+		"/Library/WebServer/Documents/poms-presentation-site/dynamic-section-mediamarkt-en.php",
+		"/Library/WebServer/Documents/poms-presentation-site/forms.js",
+		"/Library/WebServer/Documents/poms-presentation-site/index.html",
+		"/Library/WebServer/Documents/poms-presentation-site/index.php",
+		"/Library/WebServer/Documents/poms-presentation-site/style.scss",
+		"/Library/WebServer/Documents/poms-presentation-site/template.html",
+		"/Library/WebServer/Documents/query/query.py",
+		"/Users/macbook/Desktop/result.txt",
+		"/Users/macbook/Documents/Bannerek/triumph_tw_aqua_message_12_900x200/index.html",
+		"/Users/macbook/Documents/Bannerek/triumph_tw_remarketing_message_14/index_300x600.html",
+		"/Users/macbook/Documents/Bannerek/triumph_tw_remarketing_message_14/300x600.css",
+		"/Users/macbook/Documents/vue2-selectize/src/main.vue",
+		"/Users/macbook/Downloads/1_story_with_video_(mp4)_illustration_BNR_ALL_HU_Deloitte._2020_May-5ec68b063b37af3cbc45fd43/160x600/index.html",
+		"/Users/macbook/Downloads/1_story_with_video_(mp4)_illustration_BNR_ALL_HU_Deloitte._2020_May-5ec68b063b37af3cbc45fd43/300x250/index.html",
+		"/Users/macbook/Downloads/1_story_with_video_(mp4)_illustration_BNR_ALL_HU_Deloitte._2020_May-5ec68b063b37af3cbc45fd43/valami.sh",
+		"/Users/macbook/Desktop/a/valami.sh",
+		"/Users/macbook/Downloads/1_story_with_video_(mp4)_illustration_BNR_ALL_HU_Deloitte._2020_May-5ec68b063b37af3cbc45fd43/300x600/index.html",
+		"/Users/macbook/Documents/Bannerek/triumph_tw_remarketing_message_14/300x250.css",
+		"/Users/macbook/Documents/Bannerek/triumph_tw_remarketing_message_14/index_300x250.html",
+		"/Users/macbook/Library/Application Support/Sublime Text 3/Packages/User/SVN.errors.log",
+		"/Users/macbook/Downloads/Campaign-23900934-Report-2020-04-29.csv",
+		"/Users/macbook/Downloads/Triumph new logo/300x250.css",
+		"/Users/macbook/Desktop/autochecker/psr4.php",
+		"/Users/macbook/Desktop/autochecker/analyze.php",
+		"/Users/macbook/Desktop/autochecker/app.php",
+		"/Volumes/kreativ_tar/dco_kreativ_tar/triumph_tw_geotargeting_message_1/index_320x480.html",
+		"/Volumes/kreativ_tar/dco_kreativ_tar/triumph_tw_geotargeting_message_1/index_300x600.html",
+		"/Volumes/kreativ_tar/dco_kreativ_tar/triumph_tw_geotargeting_message_1/300x600.css",
+		"/Volumes/kreativ_tar/dco_kreativ_tar/triumph_tw_geotargeting_message_1/320x480.css",
+		"/Volumes/kreativ_tar/dco_kreativ_tar/triumph_tw_geotargeting_message_1/640x360.css",
+		"/Volumes/kreativ_tar/dco_kreativ_tar/triumph_tw_geotargeting_message_1/900x200.css",
+		"/Volumes/kreativ_tar/dco_kreativ_tar/triumph_tw_geotargeting_message_1/index_640x360.html",
+		"/Volumes/kreativ_tar/dco_kreativ_tar/triumph_tw_geotargeting_message_1/index_900x200.html",
+		"/Volumes/kreativ_tar/dco_kreativ_tar/triumph_tw_prospecting_message_11/index.html",
+		"/Volumes/kreativ_tar/dco_kreativ_tar/triumph_tw_prospecting_message_5/index.html",
+		"/Volumes/kreativ_tar/dco_kreativ_tar/triumph_tw_remarketing_message_19_floodlight/index.html",
+		"/Volumes/kreativ_tar/dco_kreativ_tar/triumph_tw_remarketing_message_19/index.html",
+		"/Users/macbook/Documents/Bannerek/triumph_tw_prospecting_message_8/index.html",
+		"/Users/macbook/Documents/Bannerek/triumph_tw_geotargeting_message_1/index.html",
+		"/Users/macbook/Documents/Bannerek/triumph_tw_remarketing_message_19_floodlight/300x250.css",
+		"/Users/macbook/Documents/Bannerek/triumph_tw_geotargeting_message_1/300x250.css",
+		"/Users/macbook/Documents/Bannerek/triumph_tw_prospecting_message_5/300x250.css",
+		"/Users/macbook/Documents/Bannerek/triumph_tw_prospecting_message_8/300x250.css",
+		"/Users/macbook/Documents/Bannerek/triumph_tw_prospecting_message_11/300x250.css",
+		"/Users/macbook/Documents/Bannerek/triumph_tw_remarketing_message_19/300x250.css",
+		"/Library/WebServer/Documents/dco/storage/app/public/service_accounts/spreadsheet.json",
+		"/Users/macbook/Documents/Bannerek/triumph_tw_remarketing_message_19/index.html",
+		"/Users/macbook/Documents/Bannerek/triumph_tw_prospecting_message_2/300x250.css",
+		"/Users/macbook/Documents/Bannerek/triumph_tw_prospecting_message_2/index.html",
+		"/Users/macbook/Documents/Bannerek/triumph_tw_prospecting_message_11/index.html",
+		"/Users/macbook/Documents/Bannerek/triumph_tw_prospecting_message_5/index.html",
+		"/Users/macbook/Desktop/Nissan/index.html",
+		"/Users/macbook/Desktop/Nissan/textfill.js",
+		"/Users/macbook/Downloads/triumph_tw_prospecting_message_2/index.html",
+		"/Users/macbook/Downloads/triumph_tw_geotargeting_message_1 (1)/index.html",
+		"/Users/macbook/Desktop/Nissan/300x250.css",
+		"/Users/macbook/Desktop/Nissan/dynamic.content.js",
+		"/Users/macbook/Downloads/triumph_tw_geotargeting_message_1/index.html",
+		"/Users/macbook/Library/Containers/com.apple.mail/Data/Library/Mail Downloads/FAC86595-2379-4F9E-8D16-DAD3A659A7CB/36011-20200115 18.02.17.053.xml",
+		"/Users/macbook/Downloads/nissan_remarketing/index.html",
+		"/Users/macbook/Downloads/2 slides transparent/demo/jquery.min.js",
+		"/Users/macbook/Downloads/Google_Studio_test.csv",
+		"/Users/macbook/Desktop/index.html",
+		"/Users/macbook/Downloads/Takeout 3/Hangouts/Hangouts.json",
+		"/Users/macbook/Downloads/testike/index.html",
+		"/Users/macbook/Downloads/city.list 2.json",
+		"/Users/macbook/Downloads/city.list.json",
+		"/Library/WebServer/Documents/weather-app/src/city.list.json",
+		"/Library/WebServer/Documents/weather-app/icons/Thermometer-50.svg",
+		"/Users/macbook/Downloads/climacons-master/SVG/Cloud-Drizzle-Sun-Alt.svg",
+		"/Users/macbook/Downloads/climacons-master/SVG/Cloud-Download.svg",
+		"/Library/WebServer/Documents/passtore/passtore-client/components/Navbar.js",
+		"/private/var/folders/dx/mnq00gfx63b1qs_lbps4z7gc0000gn/T/fz3temp-2/scripts.min.js",
+		"/Library/WebServer/Documents/portfolio/js/jquery.onscreen.js",
+		"/Library/WebServer/Documents/portfolio/js/scripts.js",
+		"/private/var/folders/dx/mnq00gfx63b1qs_lbps4z7gc0000gn/T/fz3temp-2/.htaccess",
+		"/Library/WebServer/Documents/portfolio/en.html",
+		"/Library/WebServer/Documents/portfolio/index.html",
+		"/Library/WebServer/Documents/portfolio/css/font-awesome.min.css",
+		"/Library/WebServer/Documents/portfolio/css/style.css",
+		"/Library/WebServer/Documents/portfolio/css/style.min.css",
+		"/Library/WebServer/Documents/passtore/passtore-client/pages/htaccess.js",
+		"/Library/WebServer/Documents/webshot/urls.txt",
+		"/Library/WebServer/Documents/webshot/webshot.py",
+		"/Library/WebServer/Documents/portfolio/js/jquery-3.2.1.min.js",
+		"/Library/WebServer/Documents/portfolio/js/scripts.min.js",
+		"/Library/WebServer/Documents/webshot/emag_hu.png",
+		"/Library/WebServer/Documents/chat/src/components/Messages.js",
+		"/Library/WebServer/Documents/petiframe/demo/index.html",
+		"/Library/WebServer/Documents/dco/public/petiframe/petiframe.js",
+		"/Library/WebServer/Documents/dco/app/Http/Controllers/TemplateController.php",
+		"/Library/WebServer/Documents/dco/public/petiframe/index 2.html",
+		"/Library/WebServer/Documents/dco/public/petiframe/index.html",
+		"/Library/WebServer/Documents/dco/public/petiframe/main.js",
+		"/Library/WebServer/Documents/banner-repeat-detector/comparsion.py",
+		"/Users/macbook/Desktop/v.bson",
+		"/Library/WebServer/Documents/Chart/index2.html",
+		"/Users/macbook/Downloads/demo/pom.xml",
+		"/Library/WebServer/Documents/Chart/index.html",
+		"/Library/WebServer/Documents/github.html",
+		"/Users/macbook/Downloads/cordia/iterator.php",
+		"/Library/WebServer/Documents/selectize.js/examples/newshit.html",
+		"/Users/macbook/Documents/hud/speedometer.py",
+		"/Library/WebServer/Documents/selectize.js/examples/plugins.html",
+		"/Users/macbook/Documents/hud/hud.py",
+		"/Users/macbook/Library/Application Support/Sublime Text 3/Packages/SFTP/SFTP.sublime-settings",
+		"/Library/WebServer/Documents/test/index.php",
+		"/Users/macbook/Desktop/pep8",
+		"/Library/WebServer/Documents/commentsystem/server.js",
+		"/Users/macbook/Downloads/vuex-socketio-example-master/client/src/types.js",
+		"/Library/WebServer/Documents/feededitor/src/Explode.php",
+		"/Library/WebServer/Documents/feededitor/src/Query.php",
+		"/Library/WebServer/Documents/feededitor/full.csv"
+	],
+	"find":
+	{
+		"height": 36.0
+	},
+	"find_in_files":
+	{
+		"height": 103.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"format_bytes",
+			"$substr",
+			"path",
+			"$lte",
+			"$gte",
+			"$push",
+			"$first",
+			"_id",
+			"$group",
+			"//",
+			"agr",
+			"#",
+			"ArrayField"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": false,
+		"whole_word": true,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 22.0
+	},
+	"input":
+	{
+		"height": 37.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 104.0
+	},
+	"output.find_results":
+	{
+		"height": 104.0
+	},
+	"output.nodejs":
+	{
+		"height": 23.0
+	},
+	"output.paneltranformations":
+	{
+		"height": 104.0
+	},
+	"output.sftp":
+	{
+		"height": 104.0
+	},
+	"pinned_build_system": "",
+	"project": "poms-presentation-site.sublime-project",
+	"replace":
+	{
+		"height": 40.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 266.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

@@ -401,6 +401,8 @@ function replaceOpenedPerson() {
         window.openPersonInSize = 0;
         window.mobileSize = true;
         openPerson(window.openedPerson, window.openPersonInSize, window.mobileSize);
+        $('.person-block').eq(0).css('margin-top', 0);
+        $('.person-block').eq(1).css('margin-top', 0);
         return;
     }
 
@@ -409,8 +411,14 @@ function replaceOpenedPerson() {
         window.openPersonInSize = 0.75;
         window.mobileSize = false;
         openPerson(window.openedPerson, window.openPersonInSize);
+        $('.person-block').eq(0).css('margin-top', Math.max(0, ($('.quote-text').eq(0).find('span').height() - 100)) + 'px');
+        $('.person-block').eq(1).css('margin-top', Math.max(0, ($('.quote-text').eq(1).find('span').height() - 100)) + 'px');
         return;
     }
+
+    $('.person-block').eq(0).css('margin-top', Math.max(0, ($('.quote-text').eq(0).find('span').height() - 100)) + 'px');
+    $('.person-block').eq(1).css('margin-top', Math.max(0, ($('.quote-text').eq(1).find('span').height() - 100)) + 'px');
+
 
     window.openPersonInSize = 1;
     window.mobileSize = false;
