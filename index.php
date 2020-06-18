@@ -38,6 +38,10 @@
             padding: 0;
         }
 
+        body {
+            background-color: #366F62;
+        }
+
         iframe {
             display: block;
             width: 100%;
@@ -47,13 +51,39 @@
     </style>
 
     <script>
+        const iframes = [];
         function resizeIframe(obj) {
-            obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
+            obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+
+            let iframesProperties = {
+                node: obj,
+                currentHeight: obj.contentWindow.document.body.scrollHeight
+            };
+
+            iframes.push(iframesProperties);
         }
 
         function loadBody(){
             document.querySelector('body').style.opacity = 1;
         }
+
+        (function() {
+            setTimeout(function() {
+                loadBody();
+            }, 2000);
+        })();
+
+        setInterval(function() {
+            if(iframes.length > 0){
+                iframes.map( iframe => {
+                    let iframePossibleNewHeight = iframe.node.contentWindow.document.body.scrollHeight;
+                    
+                    if(iframe.height != iframePossibleNewHeight){
+                        iframe.node.style.height = iframePossibleNewHeight + 'px';
+                    }
+                });
+            }
+        }, 1);
     </script>
 
 </head>
@@ -66,15 +96,17 @@ $demo = isset($_GET['demo']) ? $_GET['demo'] : '';
 $map = isset($_GET['map']) ? $_GET['map'] : '';
 
 if (!empty(trim($case))) {
-    echo '<iframe src="https://pomscloud.ie/projects/'.$case.'.html" scrolling="no" onload="resizeIframe(this)"></iframe>';
+    echo '<iframe style="background: #366F62;" src="https://pomscloud.ie/projects/'.$case.'.html" scrolling="no" onload="resizeIframe(this)"></iframe>';
 }
 
 if (!empty(trim($demo))) {
-    echo '<iframe src="https://pomscloud.ie/projects/'.$demo.'.html" scrolling="no" onload="resizeIframe(this); loadBody();"></iframe>';
+    echo '<iframe style="background: #366F62;" src="https://pomscloud.ie/projects/'.$demo.'.html" scrolling="no" onload="resizeIframe(this);"></iframe>';
 }
 
 if (!empty(trim($map))) {
-    echo '<iframe src="https://pomscloud.ie/projects/'.$map.'.html" scrolling="no" onload="resizeIframe(this)"></iframe>';
+    $personId = isset($_GET['personid']) ? $_GET['personid'] : '';
+    $mapUrl = !empty(trim($personId)) ? $map.'.html?personid='.$personId.'' : $map.'.html';
+    echo '<iframe style="background: #366F62;" src="https://pomscloud.ie/projects/'.$mapUrl.'" scrolling="no" onload="resizeIframe(this)"></iframe>';
 }
 ?>
 

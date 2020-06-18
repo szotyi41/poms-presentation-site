@@ -545,7 +545,7 @@
 
                             <div id="generated-video-player">
                                 <video width="640" height="480" id="generated-video">
-                                    <source src="" type="video/mp4">
+                                    <!-- <source src="" type="video/mp4"> -->
                                     Your browser does not support the video tag.
                                 </video>
 
@@ -605,6 +605,21 @@
                 document.querySelector('body').style.opacity = 1;
             }
         }, 10);
+
+        (function() {
+            // ?page_parts=header-section,robot-section,testimonial-section,triumph-demo-section,audi-demo-section
+            var sections = '{{page_parts}}' ? '{{page_parts}}' : url.searchParams.get('page_parts');
+            $('section,header').css({display: 'none'});
+            sections.split(',').forEach(function(section) {
+                console.log(section);
+                setTimeout(function() {
+                    if($(section)){
+                        $(section).css({display: 'block'});
+                    }
+                    $('section#' + section).css({display: 'block'}); 
+                });
+            });
+        })();
     </script>
 <script src="main.js"></script></body>
 
