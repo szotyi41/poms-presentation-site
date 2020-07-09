@@ -130,11 +130,11 @@ var persons = [
       "direction": 30
     },
     {
-      "contact_person_name": "Nikolina Jankovic",
+      "contact_person_name": "Nikolina Jakovic",
       "contact_title": "Osoba za kontakt",
       "background_image_1_contact_person": "nikolina_j.jpg",
       "contact_person_location": "Republika Hrvatska",
-      "contact_person_email": "nikolina.jankovic@pomscloud.ie",
+      "contact_person_email": "nikolina.jakovic@pomscloud.ie",
       "contact_person_phone": "+36 30 176 1561",
       "background_image_1_contact_map": "_map.svg",
       "folder_name": "B17",
@@ -293,7 +293,7 @@ $(document).ready(function () {
         contactPersonInfoPersonImg.className = 'contact-person-image';
 
         const personImg = document.createElement('img');
-        personImg.src = 'assets/' + person.background_image_1_contact_person;
+        personImg.src = person.background_image_1_contact_person;
 
         contactPersonInfoPersonImg.append(personImg);
 

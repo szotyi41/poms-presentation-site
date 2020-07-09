@@ -2,10 +2,19 @@ var transitionType = ' cubic-bezier(0.175, 0.885, 0.32, 1.0)';
 var speedoBounce = false;
 var robotArriveTime = 5000;
 
+var testimonialTextBox, personBlock, testimonialListing;
+
 $(document).ready(function () {
     init();
     animate();
     $('select').formSelect();
+
+    testimonialTextBox = document.querySelector('.quote-text.testimonial-quote');
+    personBlock = document.querySelector('.person-block');
+    testimonialListing = document.querySelector('.testimonial-listing');
+    
+    resizeTestimonialSection();
+    new ResizeObserver(resizeTestimonialSection).observe(testimonialTextBox);
 });
 
 function init() {
@@ -38,6 +47,20 @@ function init() {
     );
 }
 
+function resizeTestimonialSection() {
+    
+    personBlock.style.marginTop = (testimonialTextBox.offsetHeight - 100) + 'px';
+    testimonialListing.style.marginTop = ((112 + testimonialTextBox.offsetHeight) - 100) + 'px';
+
+    if(!window.matchMedia('(min-width: 992px)').matches) {
+        testimonialListing.style.marginTop = '112px';
+    }
+
+    if(!window.matchMedia('(min-width: 950px)').matches) {
+        personBlock.style.marginTop = 0;
+    }
+}
+
 function activateSliders(sliderIndex) {
     const sliderWidth = $(`#slider-process-${sliderIndex}`).attr('data-width');
     const sliderValue = parseInt($(`#slider-indicator-${sliderIndex}`).attr('data-value'));
@@ -54,7 +77,6 @@ function validateHTMLLists() {
     const agencyBenefitsList = [...document.querySelectorAll('#agencyBenefits li')];
     const advertiserBenefitsList = [...document.querySelectorAll('#advertiserBenefits li')];
 
-    
     loopArray(concatArrays([pomsAdvantagesList, agencyBenefitsList, advertiserBenefitsList]));
 }
 
@@ -265,7 +287,6 @@ function animate() {
     }, 22000 + robotArriveTime);
 
 }
-
 
 function runSliders(sliderIndex, sliderNumberTarget, slideToPercent) {
     $('#slider-container-' + sliderIndex).css({ transform: 'scale(1)', opacity: 1 });
