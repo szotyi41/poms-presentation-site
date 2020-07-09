@@ -1520,7 +1520,7 @@ ul {
     select,
     label {
         color: #000;
-        border-color: #000!important;
+        border-color: #000 !important;
         outline: none;
     }
 
@@ -1614,6 +1614,34 @@ ul {
 }
 
 .input-select {
+    margin-top: 48px;
+    text-align: center;
+
+    label {
+        font-size: 20px;
+        margin-right: 16px;
+    }
+}
+
+select {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    background-color: #fff;
+    color: #333 !important;
+    height: 24px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    box-shadow: $card-box-shadow;
+    font-size: 16px;
+}
+
+.input-select {
 
     input {
         border-color: #fff !important;
@@ -1627,18 +1655,6 @@ ul {
         }
     }
 
-    &:after {
-        content: ' ';
-        position: absolute;
-        right: 18px;
-        top: 50px;
-        width: 0;
-        height: 0;
-        border-left: 4px solid transparent;
-        border-right: 4px solid transparent;
-        border-top: 4px solid #fff;
-        clear: both;
-    }
 }
 
 @media screen and (-webkit-min-device-pixel-ratio:0) {
